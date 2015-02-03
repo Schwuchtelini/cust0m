@@ -1,0 +1,132 @@
+#settings-link
+{
+    padding: 10px 5px;
+    margin: -10px -5px;
+}
+
+.cust0m_settings
+{
+    width: 450px;
+    color: #FFF;
+    right: 0px;
+    margin-top: 15px;
+    padding-top: 19px;
+    position: absolute;
+    display: none;
+    font-size: 15px;
+}
+
+.cust0m_settings:hover
+{
+    display: block !important;
+}
+
+.cust0m_input
+{
+    border-bottom: 1px solid #FFF;
+    float: left;
+    min-width: 15px;
+    outline: none;
+    overflow: hidden;
+    max-height: 30px;
+    margin-right: 5px;
+}
+
+.cust0m_label
+{
+    float: left;
+}
+
+.cust0m_middle
+{
+    padding: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.cust0m_button
+{
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.cust0m_button:hover
+{
+    color: #ee4d2e;
+}
+
+.cust0m_line
+{
+    width: 100%;
+    height: 1px;
+    background: #444;
+}
+
+.cust0m_lable_1
+{
+    width: 55%;
+}
+
+.cust0m_triggers
+{
+    float: left;
+    min-width: 15px;
+    outline: none;
+    overflow: hidden;
+    max-height: 30px;
+    border-radius: 3px;
+    width: 45%;
+}
+
+.cust0m_trigger
+{
+    width: 50%;
+    float: left;
+    height: 25px;
+    color: #444;
+    background-color: #222;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.cust0m_trigger_on
+{
+
+}
+
+.cust0m_trigger_off
+{
+
+}
+
+.cust0m_trigger.active, .cust0m_trigger:hover
+{
+    color: #ee4d2e;
+    background-color: #333;
+}
+
+.cust0m_trigger.active:hover
+{
+    cursor: auto;
+}
+
+.cust0m_benis_head
+{
+    margin-left: 15px;
+    display: inline;
+    color: transparent;
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/benis.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cust0m_benis_num
+{
+    display: inline;
+    color: #F5F7F6;
+}
