@@ -95,7 +95,7 @@ g.text = 'cust0m = {};\r\n' +
 '           }\r\n' +
 '       }\r\n' +
 '\r\n' +
-'       data.items = (tempItems.length != 0) ? tempItems : [];\r\n' +
+'       data.items = (tempItems.length != 0) ? tempItems : [data.items[data.items.length - 1]];\r\n' +
 '        for (var i = 0; i < data.items.length; i++) {\r\n' +
 '            var item = data.items[i];\r\n' +
 '            item.thumb = CONFIG.PATH.THUMBS + item.thumb;\r\n' +
