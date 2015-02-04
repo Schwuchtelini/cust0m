@@ -95,12 +95,16 @@ g.text = 'cust0m = {};\r\n' +
 '           else \r\n' +
 '           {\r\n' +
 '               var position = stream._processResponse(data);\r\n' +
+'               if(position == p.Stream.POSITION.APPEND) console.log("Add front");\r\n' +
+'               if(position == p.Stream.POSITION.PREPEND) console.log("Add Back");\r\n' +
 '               callback(data.items, position, data.error);\r\n' +
 '           }\r\n' +
 '        });\r\n' +
 '        else \r\n' +
 '        {\r\n' +
 '            var position = stream._processResponse(data);\r\n' +
+'               if(position == p.Stream.POSITION.APPEND) console.log("Add front");\r\n' +
+'               if(position == p.Stream.POSITION.PREPEND) console.log("Add back");\r\n' +
 '            callback(data.items, position, data.error);\r\n' +
 '        }\r\n' +
 '    };\r\n' +
