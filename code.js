@@ -105,7 +105,68 @@ g.text = 'cust0m = {};' +
 '            this.items[item.id] = item;' +
 '        }' +
 '        return position;' +
-'    };';
+'    };' +
+'' +
+'p.View.Stream.Main.loaded = function (items, position, error) {' +
+'        this.itemsPerRow = p.mainView.thumbsPerRow;' +
+'        this.$container.find(".spinner").remove();' +
+'        if (!items || !items.length) {' +
+'            var msg = null;' +
+'            var fm = null;' +
+'            if (error && (fm = error.match(/^(nsfw|nsfl|sfw)Required$/))) {' +
+'               msg = "Das Bild wurde als <em>" + fm[1].toUpperCase() + "</em> markiert.<br/>" +' +
+'                    (p.user.id ? "Ändere deine Filter-Einstellung," : "Melde dich an,") + " wenn du es sehen willst."' +
+'            } else if (!this.hasItems) {' +
+'                msg = "Nichts gefunden &#175;\\_(&#12484;)_/&#175;";' +
+'            }' +
+'            if (msg) {' +
+'                this.$container.html("<h2 class="main-message">" + msg + "</h2>");' +
+'            }' +
+'            return;' +
+'        }' +
+'        if (position == p.Stream.POSITION.PREPEND) {' +
+'            var prevHeight = $("#main-view").height();' +
+'            var firstRow = this.$streamContainer.find(".stream-row:first");' +
+'            var placeholders = firstRow.find(".thumb-placeholder");' +
+'            var numPlaceholders = placeholders.length' +
+'            if (numPlaceholders) {' +
+'                var html = "";' +
+'               for (var i = 0; i < numPlaceholders; i++) {' +
+'                   html += this.buildItem(items[items.length - numPlaceholders - 1 + i]);' +
+'               }' +
+'               placeholders.remove();' +
+'               firstRow.prepend(this.prepareThumbsForInsertion(html));' +
+'           }' +
+'          var html = this.buildItemRows(items, 0, items.length - numPlaceholders, position);' +
+'          this.$streamContainer.prepend(this.prepareThumbsForInsertion(html));' +
+'          var newHeight = $("#main-view").height() - (117 - 52);' +
+'          $(document).scrollTop($(document).scrollTop() + (newHeight - prevHeight));' +
+'      } else if (position == p.Stream.POSITION.APPEND) {' +
+'          var lastRow = this.$streamContainer.find(".stream-row:last");' +
+'          var itemCount = lastRow.find(".thumb").length;' +
+'          var fill = 0;' +
+'          if (itemCount % this.itemsPerRow != 0) {' +
+'              var html = "";' +
+'              fill = this.itemsPerRow - itemCount;' +
+'              for (var i = 0; i < fill; i++) {' +
+'                   html += this.buildItem(items[i]);' +
+'              }' +
+'              lastRow.append(this.prepareThumbsForInsertion(html));' +
+'          }' +
+'          var html = this.buildItemRows(items, fill, items.length, position);' +
+'          this.$streamContainer.append(this.prepareThumbsForInsertion(html));' +
+'      }' +
+'      if (this.jumpToItem) {' +
+'          var target = $("#item-" + this.jumpToItem);' +
+'          if (target.length) {' +
+'              $(document).scrollTop(target.offset().top - CONFIG.HEADER_HEIGHT);' +
+'              this.showItem(target, this.SCROLL.THUMB);' +
+'          }' +
+'          this.jumpToItem = null;' +
+'      }' +
+'      this.loadInProgress = false;' +
+'      this.hasItems = true;' +
+'   }' ;
 s.parentNode.insertBefore(g, s);
 
 standard =
