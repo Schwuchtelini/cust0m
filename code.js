@@ -107,7 +107,7 @@ g.text = 'cust0m = {};\r\n' +
 '        return position;\r\n' +
 '    }; \r\n' +
 '\r\n' +
-"p.View.Stream.Main.prototype.buildItem = function (item) { debugger; return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
+"p.View.Stream.Main.prototype.buildItem = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
 
 standard =
