@@ -82,7 +82,7 @@ g.text = 'cust0m = {};\r\n' +
 '        }\r\n' +
 '    };\r\n' +
 'p.Stream.prototype._load = function (options, callback) {\r\n' +
-'        stream._loadCust0m(options, callback, {items: []});\r\n' +
+'        this._loadCust0m(options, callback, {items: []});\r\n' +
 '    };\r\n' +
 'p.Stream.prototype._processResponse2 = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
