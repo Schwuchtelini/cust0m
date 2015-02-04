@@ -124,7 +124,7 @@ g.text = 'cust0m = {};\r\n' +
 '            }\r\n' +
 '            return;\r\n' +
 '        }\r\n' +
-'        if (position == p.Stream.POSITION.PREPEND) {\r\n' +
+'        if (position == p.Stream.POSITION.PREPEND && items.length > 0) {\r\n' +
 '            var prevHeight = $("#main-view").height();\r\n' +
 '            var firstRow = this.$streamContainer.find(".stream-row:first");\r\n' +
 '            var placeholders = firstRow.find(".thumb-placeholder");\r\n' +
@@ -141,7 +141,7 @@ g.text = 'cust0m = {};\r\n' +
 '          this.$streamContainer.prepend(this.prepareThumbsForInsertion(html));\r\n' +
 '          var newHeight = $("#main-view").height() - (117 - 52);\r\n' +
 '          $(document).scrollTop($(document).scrollTop() + (newHeight - prevHeight));\r\n' +
-'      } else if (position == p.Stream.POSITION.APPEND) {\r\n' +
+'      } else if (position == p.Stream.POSITION.APPEND && items.length > 0) {\r\n' +
 '          var lastRow = this.$streamContainer.find(".stream-row:last");\r\n' +
 '          var itemCount = lastRow.find(".thumb").length;\r\n' +
 '          var fill = 0;\r\n' +
