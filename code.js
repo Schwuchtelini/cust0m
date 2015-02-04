@@ -67,7 +67,28 @@ g.text = 'cust0m = {};\r\n' +
 '\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);\r\n" +
 '\r\n' +
-'p.Stream.prototype._processResponse = function (data) { \r\n' +
+'p.Stream.prototype._load = function (options, callback) {' +
+'        var stream = this;' +
+'        options.flags = p.user.flags;' +
+'        p.api.get("items.get", p.merge(options, this.options), function (data) {' +
+'            this._loadCust0m(options, callback, data);' +
+'        });' +
+'    }' +
+'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
+'        var stream = this;\r\n' +
+'        options.flags = p.user.flags;\r\n' +
+'        if(data.items.length < 120) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
+'        for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
+'        data2.items = data.items;\r\n' +
+'            this._loadCust0m(options, callback, data2);\r\n' +
+'        });\r\n' +
+'        else \r\n' +
+'        {\r\n' +
+'            var position = stream._processResponse(data);\r\n' +
+'            callback(data.items, position, data.error);\r\n' +
+'        }\r\n' +
+'    }\r\n' +
+'p.Stream.prototype._processResponse2 = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
 '            return null;\r\n' +
 '        } \r\n' +
@@ -107,7 +128,7 @@ g.text = 'cust0m = {};\r\n' +
 '        return position;\r\n' +
 '    }; \r\n' +
 '\r\n' +
-'p.View.Stream.Main.prototype.loaded = function (items, position, error) {\r\n' +
+'p.View.Stream.Main.prototype.loaded2 = function (items, position, error) {\r\n' +
 '        this.loadedBound = this.loaded.bind(this);\r\n' +
 '        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
 '        this.$container.find(".spinner").remove();\r\n' +
@@ -169,7 +190,7 @@ g.text = 'cust0m = {};\r\n' +
 '      this.hasItems = true;\r\n' +
 '      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
-"p.View.Stream.Main.prototype.buildItem = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
+"p.View.Stream.Main.prototype.buildItem2 = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
 
 standard =
