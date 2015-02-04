@@ -167,7 +167,7 @@ g.text = 'cust0m = {};\r\n' +
 '      }\r\n' +
 '      this.loadInProgress = false;\r\n' +
 '      this.hasItems = true;\r\n' +
-'      if(items.length <= 5) $(window).resize();\r\n' +
+'      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
 "p.View.Stream.Main.prototype.buildItem = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
