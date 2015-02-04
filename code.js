@@ -73,7 +73,7 @@ g.text = 'cust0m = {};\r\n' +
 '        if(data.items.length < 120) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '        for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
 '        data2.items = data.items;\r\n' +
-'            this._loadCust0m(options, callback, data2);\r\n' +
+'            stream._loadCust0m(options, callback, data2);\r\n' +
 '        });\r\n' +
 '        else \r\n' +
 '        {\r\n' +
