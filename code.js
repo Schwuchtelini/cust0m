@@ -71,7 +71,7 @@ g.text = 'cust0m = {};\r\n' +
 '        var stream = this;\r\n' +
 '        console.log("Lade Items:" + data.items.length);\r\n' +
 '        options.flags = p.user.flags;\r\n' +
-'        if(data.items.length < 120) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
+'        p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '           stream.reached.start = data2.atStart || stream.reached.start;\r\n' +
 '            stream.reached.end = data2.atEnd || stream.reached.end;\r\n' +
 '           var oldestId, newestId;\r\n' +
@@ -90,8 +90,8 @@ g.text = 'cust0m = {};\r\n' +
 '           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
-'           if(position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data); }\r\n' +
-'           else if(!stream.reached.start) { console.log("Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data); }\r\n' +
+'           if(data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data); }\r\n' +
+'           else if(data.items.length < 120 && !stream.reached.start) { console.log("Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data); }\r\n' +
 '           else \r\n' +
 '           {\r\n' +
 '               var position = stream._processResponse(data);\r\n' +
@@ -100,13 +100,6 @@ g.text = 'cust0m = {};\r\n' +
 '               callback(data.items, position, data.error);\r\n' +
 '           }\r\n' +
 '        });\r\n' +
-'        else \r\n' +
-'        {\r\n' +
-'            var position = stream._processResponse(data);\r\n' +
-'               if(position == p.Stream.POSITION.APPEND) console.log("Add front");\r\n' +
-'               if(position == p.Stream.POSITION.PREPEND) console.log("Add back");\r\n' +
-'            callback(data.items, position, data.error);\r\n' +
-'        }\r\n' +
 '    };\r\n' +
 'p.Stream.prototype._load = function (options, callback) {\r\n' +
 '        this._loadCust0m(options, callback, {items: []});\r\n' +
