@@ -63,7 +63,7 @@ var g = document.createElement('script');
 var s = document.getElementsByTagName('script')[0];
 g.text = 'cust0m = {};\r\n' +
 'cust0m.fullsize = true;\r\n' +
-'cust0m.benis = 500;\r\n' +
+'cust0m.benis = 2000;\r\n' +
 '\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);\r\n" +
 '\r\n' +
