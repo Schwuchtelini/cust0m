@@ -108,6 +108,7 @@ g.text = 'cust0m = {};\r\n' +
 '    }; \r\n' +
 '\r\n' +
 'p.View.Stream.Main.prototype.loaded = function (items, position, error) {\r\n' +
+'        this.loadedBound = this.loaded.bind(this);\r\n' +
 '        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
 '        this.$container.find(".spinner").remove();debugger;\r\n' +
 '        if (!items) {\r\n' +
@@ -167,7 +168,6 @@ g.text = 'cust0m = {};\r\n' +
 '      this.loadInProgress = false;\r\n' +
 '      this.hasItems = true;\r\n' +
 '   };' +
-'p.View.Stream.Main.loadedBound = p.View.Stream.Main.prototype.loaded.bind(p.View.Stream.Main);' +
 "p.View.Stream.Main.prototype.buildItem = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
 
