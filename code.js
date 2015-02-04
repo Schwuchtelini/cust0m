@@ -73,7 +73,7 @@ g.text = 'cust0m = {};' +
 '        }' +
 '       var tempItems = [];' +
 '       for (var i = 0; i < data.items.length; i++) {' +
-'           if (i >= data.items.length - 1 || (cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {' +
+'           if (true || i >= data.items.length - 1 || (cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {' +
 '               tempItems.push(data.items[i]);' +
 '           }' +
 '       }' +
