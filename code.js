@@ -75,10 +75,10 @@ g.text = 'cust0m = {};\r\n' +
 '           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
-'           this.reached.start = data.atStart || this.reached.start;\r\n' +
-'            this.reached.end = data.atEnd || this.reached.end;\r\n' +
+'           stream.reached.start = data.atStart || stream.reached.start;\r\n' +
+'            stream.reached.end = data.atEnd || stream.reached.end;\r\n' +
 '           var oldestId, newestId;\r\n' +
-'           if (this.options.promoted) {\r\n' +
+'           if (stream.options.promoted) {\r\n' +
 '               data.items.sort(p.Stream.sortByPromoted);\r\n' +
 '               oldestId = data.items[data.items.length - 1].promoted;\r\n' +
 '               newestId = data.items[0].promoted;\r\n' +
@@ -87,11 +87,11 @@ g.text = 'cust0m = {};\r\n' +
 '               oldestId = data.items[data.items.length - 1].id;\r\n' +
 '               newestId = data.items[0].id;\r\n' +
 '           }\r\n' +
-'           var position = (oldestId < this._oldestId) ? p.Stream.POSITION.APPEND : p.Stream.POSITION.PREPEND;\r\n' +
-'           this._oldestId = Math.min(this._oldestId, oldestId);\r\n' +
-'           this._newestId = Math.max(this._newestId, newestId);\r\n' +
-'           if(position == p.Stream.POSITION.APPEND && !reached.end) stream._loadCust0m({older: this._oldestId}, callback, data);\r\n' +
-'           else if(!reached.start) stream._loadCust0m({newer: this._newestId}, callback, data);\r\n' +
+'           var position = (oldestId < stream._oldestId) ? p.Stream.POSITION.APPEND : p.Stream.POSITION.PREPEND;\r\n' +
+'           stream._oldestId = Math.min(stream._oldestId, oldestId);\r\n' +
+'           stream._newestId = Math.max(stream._newestId, newestId);\r\n' +
+'           if(position == p.Stream.POSITION.APPEND && !reached.end) stream._loadCust0m({older: stream._oldestId}, callback, data);\r\n' +
+'           else if(!reached.start) stream._loadCust0m({newer: stream._newestId}, callback, data);\r\n' +
 '           else \r\n' +
 '           {\r\n' +
 '               var position = stream._processResponse(data);\r\n' +
