@@ -71,14 +71,6 @@ g.text = 'cust0m = {};\r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
 '            return null;\r\n' +
 '        } \r\n' +
-'       var tempItems = [];\r\n' +
-'       for (var i = 0; i < data.items.length; i++) {\r\n' +
-'           if ((cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {\r\n' +
-'               tempItems.push(data.items[i]);\r\n' +
-'           }\r\n' +
-'       }\r\n' +
-'\r\n' +
-'       data.items = tempItems;\r\n' +
 '        this.reached.start = data.atStart || this.reached.start;\r\n' +
 '        this.reached.end = data.atEnd || this.reached.end;\r\n' +
 '        var oldestId, newestId;\r\n' +
@@ -96,6 +88,14 @@ g.text = 'cust0m = {};\r\n' +
 '        this._newestId = Math.max(this._newestId, newestId);\r\n' +
 '        var prev = null;\r\n' +
 '        var itemVotes = p.user.voteCache.votes.items;\r\n' +
+'       var tempItems = [];\r\n' +
+'       for (var i = 0; i < data.items.length; i++) {\r\n' +
+'           if ((cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {\r\n' +
+'               tempItems.push(data.items[i]);\r\n' +
+'           }\r\n' +
+'       }\r\n' +
+'\r\n' +
+'       data.items = tempItems;\r\n' +
 '        for (var i = 0; i < data.items.length; i++) {\r\n' +
 '            var item = data.items[i];\r\n' +
 '            item.thumb = CONFIG.PATH.THUMBS + item.thumb;\r\n' +
