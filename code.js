@@ -94,7 +94,7 @@ g.text = 'cust0m = {};\r\n' +
 '           else if(data.items.length < 120 && !stream.reached.start) { console.log("Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data); }\r\n' +
 '           else \r\n' +
 '           {\r\n' +
-'               var position = stream._processResponse(data);\r\n' +
+'               position = stream._processResponse(data);\r\n' +
 '               if(position == p.Stream.POSITION.APPEND) console.log("Add front");\r\n' +
 '               if(position == p.Stream.POSITION.PREPEND) console.log("Add Back");\r\n' +
 '               callback(data.items, position, data.error);\r\n' +
