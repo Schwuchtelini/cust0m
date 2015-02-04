@@ -65,7 +65,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.fullsize = true;\r\n' +
 'cust0m.benis = 1000;\r\n' +
 '\r\n' +
-"setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);" +
+"setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);\r\n" +
 '\r\n' +
 'p.Stream.prototype._processResponse = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
@@ -107,66 +107,7 @@ g.text = 'cust0m = {};\r\n' +
 '        return position;\r\n' +
 '    }; \r\n' +
 '\r\n' +
-'p.View.Stream.Main.loaded = function (items, position, error) {\r\n' +
-'        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
-'        this.$container.find(".spinner").remove();\r\n' +
-'        if (!items || !items.length) {\r\n' +
-'            var msg = null;\r\n' +
-'            var fm = null;\r\n' +
-'            if (error && (fm = error.match(/^(nsfw|nsfl|sfw)Required$/))) {\r\n' +
-'               msg = "Das Bild wurde als <em>" + fm[1].toUpperCase() + "</em> markiert.<br/>" +\r\n' +
-'                    (p.user.id ? "Ändere deine Filter-Einstellung," : "Melde dich an,") + " wenn du es sehen willst."\r\n' +
-'            } else if (!this.hasItems) {\r\n' +
-'                msg = "Nichts gefunden &#175;\\_(&#12484;)_/&#175;";\r\n' +
-'            }\r\n' +
-'            if (msg) {\r\n' +
-'                this.$container.html("<h2 class=\'main-message\'>" + msg + "</h2>");\r\n' +
-'            }\r\n' +
-'            return;\r\n' +
-'        }\r\n' +
-'        if (position == p.Stream.POSITION.PREPEND) {\r\n' +
-'            var prevHeight = $("#main-view").height();\r\n' +
-'            var firstRow = this.$streamContainer.find(".stream-row:first");\r\n' +
-'            var placeholders = firstRow.find(".thumb-placeholder");\r\n' +
-'            var numPlaceholders = placeholders.length\r\n' +
-'            if (numPlaceholders) {\r\n' +
-'                var html = "";\r\n' +
-'               for (var i = 0; i < numPlaceholders; i++) {\r\n' +
-'                   html += this.buildItem(items[items.length - numPlaceholders - 1 + i]);\r\n' +
-'               }\r\n' +
-'               placeholders.remove();\r\n' +
-'               firstRow.prepend(this.prepareThumbsForInsertion(html));\r\n' +
-'           }\r\n' +
-'          var html = this.buildItemRows(items, 0, items.length - numPlaceholders, position);\r\n' +
-'          this.$streamContainer.prepend(this.prepareThumbsForInsertion(html));\r\n' +
-'          var newHeight = $("#main-view").height() - (117 - 52);\r\n' +
-'          $(document).scrollTop($(document).scrollTop() + (newHeight - prevHeight));\r\n' +
-'      } else if (position == p.Stream.POSITION.APPEND) {\r\n' +
-'          var lastRow = this.$streamContainer.find(".stream-row:last");\r\n' +
-'          var itemCount = lastRow.find(".thumb").length;\r\n' +
-'          var fill = 0;\r\n' +
-'          if (itemCount % this.itemsPerRow != 0) {\r\n' +
-'              var html = "";\r\n' +
-'              fill = this.itemsPerRow - itemCount;\r\n' +
-'              for (var i = 0; i < fill; i++) {\r\n' +
-'                   html += this.buildItem(items[i]);\r\n' +
-'              }\r\n' +
-'              lastRow.append(this.prepareThumbsForInsertion(html));\r\n' +
-'          }\r\n' +
-'          var html = this.buildItemRows(items, fill, items.length, position);\r\n' +
-'          this.$streamContainer.append(this.prepareThumbsForInsertion(html));\r\n' +
-'      }\r\n' +
-'      if (this.jumpToItem) {\r\n' +
-'          var target = $("#item-" + this.jumpToItem);\r\n' +
-'          if (target.length) {\r\n' +
-'              $(document).scrollTop(target.offset().top - CONFIG.HEADER_HEIGHT);\r\n' +
-'              this.showItem(target, this.SCROLL.THUMB);\r\n' +
-'          }\r\n' +
-'          this.jumpToItem = null;\r\n' +
-'      }\r\n' +
-'      this.loadInProgress = false;\r\n' +
-'      this.hasItems = true;\r\n' +
-'   };' ;
+"p.View.Stream.Main.loaded = buildItem: function (item) { return ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>');}" ;
 s.parentNode.insertBefore(g, s);
 
 standard =
