@@ -105,7 +105,7 @@ g.text = 'cust0m = {};' +
 '            this.items[item.id] = item;' +
 '        }' +
 '        return position;' +
-'    };' +
+'    }; ' +
 '' +
 'p.View.Stream.Main.loaded = function (items, position, error) {' +
 '        this.itemsPerRow = p.mainView.thumbsPerRow;' +
@@ -166,7 +166,7 @@ g.text = 'cust0m = {};' +
 '      }' +
 '      this.loadInProgress = false;' +
 '      this.hasItems = true;' +
-'   }' ;
+'   };' ;
 s.parentNode.insertBefore(g, s);
 
 standard =
