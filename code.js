@@ -71,10 +71,27 @@ g.text = 'cust0m = {};\r\n' +
 '        var stream = this;\r\n' +
 '        console.log("Lade Items:" + data.items.length);\r\n' +
 '        options.flags = p.user.flags;\r\n' +
-'        if(data.items.length < 120) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
-'        for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
-'        data2.items = data.items;\r\n' +
-'            stream._loadCust0m(options, callback, data2);\r\n' +
+'        if(data.items.length < 120 && ) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
+'           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
+'           data2.items = data.items;\r\n' +
+'           data = data2;\r\n' +
+'           this.reached.start = data.atStart || this.reached.start;\r\n' +
+'            this.reached.end = data.atEnd || this.reached.end;\r\n' +
+'           var oldestId, newestId;\r\n' +
+'           if (this.options.promoted) {\r\n' +
+'               data.items.sort(p.Stream.sortByPromoted);\r\n' +
+'               oldestId = data.items[data.items.length - 1].promoted;\r\n' +
+'               newestId = data.items[0].promoted;\r\n' +
+'           } else {\r\n' +
+'               data.items.sort(p.Stream.sortById);\r\n' +
+'               oldestId = data.items[data.items.length - 1].id;\r\n' +
+'               newestId = data.items[0].id;\r\n' +
+'           }\r\n' +
+'           var position = (oldestId < this._oldestId) ? p.Stream.POSITION.APPEND : p.Stream.POSITION.PREPEND;\r\n' +
+'           this._oldestId = Math.min(this._oldestId, oldestId);\r\n' +
+'           this._newestId = Math.max(this._newestId, newestId);\r\n' +
+'            if(position == p.Stream.POSITION.APPEND) stream._loadCust0m({older: this._oldestId}, callback, data);\r\n' +
+'            else stream._loadCust0m({newer: this._newestId}, callback, data);\r\n' +
 '        });\r\n' +
 '        else \r\n' +
 '        {\r\n' +
