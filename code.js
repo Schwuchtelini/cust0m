@@ -69,6 +69,7 @@ g.text = 'cust0m = {};\r\n' +
 '\r\n' +
 'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
 '        var stream = this;\r\n' +
+'        console.log("Lade Items:" + data.items.length);\r\n' +
 '        options.flags = p.user.flags;\r\n' +
 '        if(data.items.length < 120) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '        for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
