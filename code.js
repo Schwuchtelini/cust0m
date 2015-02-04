@@ -120,7 +120,7 @@ g.text = 'cust0m = {};\r\n' +
 '                msg = "Nichts gefunden &#175;\\_(&#12484;)_/&#175;";\r\n' +
 '            }\r\n' +
 '            if (msg) {\r\n' +
-'                this.$container.html("<h2 class="main-message">" + msg + "</h2>");\r\n' +
+'                this.$container.html("<h2 class=\'main-message\'>" + msg + "</h2>");\r\n' +
 '            }\r\n' +
 '            return;\r\n' +
 '        }\r\n' +
