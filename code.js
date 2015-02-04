@@ -70,7 +70,7 @@ g.text = 'cust0m = {};\r\n' +
 'p.Stream.prototype._processResponse = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
 '            return null;\r\n' +
-'        } debugger; \r\n' +
+'        } \r\n' +
 '       var tempItems = [];\r\n' +
 '       for (var i = 0; i < data.items.length; i++) {\r\n' +
 '           if ((cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {\r\n' +
