@@ -67,13 +67,13 @@ g.text = 'cust0m = {};\r\n' +
 '\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);\r\n" +
 '\r\n' +
-'p.Stream.prototype._load = function (options, callback) {' +
-'        var stream = this;' +
-'        options.flags = p.user.flags;' +
-'        p.api.get("items.get", p.merge(options, this.options), function (data) {' +
-'            this._loadCust0m(options, callback, data);' +
-'        });' +
-'    }' +
+'p.Stream.prototype._load = function (options, callback) {\r\n' +
+'        var stream = this;\r\n' +
+'        options.flags = p.user.flags;\r\n' +
+'        p.api.get("items.get", p.merge(options, this.options), function (data) {\r\n' +
+'            this._loadCust0m(options, callback, data);\r\n' +
+'        });\r\n' +
+'    };\r\n' +
 'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
 '        var stream = this;\r\n' +
 '        options.flags = p.user.flags;\r\n' +
@@ -87,7 +87,7 @@ g.text = 'cust0m = {};\r\n' +
 '            var position = stream._processResponse(data);\r\n' +
 '            callback(data.items, position, data.error);\r\n' +
 '        }\r\n' +
-'    }\r\n' +
+'    };\r\n' +
 'p.Stream.prototype._processResponse2 = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
 '            return null;\r\n' +
