@@ -110,7 +110,7 @@ g.text = 'cust0m = {};\r\n' +
 'p.View.Stream.Main.prototype.loaded = function (items, position, error) {\r\n' +
 '        this.loadedBound = this.loaded.bind(this);\r\n' +
 '        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
-'        this.$container.find(".spinner").remove();debugger;\r\n' +
+'        this.$container.find(".spinner").remove();\r\n' +
 '        if (!items) {\r\n' +
 '            var msg = null;\r\n' +
 '            var fm = null;\r\n' +
