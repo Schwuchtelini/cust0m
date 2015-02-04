@@ -63,7 +63,7 @@ var g = document.createElement('script');
 var s = document.getElementsByTagName('script')[0];
 g.text = 'cust0m = {};\r\n' +
 'cust0m.fullsize = true;\r\n' +
-'cust0m.benis = 1000;\r\n' +
+'cust0m.benis = 200;\r\n' +
 '\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);\r\n" +
 '\r\n' +
@@ -73,7 +73,7 @@ g.text = 'cust0m = {};\r\n' +
 '        }\r\n' +
 '       var tempItems = [];\r\n' +
 '       for (var i = 0; i < data.items.length; i++) {\r\n' +
-'           if (true || i >= data.items.length - 1 || (cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {\r\n' +
+'           if ((cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {\r\n' +
 '               tempItems.push(data.items[i]);\r\n' +
 '           }\r\n' +
 '       }\r\n' +
