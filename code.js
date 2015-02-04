@@ -72,24 +72,24 @@ g.text = 'cust0m = {};\r\n' +
 '        console.log("Lade Items:" + data.items.length);\r\n' +
 '        options.flags = p.user.flags;\r\n' +
 '        if(data.items.length < 120) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
-'           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
-'           data2.items = data.items;\r\n' +
-'           data = data2;\r\n' +
-'           stream.reached.start = data.atStart || stream.reached.start;\r\n' +
-'            stream.reached.end = data.atEnd || stream.reached.end;\r\n' +
+'           stream.reached.start = data2.atStart || stream.reached.start;\r\n' +
+'            stream.reached.end = data2.atEnd || stream.reached.end;\r\n' +
 '           var oldestId, newestId;\r\n' +
 '           if (stream.options.promoted) {\r\n' +
-'               data.items.sort(p.Stream.sortByPromoted);\r\n' +
-'               oldestId = data.items[data.items.length - 1].promoted;\r\n' +
-'               newestId = data.items[0].promoted;\r\n' +
+'               data2.items.sort(p.Stream.sortByPromoted);\r\n' +
+'               oldestId = data2.items[data2.items.length - 1].promoted;\r\n' +
+'               newestId = data2.items[0].promoted;\r\n' +
 '           } else {\r\n' +
-'               data.items.sort(p.Stream.sortById);\r\n' +
-'               oldestId = data.items[data.items.length - 1].id;\r\n' +
-'               newestId = data.items[0].id;\r\n' +
+'               data2.items.sort(p.Stream.sortById);\r\n' +
+'               oldestId = data2.items[data2.items.length - 1].id;\r\n' +
+'               newestId = data2.items[0].id;\r\n' +
 '           }\r\n' +
 '           var position = (oldestId < stream._oldestId) ? p.Stream.POSITION.APPEND : p.Stream.POSITION.PREPEND;\r\n' +
 '           stream._oldestId = Math.min(stream._oldestId, oldestId);\r\n' +
 '           stream._newestId = Math.max(stream._newestId, newestId);\r\n' +
+'           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
+'           data2.items = data.items;\r\n' +
+'           data = data2;\r\n' +
 '           if(position == p.Stream.POSITION.APPEND && !reached.end) stream._loadCust0m({older: stream._oldestId}, callback, data);\r\n' +
 '           else if(!reached.start) stream._loadCust0m({newer: stream._newestId}, callback, data);\r\n' +
 '           else \r\n' +
