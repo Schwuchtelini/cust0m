@@ -153,9 +153,8 @@ g.text = 'cust0m = {};\r\n' +
 '              }\r\n' +
 '              lastRow.append(this.prepareThumbsForInsertion(html));\r\n' +
 '          }\r\n' +
-'          var html = ""; \r\n' +
-'          if(items.length - fill > 0) html = this.buildItemRows(items, fill, items.length, position);\r\n' +
-'          this.$streamContainer.append(this.prepareThumbsForInsertion(html));\r\n' +
+'          if(items.length - fill > 0) { var html = this.buildItemRows(items, fill, items.length, position);\r\n' +
+'          this.$streamContainer.append(this.prepareThumbsForInsertion(html));}\r\n' +
 '      }\r\n' +
 '      if (this.jumpToItem) {\r\n' +
 '          var target = $("#item-" + this.jumpToItem);\r\n' +
