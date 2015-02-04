@@ -1,50 +1,50 @@
-$(".user-info.user-only").prepend('<div class="cust0m_settings"> ' +
-'    <div class="cust0m_middle"> ' +
-'        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> ' +
-'        <div id="cust0m_input_anzahl" class="cust0m_input" contenteditable="true"></div> ' +
-'        <div class="cust0m_label">Vorschaubilder</div> ' +
-'    </div> ' +
-'    <div class="cust0m_middle"> ' +
-'        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> ' +
-'        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> ' +
-'        <div class="cust0m_label">%</div> ' +
-'    </div> ' +
-'    <div class="cust0m_middle"> ' +
-'        <div class="cust0m_label cust0m_lable_1">Bilder Mindesthöhe:</div> ' +
-'        <div id="cust0m_input_width" class="cust0m_input" contenteditable="true"></div> ' +
-'        <div class="cust0m_label">px</div> ' +
-'    </div> ' +
-'    <div class="cust0m_middle"> ' +
-'        <div class="cust0m_label cust0m_lable_1">Großes Bild laden</div> ' +
-'        <div id="cust0m_input_fullsize" class="cust0m_triggers"> ' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> ' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> ' +
-'        </div> ' +
-'    </div> ' +
-'    <div class="cust0m_middle"> ' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentare in die Mitte:</div> ' +
-'        <div id="cust0m_input_pos" class="cust0m_triggers"> ' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> ' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> ' +
-'        </div> ' +
-'    </div> ' +
-'    <div class="cust0m_middle"> ' +
-'        <div class="cust0m_label cust0m_lable_1">Admin Sicht:</div> ' +
-'        <div id="cust0m_input_admin" class="cust0m_triggers"> ' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> ' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> ' +
-'        </div> ' +
-'    </div> ' +
-'    <div class="cust0m_middle"> ' +
-'        <div class="cust0m_label cust0m_lable_1">Benis anzeigen:</div> ' +
-'        <div id="cust0m_input_benis" class="cust0m_triggers"> ' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> ' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> ' +
-'        </div> ' +
-'    </div> ' +
-'    <div class="cust0m_line"></div> ' +
-'    <div id="cust0m_save" class="cust0m_button">speichern</div> ' +
-'    <div id="cust0m_info" class="cust0m_button" style="display: none">gespeichert</div> ' +
+$(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> \r\n' +
+'        <div id="cust0m_input_anzahl" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">Vorschaubilder</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
+'        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">%</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Bilder Mindesthöhe:</div> \r\n' +
+'        <div id="cust0m_input_width" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">px</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Großes Bild laden</div> \r\n' +
+'        <div id="cust0m_input_fullsize" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare in die Mitte:</div> \r\n' +
+'        <div id="cust0m_input_pos" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Admin Sicht:</div> \r\n' +
+'        <div id="cust0m_input_admin" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Benis anzeigen:</div> \r\n' +
+'        <div id="cust0m_input_benis" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_line"></div> \r\n' +
+'    <div id="cust0m_save" class="cust0m_button">speichern</div> \r\n' +
+'    <div id="cust0m_info" class="cust0m_button" style="display: none">gespeichert</div> \r\n' +
 '</div> ');
 
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num">1009</div>');
@@ -62,110 +62,110 @@ if($(".user-name.head-link").text() != "") setInterval(function() { $.ajax(
 var g = document.createElement('script');
 var s = document.getElementsByTagName('script')[0];
 g.text = 'cust0m = {};\r\n' +
-'cust0m.fullsize = true;' +
-'cust0m.benis = 1000;' +
-'' +
+'cust0m.fullsize = true;\r\n' +
+'cust0m.benis = 1000;\r\n' +
+'\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);" +
-'' +
-'p.Stream.prototype._processResponse = function (data) { ' +
-'        if (!data.items || !data.items.length) {' +
-'            return null;' +
-'        }' +
-'       var tempItems = [];' +
-'       for (var i = 0; i < data.items.length; i++) {' +
-'           if (true || i >= data.items.length - 1 || (cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {' +
-'               tempItems.push(data.items[i]);' +
-'           }' +
-'       }' +
-'debugger;' +
-'       data.items = tempItems;' +
-'        this.reached.start = data.atStart || this.reached.start;' +
-'        this.reached.end = data.atEnd || this.reached.end;' +
-'        var oldestId, newestId;' +
-'        if (this.options.promoted) {' +
-'            data.items.sort(p.Stream.sortByPromoted);' +
-'            oldestId = data.items[data.items.length - 1].promoted;' +
-'            newestId = data.items[0].promoted;' +
-'        } else {' +
-'            data.items.sort(p.Stream.sortById);' +
-'            oldestId = data.items[data.items.length - 1].id;' +
-'            newestId = data.items[0].id;' +
-'        }' +
-'        var position = (oldestId < this._oldestId) ? p.Stream.POSITION.APPEND : p.Stream.POSITION.PREPEND;' +
-'        this._oldestId = Math.min(this._oldestId, oldestId);' +
-'        this._newestId = Math.max(this._newestId, newestId);' +
-'        var prev = null;' +
-'        var itemVotes = p.user.voteCache.votes.items;' +
-'        for (var i = 0; i < data.items.length; i++) {' +
-'            var item = data.items[i];' +
-'            item.thumb = CONFIG.PATH.THUMBS + item.thumb;' +
-'            item.image = (cust0m.fullsize && item.fullsize) ? (CONFIG.PATH.FULLSIZE + item.fullsize) : (CONFIG.PATH.IMAGES + item.image);' +
-'            item.fullsize = item.fullsize ? CONFIG.PATH.FULLSIZE + item.fullsize : null;' +
-'            item.vote = itemVotes[item.id] || 0;' +
-'            this.items[item.id] = item;' +
-'        }' +
-'        return position;' +
-'    }; ' +
-'' +
-'p.View.Stream.Main.loaded = function (items, position, error) {' +
-'        this.itemsPerRow = p.mainView.thumbsPerRow;' +
-'        this.$container.find(".spinner").remove();' +
-'        if (!items || !items.length) {' +
-'            var msg = null;' +
-'            var fm = null;' +
-'            if (error && (fm = error.match(/^(nsfw|nsfl|sfw)Required$/))) {' +
-'               msg = "Das Bild wurde als <em>" + fm[1].toUpperCase() + "</em> markiert.<br/>" +' +
-'                    (p.user.id ? "Ändere deine Filter-Einstellung," : "Melde dich an,") + " wenn du es sehen willst."' +
-'            } else if (!this.hasItems) {' +
-'                msg = "Nichts gefunden &#175;\\_(&#12484;)_/&#175;";' +
-'            }' +
-'            if (msg) {' +
-'                this.$container.html("<h2 class="main-message">" + msg + "</h2>");' +
-'            }' +
-'            return;' +
-'        }' +
-'        if (position == p.Stream.POSITION.PREPEND) {' +
-'            var prevHeight = $("#main-view").height();' +
-'            var firstRow = this.$streamContainer.find(".stream-row:first");' +
-'            var placeholders = firstRow.find(".thumb-placeholder");' +
-'            var numPlaceholders = placeholders.length' +
-'            if (numPlaceholders) {' +
-'                var html = "";' +
-'               for (var i = 0; i < numPlaceholders; i++) {' +
-'                   html += this.buildItem(items[items.length - numPlaceholders - 1 + i]);' +
-'               }' +
-'               placeholders.remove();' +
-'               firstRow.prepend(this.prepareThumbsForInsertion(html));' +
-'           }' +
-'          var html = this.buildItemRows(items, 0, items.length - numPlaceholders, position);' +
-'          this.$streamContainer.prepend(this.prepareThumbsForInsertion(html));' +
-'          var newHeight = $("#main-view").height() - (117 - 52);' +
-'          $(document).scrollTop($(document).scrollTop() + (newHeight - prevHeight));' +
-'      } else if (position == p.Stream.POSITION.APPEND) {' +
-'          var lastRow = this.$streamContainer.find(".stream-row:last");' +
-'          var itemCount = lastRow.find(".thumb").length;' +
-'          var fill = 0;' +
-'          if (itemCount % this.itemsPerRow != 0) {' +
-'              var html = "";' +
-'              fill = this.itemsPerRow - itemCount;' +
-'              for (var i = 0; i < fill; i++) {' +
-'                   html += this.buildItem(items[i]);' +
-'              }' +
-'              lastRow.append(this.prepareThumbsForInsertion(html));' +
-'          }' +
-'          var html = this.buildItemRows(items, fill, items.length, position);' +
-'          this.$streamContainer.append(this.prepareThumbsForInsertion(html));' +
-'      }' +
-'      if (this.jumpToItem) {' +
-'          var target = $("#item-" + this.jumpToItem);' +
-'          if (target.length) {' +
-'              $(document).scrollTop(target.offset().top - CONFIG.HEADER_HEIGHT);' +
-'              this.showItem(target, this.SCROLL.THUMB);' +
-'          }' +
-'          this.jumpToItem = null;' +
-'      }' +
-'      this.loadInProgress = false;' +
-'      this.hasItems = true;' +
+'\r\n' +
+'p.Stream.prototype._processResponse = function (data) { \r\n' +
+'        if (!data.items || !data.items.length) {\r\n' +
+'            return null;\r\n' +
+'        }\r\n' +
+'       var tempItems = [];\r\n' +
+'       for (var i = 0; i < data.items.length; i++) {\r\n' +
+'           if (true || i >= data.items.length - 1 || (cust0m.benis >= 0 && data.items[i].up - data.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data.items[i].up - data.items[i].down < cust0m.benis)) {\r\n' +
+'               tempItems.push(data.items[i]);\r\n' +
+'           }\r\n' +
+'       }\r\n' +
+'debugger;\r\n' +
+'       data.items = tempItems;\r\n' +
+'        this.reached.start = data.atStart || this.reached.start;\r\n' +
+'        this.reached.end = data.atEnd || this.reached.end;\r\n' +
+'        var oldestId, newestId;\r\n' +
+'        if (this.options.promoted) {\r\n' +
+'            data.items.sort(p.Stream.sortByPromoted);\r\n' +
+'            oldestId = data.items[data.items.length - 1].promoted;\r\n' +
+'            newestId = data.items[0].promoted;\r\n' +
+'        } else {\r\n' +
+'            data.items.sort(p.Stream.sortById);\r\n' +
+'            oldestId = data.items[data.items.length - 1].id;\r\n' +
+'            newestId = data.items[0].id;\r\n' +
+'        }\r\n' +
+'        var position = (oldestId < this._oldestId) ? p.Stream.POSITION.APPEND : p.Stream.POSITION.PREPEND;\r\n' +
+'        this._oldestId = Math.min(this._oldestId, oldestId);\r\n' +
+'        this._newestId = Math.max(this._newestId, newestId);\r\n' +
+'        var prev = null;\r\n' +
+'        var itemVotes = p.user.voteCache.votes.items;\r\n' +
+'        for (var i = 0; i < data.items.length; i++) {\r\n' +
+'            var item = data.items[i];\r\n' +
+'            item.thumb = CONFIG.PATH.THUMBS + item.thumb;\r\n' +
+'            item.image = (cust0m.fullsize && item.fullsize) ? (CONFIG.PATH.FULLSIZE + item.fullsize) : (CONFIG.PATH.IMAGES + item.image);\r\n' +
+'            item.fullsize = item.fullsize ? CONFIG.PATH.FULLSIZE + item.fullsize : null;\r\n' +
+'            item.vote = itemVotes[item.id] || 0;\r\n' +
+'            this.items[item.id] = item;\r\n' +
+'        }\r\n' +
+'        return position;\r\n' +
+'    }; \r\n' +
+'\r\n' +
+'p.View.Stream.Main.loaded = function (items, position, error) {\r\n' +
+'        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
+'        this.$container.find(".spinner").remove();\r\n' +
+'        if (!items || !items.length) {\r\n' +
+'            var msg = null;\r\n' +
+'            var fm = null;\r\n' +
+'            if (error && (fm = error.match(/^(nsfw|nsfl|sfw)Required$/))) {\r\n' +
+'               msg = "Das Bild wurde als <em>" + fm[1].toUpperCase() + "</em> markiert.<br/>" +\r\n' +
+'                    (p.user.id ? "Ändere deine Filter-Einstellung," : "Melde dich an,") + " wenn du es sehen willst."\r\n' +
+'            } else if (!this.hasItems) {\r\n' +
+'                msg = "Nichts gefunden &#175;\\_(&#12484;)_/&#175;";\r\n' +
+'            }\r\n' +
+'            if (msg) {\r\n' +
+'                this.$container.html("<h2 class="main-message">" + msg + "</h2>");\r\n' +
+'            }\r\n' +
+'            return;\r\n' +
+'        }\r\n' +
+'        if (position == p.Stream.POSITION.PREPEND) {\r\n' +
+'            var prevHeight = $("#main-view").height();\r\n' +
+'            var firstRow = this.$streamContainer.find(".stream-row:first");\r\n' +
+'            var placeholders = firstRow.find(".thumb-placeholder");\r\n' +
+'            var numPlaceholders = placeholders.length\r\n' +
+'            if (numPlaceholders) {\r\n' +
+'                var html = "";\r\n' +
+'               for (var i = 0; i < numPlaceholders; i++) {\r\n' +
+'                   html += this.buildItem(items[items.length - numPlaceholders - 1 + i]);\r\n' +
+'               }\r\n' +
+'               placeholders.remove();\r\n' +
+'               firstRow.prepend(this.prepareThumbsForInsertion(html));\r\n' +
+'           }\r\n' +
+'          var html = this.buildItemRows(items, 0, items.length - numPlaceholders, position);\r\n' +
+'          this.$streamContainer.prepend(this.prepareThumbsForInsertion(html));\r\n' +
+'          var newHeight = $("#main-view").height() - (117 - 52);\r\n' +
+'          $(document).scrollTop($(document).scrollTop() + (newHeight - prevHeight));\r\n' +
+'      } else if (position == p.Stream.POSITION.APPEND) {\r\n' +
+'          var lastRow = this.$streamContainer.find(".stream-row:last");\r\n' +
+'          var itemCount = lastRow.find(".thumb").length;\r\n' +
+'          var fill = 0;\r\n' +
+'          if (itemCount % this.itemsPerRow != 0) {\r\n' +
+'              var html = "";\r\n' +
+'              fill = this.itemsPerRow - itemCount;\r\n' +
+'              for (var i = 0; i < fill; i++) {\r\n' +
+'                   html += this.buildItem(items[i]);\r\n' +
+'              }\r\n' +
+'              lastRow.append(this.prepareThumbsForInsertion(html));\r\n' +
+'          }\r\n' +
+'          var html = this.buildItemRows(items, fill, items.length, position);\r\n' +
+'          this.$streamContainer.append(this.prepareThumbsForInsertion(html));\r\n' +
+'      }\r\n' +
+'      if (this.jumpToItem) {\r\n' +
+'          var target = $("#item-" + this.jumpToItem);\r\n' +
+'          if (target.length) {\r\n' +
+'              $(document).scrollTop(target.offset().top - CONFIG.HEADER_HEIGHT);\r\n' +
+'              this.showItem(target, this.SCROLL.THUMB);\r\n' +
+'          }\r\n' +
+'          this.jumpToItem = null;\r\n' +
+'      }\r\n' +
+'      this.loadInProgress = false;\r\n' +
+'      this.hasItems = true;\r\n' +
 '   };' ;
 s.parentNode.insertBefore(g, s);
 
