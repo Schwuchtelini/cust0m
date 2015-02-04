@@ -77,7 +77,7 @@ g.text = 'cust0m = {};\r\n' +
 '               tempItems.push(data.items[i]);\r\n' +
 '           }\r\n' +
 '       }\r\n' +
-'debugger;\r\n' +
+'\r\n' +
 '       data.items = tempItems;\r\n' +
 '        this.reached.start = data.atStart || this.reached.start;\r\n' +
 '        this.reached.end = data.atEnd || this.reached.end;\r\n' +
