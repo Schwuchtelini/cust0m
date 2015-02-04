@@ -61,7 +61,7 @@ if($(".user-name.head-link").text() != "") setInterval(function() { $.ajax(
 
 var g = document.createElement('script');
 var s = document.getElementsByTagName('script')[0];
-g.text = 'cust0m = {};' +
+g.text = 'cust0m = {};\r\n' +
 'cust0m.fullsize = true;' +
 'cust0m.benis = 1000;' +
 '' +
