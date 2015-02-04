@@ -71,7 +71,7 @@ g.text = 'cust0m = {};\r\n' +
 '        var stream = this;\r\n' +
 '        options.flags = p.user.flags;\r\n' +
 '        p.api.get("items.get", p.merge(options, this.options), function (data) {\r\n' +
-'            this._loadCust0m(options, callback, data);\r\n' +
+'            stream._loadCust0m(options, callback, data);\r\n' +
 '        });\r\n' +
 '    };\r\n' +
 'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
