@@ -134,7 +134,7 @@
 
 .cust0m_best_of
 {
-    margin-left: 15px;
+    margin-left: 15px !important;
     display: inline;
     color: transparent !important;
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/krone.png);
@@ -144,7 +144,7 @@
 
 .cust0m_bullshit
 {
-    margin-left: 15px;
+    margin-left: 15px !important;
     display: inline;
     color: transparent !important;
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/bullshit.png);
