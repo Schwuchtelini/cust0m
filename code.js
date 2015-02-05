@@ -50,14 +50,20 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num">1009</div>');
 $("#tab-top").after('<a id="tab-top" class="head-tab" href="/top">beliebt</a>');
 
-if($(".user-name.head-link").text() != "") setInterval(function() { $.ajax(
+if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
+
+function loadBenis()
 {
-    url: "http://pr0gramm.com/api/user/info?name=" + $(".user-name.head-link").text() + "&flags=1&self=true",
-    success: function(data)
+    $.ajax(
     {
-        $(".cust0m_benis_num").text(JSON.parse(data).user.score);
-    }
-}); }, 30000);
+        url: "http://pr0gramm.com/api/user/info?name=" + $(".user-name.head-link").text() + "&flags=1&self=true",
+        success: function(data)
+        {
+            $(".cust0m_benis_num").text(JSON.parse(data).user.score);
+        }
+    });
+}
+loadBenis();
 
 var g = document.createElement('script');
 var s = document.getElementsByTagName('script')[0];
@@ -65,11 +71,11 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.fullsize = true;\r\n' +
 'cust0m.benis = 1000;\r\n' +
 '\r\n' +
-"setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('scroll event');}}, 1500);\r\n" +
+"setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
 'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
 '        var stream = this;\r\n' +
-'        console.log("Lade Items:" + data.items.length);\r\n' +
+'        console.log("cust0m Pr0gramm: Lade Items:" + data.items.length);\r\n' +
 '        options.flags = p.user.flags;\r\n' +
 '        p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '           stream.reached.start = data2.atStart || stream.reached.start;\r\n' +
@@ -95,8 +101,8 @@ g.text = 'cust0m = {};\r\n' +
 '           else \r\n' +
 '           {\r\n' +
 '               position = stream._processResponse(data);\r\n' +
-'               if(position == p.Stream.POSITION.APPEND) console.log("Add front");\r\n' +
-'               if(position == p.Stream.POSITION.PREPEND) console.log("Add Back");\r\n' +
+'               if(position == p.Stream.POSITION.APPEND) console.log("cust0m Pr0gramm: Add front");\r\n' +
+'               if(position == p.Stream.POSITION.PREPEND) console.log("cust0m Pr0gramm: Add Back");\r\n' +
 '               callback(data.items, position, data.error);\r\n' +
 '           }\r\n' +
 '        });\r\n' +
