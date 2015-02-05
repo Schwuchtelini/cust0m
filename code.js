@@ -92,6 +92,8 @@ g.text = 'cust0m = {};\r\n' +
 '               newestId = data2.items[0].id;\r\n' +
 '           }\r\n' +
 '           var position = (oldestId < stream._oldestId) ? p.Stream.POSITION.APPEND : p.Stream.POSITION.PREPEND;\r\n' +
+'           _oldestId = stream._oldestId;\r\n' +
+'           _newestId = stream._newestId;\r\n' +
 '           stream._oldestId = Math.min(stream._oldestId, oldestId);\r\n' +
 '           stream._newestId = Math.max(stream._newestId, newestId);\r\n' +
 '           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
@@ -101,6 +103,8 @@ g.text = 'cust0m = {};\r\n' +
 '           else if(data.items.length < 120 && !stream.reached.start) { console.log("Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data); }\r\n' +
 '           else \r\n' +
 '           {\r\n' +
+'               stream._oldestId = _oldestId;\r\n' +
+'               stream._newestId = _newestId;\r\n' +
 '               position = stream._processResponse(data);\r\n' +
 '               if(position == p.Stream.POSITION.APPEND) console.log("cust0m Pr0gramm: Add to front");\r\n' +
 '               if(position == p.Stream.POSITION.PREPEND) console.log("cust0m Pr0gramm: Add to Back");\r\n' +
