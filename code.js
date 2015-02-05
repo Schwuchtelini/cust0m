@@ -42,13 +42,37 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Best of:</div> \r\n' +
+'        <div id="cust0m_input_bets_of" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
+'        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">Benis</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Bullshit:</div> \r\n' +
+'        <div id="cust0m_input_bullshit" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
+'        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">Benis</div> \r\n' +
+'    </div> \r\n' +
 '    <div class="cust0m_line"></div> \r\n' +
 '    <div id="cust0m_save" class="cust0m_button">speichern</div> \r\n' +
 '    <div id="cust0m_info" class="cust0m_button" style="display: none">gespeichert</div> \r\n' +
 '</div> ');
 
-$(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num">1009</div>');
-$("#tab-top").after('<a id="tab-top" class="head-tab" href="/top">beliebt</a>');
+$(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
+$("#tab-top").after('<a id="tab-top" class="head-tab" href="/top">best of</a><a id="tab-top" class="head-tab" href="/top">bullshit</a>');
 
 if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
 
@@ -146,7 +170,7 @@ g.text = 'cust0m = {};\r\n' +
 '        return position;\r\n' +
 '    }; \r\n' +
 '\r\n' +
-'p.View.Stream.Main.prototype.loaded2 = function (items, position, error) {\r\n' +
+'p.View.Stream.Main.prototype.loadedOFF = function (items, position, error) {\r\n' +
 '        this.loadedBound = this.loaded.bind(this);\r\n' +
 '        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
 '        this.$container.find(".spinner").remove();\r\n' +
@@ -208,7 +232,7 @@ g.text = 'cust0m = {};\r\n' +
 '      this.hasItems = true;\r\n' +
 '      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
-"p.View.Stream.Main.prototype.buildItem2 = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
+"p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
 
 standard =
