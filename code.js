@@ -75,7 +75,8 @@ g.text = 'cust0m = {};\r\n' +
 '\r\n' +
 'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
 '        var stream = this;\r\n' +
-'        console.log("cust0m Pr0gramm: Lade Items:" + data.items.length);\r\n' +
+'        debugger\r\n' +
+'        console.log("cust0m Pr0gramm: Lade Items. Bis jetzt: " + data.items.length);\r\n' +
 '        options.flags = p.user.flags;\r\n' +
 '        p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '           stream.reached.start = data2.atStart || stream.reached.start;\r\n' +
@@ -101,8 +102,8 @@ g.text = 'cust0m = {};\r\n' +
 '           else \r\n' +
 '           {\r\n' +
 '               position = stream._processResponse(data);\r\n' +
-'               if(position == p.Stream.POSITION.APPEND) console.log("cust0m Pr0gramm: Add front");\r\n' +
-'               if(position == p.Stream.POSITION.PREPEND) console.log("cust0m Pr0gramm: Add Back");\r\n' +
+'               if(position == p.Stream.POSITION.APPEND) console.log("cust0m Pr0gramm: Add to front");\r\n' +
+'               if(position == p.Stream.POSITION.PREPEND) console.log("cust0m Pr0gramm: Add to Back");\r\n' +
 '               callback(data.items, position, data.error);\r\n' +
 '           }\r\n' +
 '        });\r\n' +
