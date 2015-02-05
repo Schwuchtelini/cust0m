@@ -151,3 +151,13 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.cust0m_bullshit:hover
+{
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/bullshit_active.png);
+}
+
+.cust0m_best_of:hover
+{
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/krone_active.png);
+}
