@@ -72,7 +72,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 '</div> ');
 
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
-$("#tab-top").after('<a id="tab-top" class="head-tab" href="/top">best of</a><a id="tab-top" class="head-tab" href="/top">bullshit</a>');
+$("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" href="/top">mm </a><a id="tab-top" class="head-tab cust0m_bullshit" href="/top">mm </a>');
 
 if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
 

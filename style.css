@@ -130,3 +130,24 @@
     display: inline;
     color: #F5F7F6;
 }
+
+
+.cust0m_best_of
+{
+    margin-left: 15px;
+    display: inline;
+    color: transparent;
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/krone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cust0m_bullshit
+{
+    margin-left: 15px;
+    display: inline;
+    color: transparent;
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/bullshit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
