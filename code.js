@@ -98,8 +98,8 @@ g.text = 'cust0m = {};\r\n' +
 '           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
-'           if(data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data); }\r\n' +
-'           else if(data.items.length < 120 && !stream.reached.start) { console.log("Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data); }\r\n' +
+'           if(data.items.length < p.View.Stream.Main.itemsPerRow && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data); }\r\n' +
+'           else if(data.items.length < p.View.Stream.Main.itemsPerRow && !stream.reached.start) { console.log("Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data); }\r\n' +
 '           else \r\n' +
 '           {\r\n' +
 '               stream._oldestId = _oldestId;\r\n' +
