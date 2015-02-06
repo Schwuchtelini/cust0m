@@ -97,7 +97,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit_benis = -200;\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
-'cust0m.free_click = false;\r\n' +
+'cust0m.disableLoad = false;\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
 '   debugger\r\n' +
@@ -105,7 +105,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_best_of").addClass("cust0m_active");\r\n' +
 '   $("#tab-top").addClass("cust0m_unactive");\r\n' +
 '   cust0m.best_of = true;\r\n' +
-'   cust0m.free_click = true;\r\n' +
+'   cust0m.disableLoad = false;\r\n' +
 '   p.navigateTo("top?asd",0);\r\n' +
 '};\r\n' +
 'cust0m.load_bullshit = function ()\r\n' +
@@ -114,7 +114,7 @@ g.text = 'cust0m = {};\r\n' +
 '   cust0m.disable_best_of();\r\n' +
 '   $(".cust0m_bullshit").addClass("cust0m_active");\r\n' +
 '   $("#tab-new").addClass("cust0m_unactive");\r\n' +
-'   cust0m.free_click = true;\r\n' +
+'   cust0m.disableLoad = false;\r\n' +
 '   p.navigateTo("new?asd",0);\r\n' +
 '};\r\n' +
 'cust0m.disable_best_of = function ()\r\n' +
@@ -269,20 +269,15 @@ g.text = 'cust0m = {};\r\n' +
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
 '        debugger;\r\n' +
-'        if(cust0m.bullshit && location.indexOf("new") != 0) cust0m.disable_bullshit();\r\n' +
-'        if(cust0m.best_of && location.indexOf("top") != 0) cust0m.disable_best_of();\r\n' +
-'        this._navigateSilent = (mode == p.NAVIGATE.SILENT);\r\n' +
-'        if (this._hasPushState) {\r\n' +
-'            var url = "/" + location;\r\n' +
-'            window.history.pushState({}, document.title, url);\r\n' +
-'            this._dispatch(mode == p.NAVIGATE.FORCE);\r\n' +
-'        } else {\r\n' +
-'            var url = document.location.href.replace(/#.*$/, "") + "#" + location;\r\n' +
-'            document.location.assign(url);\r\n' +
+'        if(cust0m.bullshit && (location.indexOf("new") != 0 || (!cust0m.disableLoad && location == "new")) cust0m.disable_bullshit();\r\n' +
+'        if(cust0m.best_of && (location.indexOf("top") != 0 || (!cust0m.disableLoad && location == "top")) cust0m.disable_best_of();\r\n' +
+'        if(location == documemnt.href)\r\n' +
+'        {\r\n' +
+'            p.navigateToOrginal(location == "top" ? "new" : "top", mode);\r\n' +
+'            setTimeout(function() {p.navigateToOrginal(location, mode);}, 200);\r\n' +
 '        }\r\n' +
-'        if (CONFIG.ANALYTICS.ENABLED && window._gaq) {\r\n' +
-'           _gaq.push(["_trackPageview", location]);\r\n' +
-'        }\r\n' +
+'        else p.navigateToOrginal(location, mode);\r\n' +
+'   cust0m.disableLoad = true;\r\n' +
 '    },\r\n' +
 "p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
