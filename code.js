@@ -404,7 +404,8 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_bullshit, .cust0m_bullshit_middle', 'display: none');
+                changeCss('.cust0m_bullshit', 'display: none');
+                changeCss('.cust0m_bullshit_middle', 'display: none');
             });
         }
 
@@ -420,7 +421,8 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_best_of, .cust0m_best_of_middle', 'display: none');
+                changeCss('.cust0m_best_of', 'display: none');
+                 changeCss('.cust0m_best_of_middle', 'display: none');
             });
         }
         $(window).resize();
