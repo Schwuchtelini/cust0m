@@ -268,6 +268,21 @@ g.text = 'cust0m = {};\r\n' +
 '      this.hasItems = true;\r\n' +
 '      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
+'p.navigateTo = function (location, mode) {' +
+'    debugger;' +
+'        this._navigateSilent = (mode == p.NAVIGATE.SILENT);' +
+'        if (this._hasPushState) {' +
+'            var url = "/" + location;' +
+'            window.history.pushState({}, document.title, url);' +
+'            this._dispatch(mode == p.NAVIGATE.FORCE);' +
+'        } else {' +
+'            var url = document.location.href.replace(/#.*$/, "") + "#" + location;' +
+'            document.location.assign(url);' +
+'        }' +
+'        if (CONFIG.ANALYTICS.ENABLED && window._gaq) {' +
+'           _gaq.push(["_trackPageview", location]);' +
+'        }' +
+'    },' +
 "p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
 
