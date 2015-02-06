@@ -130,7 +130,8 @@ g.text = 'cust0m = {};\r\n' +
 '};\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
-'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
+'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
+'        round++;\r\n' +
 '        var stream = this;\r\n' +
 '        options.flags = p.user.flags;\r\n' +
 '        p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
@@ -155,9 +156,9 @@ g.text = 'cust0m = {};\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
 '           console.log("cust0m Pr0gramm: Lade Items. Bis jetzt: " + data.items.length);\r\n' +
-'           if(cust0m.bullshit || cust0m.best_of) $(".spinner").text(((data.items.length/120) + "").substr(0, 5));\r\n' +
-'           if(data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data); }\r\n' +
-'           else if(data.items.length < 120 && !stream.reached.start) { console.log("cust0m Pr0gramm: Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data); }\r\n' +
+'           if((cust0m.bullshit || cust0m.best_of) && round > 5) $(".spinner").text(((data.items.length/120) + "").substr(0, 5));\r\n' +
+'           if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data, round); }\r\n' +
+'           else if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && !stream.reached.start) { console.log("cust0m Pr0gramm: Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data, round); }\r\n' +
 '           else \r\n' +
 '           {\r\n' +
 '               stream._oldestId = _oldestId;\r\n' +
@@ -170,7 +171,7 @@ g.text = 'cust0m = {};\r\n' +
 '        });\r\n' +
 '    };\r\n' +
 'p.Stream.prototype._load = function (options, callback) {\r\n' +
-'        this._loadCust0m(options, callback, {items: []});\r\n' +
+'        this._loadCust0m(options, callback, {items: []}, 0);\r\n' +
 '    };\r\n' +
 'p.Stream.prototype._processResponse = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
