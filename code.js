@@ -72,7 +72,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 '</div> ');
 
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
-$("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" onclick="cust0m.load_bullshit();">mm </a>');
+$("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" href="/top" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" href="/new" onclick="cust0m.load_bullshit();">mm </a>');
 
 if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
 
@@ -102,13 +102,11 @@ g.text = 'cust0m = {};\r\n' +
 '   debugger\r\n' +
 '   cust0m.bullshit = false;\r\n' +
 '   cust0m.best_of = true;\r\n' +
-'   document.location.href = "http://pr0gramm.com/top"\r\n' +
 '};\r\n' +
 'cust0m.load_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = true;\r\n' +
 '   cust0m.best_of = false;\r\n' +
-'   document.location.href = "http://pr0gramm.com/new"\r\n' +
 '};\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
