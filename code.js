@@ -285,10 +285,15 @@ s.parentNode.insertBefore(g, s);
 standard =
 {
     anzahl: 20,
+    anzahl_min: 3,
+    anzahl_max: 9000,
     width: 0,
+    width_min: 0,
+    width_max: 0,
     pos: "ON",
     thumbs: 100,
     thumbs_min: 30,
+    thumbs_max: 500,
     admin: "OFF",
     benis: "OFF",
     fullsize: "OFF",
@@ -317,6 +322,16 @@ function save_options()
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
         bullshit_benis: $('#cust0m_input_bullshit_benis').text()
     };
+    for (var k in set)
+    {
+        if (standard[k + "_min"] != undefined)
+        {
+            if(parseInt(set[k]) == set[k]) set[k] = parseInt(set[k]);
+            else set[k] = standard[k];
+            set[k] = Math.max(standard[k + "min"], Math.min(standard[k + "max"], parseInt(items.best_of_benis)));
+        }
+        else if(set[k] != "ON" && set[k] != "OFF") set[k] = "OFF";
+    }
     chrome.storage.local.set(set,
     function ()
     {
@@ -388,25 +403,15 @@ function update_settings()
     chrome.storage.local.get(standard,
     function (items)
     {
-        anzahl = standard.anzahl;
-        if(parseInt(items.anzahl) == items.anzahl) anzahl = parseInt(items.anzahl);
+        anzahl = items.anzahl;
 
-        width = standard.width;
-        if(parseInt(items.width) == items.width) width = parseInt(items.width);
+        width = items.width;
 
-        thumbs = standard.thumbs;
-        if(parseInt(items.thumbs) == items.thumbs)
-        {
-            thumbs = parseInt(items.thumbs);
-            if(thumbs < standard.thumbs_min) thumbs = standard.thumbs_min;
-        }
-        thumbs /= 100;
+        thumbs = items.thumbs / 100;
 
-        best_of_benis = standard.best_of_benis;
-        if(parseInt(items.best_of_benis) == items.best_of_benis) best_of_benis = Math.max(standard.best_of_benis_min, Math.min(standard.best_of_benis_max, parseInt(items.best_of_benis)));
+        best_of_benis = items.best_of_benis;
 
-        bullshit_benis = standard.bullshit_benis;
-        if(parseInt(items.bullshit_benis) == items.bullshit_benis) bullshit_benis = Math.max(standard.bullshit_benis_min, Math.min(standard.bullshit_benis_max, parseInt(items.bullshit_benis)));
+        bullshit_benis = items.bullshit_benis;
 
         var g = document.createElement('script');
         var s = document.getElementsByTagName('script')[0];
