@@ -106,7 +106,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $("#tab-top").addClass("cust0m_unactive");\r\n' +
 '   cust0m.best_of = true;\r\n' +
 '   cust0m.free_click = true;\r\n' +
-'   p.navigateTo("top?",0);\r\n' +
+'   p.navigateTo("top?asd",0);\r\n' +
 '};\r\n' +
 'cust0m.load_bullshit = function ()\r\n' +
 '{\r\n' +
@@ -115,7 +115,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").addClass("cust0m_active");\r\n' +
 '   $("#tab-new").addClass("cust0m_unactive");\r\n' +
 '   cust0m.free_click = true;\r\n' +
-'   p.navigateTo("new?",0);\r\n' +
+'   p.navigateTo("new?asd",0);\r\n' +
 '};\r\n' +
 'cust0m.disable_best_of = function ()\r\n' +
 '{\r\n' +
