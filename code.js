@@ -100,7 +100,6 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.disableLoad = false;\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
-'   debugger\r\n' +
 '   cust0m.disable_bullshit();\r\n' +
 '   $(".cust0m_best_of").addClass("cust0m_active");\r\n' +
 '   $("#tab-top").addClass("cust0m_unactive");\r\n' +
@@ -268,7 +267,6 @@ g.text = 'cust0m = {};\r\n' +
 '   };' +
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
-'        debugger;\r\n' +
 '        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new" && mode == 0))) cust0m.disable_bullshit();\r\n' +
 '        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top" && mode == 0))) cust0m.disable_best_of();\r\n' +
 '        if((location == "top" || location == "new") && "http://pr0gramm.com/" + location == document.location.href)\r\n' +
@@ -403,6 +401,7 @@ function update_settings()
     chrome.storage.local.get(standard,
     function (items)
     {
+        debugger;
         anzahl = items.anzahl;
 
         width = items.width;
