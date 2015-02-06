@@ -271,7 +271,7 @@ g.text = 'cust0m = {};\r\n' +
 '        debugger;\r\n' +
 '        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new"))) cust0m.disable_bullshit();\r\n' +
 '        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top"))) cust0m.disable_best_of();\r\n' +
-'        if("http://pr0gramm.com/" + location == document.location.href)\r\n' +
+'        if(location == "top" || location == "new" && "http://pr0gramm.com/" + location == document.location.href)\r\n' +
 '        {\r\n' +
 '            p.navigateToOrginal(location == "top" ? "new" : "top", mode);\r\n' +
 '            setTimeout(function() {p.navigateToOrginal(location, mode);}, 500);\r\n' +
