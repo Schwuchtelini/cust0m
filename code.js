@@ -287,8 +287,8 @@ standard =
     best_of_benis_max: 1000,
     best_of_benis_min: -9000,
     bullshit_benis: -200,
-    bullshit_benis_max: -1000,
-    bullshit_benis_min: 9000
+    bullshit_benis_max: 9000,
+    bullshit_benis_min: -1000
 };
 
 function save_options()
