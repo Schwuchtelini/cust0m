@@ -328,7 +328,7 @@ function save_options()
             else set[k] = standard[k];
             set[k] = Math.max(standard[k + "min"], Math.min(standard[k + "max"], parseInt(set[k])));
         }
-        else if(set[k] != "ON" && set[k] != "OFF") set[k] = "OFF";
+        else if(set[k] != "ON") set[k] = "OFF";
     }
     chrome.storage.local.set(set,
     function ()
