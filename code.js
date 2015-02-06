@@ -156,7 +156,7 @@ g.text = 'cust0m = {};\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
 '           console.log("cust0m Pr0gramm: Lade Items. Bis jetzt: " + data.items.length + " mit " + options);\r\n' +
-'           if((cust0m.bullshit || cust0m.best_of) && round > 50) $(".spinner").text((((data.items.length/120) * 100).substr(0, 3) + "%"));\r\n' +
+'           if((cust0m.bullshit || cust0m.best_of) && round > 50) $(".spinner").text((((data.items.length/120) * 100 + "").substr(0, 3) + "%"));\r\n' +
 '           if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && position == p.Stream.POSITION.PREPEND && !stream.reached.start) { console.log("cust0m Pr0gramm: Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data, round); }\r\n' +
 '           else if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data, round); }\r\n' +
 '           else \r\n' +
