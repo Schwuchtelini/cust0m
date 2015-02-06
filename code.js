@@ -392,10 +392,10 @@ function update_settings()
         thumbs /= 100;
 
         best_of_benis = standard.best_of_benis;
-        if(parseInt(items.best_of_benis) == items.best_of_benis) best_of_benis = Math.max(standard.best_of_benis_min, Math.min(standard.best_of_benis_max, parseInt(items.width)));
+        if(parseInt(items.best_of_benis) == items.best_of_benis) best_of_benis = Math.max(standard.best_of_benis_min, Math.min(standard.best_of_benis_max, parseInt(items.best_of_benis)));
 
         bullshit_benis = standard.bullshit_benis;
-        if(parseInt(items.bullshit_benis) == items.bullshit_benis) bullshit_benis = Math.max(standard.bullshit_benis_min, Math.min(standard.bullshit_benis_max, parseInt(items.width)));
+        if(parseInt(items.bullshit_benis) == items.bullshit_benis) bullshit_benis = Math.max(standard.bullshit_benis_min, Math.min(standard.bullshit_benis_max, parseInt(items.bullshit_benis)));
 
         var g = document.createElement('script');
         var s = document.getElementsByTagName('script')[0];
