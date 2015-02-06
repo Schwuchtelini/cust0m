@@ -49,7 +49,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
 '        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
@@ -61,7 +61,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
 '        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
@@ -244,7 +244,11 @@ standard =
     thumbs_min: 30,
     admin: "OFF",
     benis: "OFF",
-    fullsize: "OFF"
+    fullsize: "OFF",
+    best_of: "ON",
+    bullshit: "ON",
+    best_of_benis: 500,
+    bullshit_benis: -200,
 };
 
 function save_options()
@@ -256,7 +260,11 @@ function save_options()
         admin: $('#cust0m_input_admin .active').text(),
         thumbs: $('#cust0m_input_thumbs').text(),
         benis: $('#cust0m_input_benis .active').text(),
-        fullsize: $('#cust0m_input_benis .active').text()
+        fullsize: $('#cust0m_input_benis .active').text(),
+        best_of: $('#cust0m_input_best_of .active').text(),
+        bullshit: $('#cust0m_input_bullshit .active').text(),
+        best_of_benis: $('#cust0m_input_best_of_benis').text(),
+        bullshit_benis: $('#cust0m_input_bullshit_benis').text()
     };
     chrome.storage.local.set(set,
     function ()
@@ -296,6 +304,16 @@ function restore_options()
         else $('#cust0m_input_fullsize .cust0m_trigger_off').addClass("active");
 
         $('#cust0m_input_thumbs').text(items.thumbs);
+
+        $('#cust0m_input_bullshit .cust0m_trigger').removeClass("active");
+        if(items.bullshit == "ON") $('#cust0m_input_bullshit .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_bullshit .cust0m_trigger_off').addClass("active");
+        $('#cust0m_input_bullshit_benis').text(items.bullshit_benis);
+
+        $('#cust0m_input_best_of .cust0m_trigger').removeClass("active");
+        if(items.best_of == "ON") $('#cust0m_input__best_of .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input__best_of .cust0m_trigger_off').addClass("active");
+        $('#cust0m_input_best_of_benis').text(items.best_of_benis);
     });
 }
 restore_options();
@@ -371,6 +389,38 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.cust0m_benis_head, .cust0m_benis_num', 'display: none');
+            });
+        }
+
+        if(items.bullshit == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_bullshit', 'display: inline');
+                changeCss('.cust0m_bullshit_middle', 'display: block');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_bullshit, .cust0m_bullshit_middle', 'display: none');
+            });
+        }
+
+        if(items.best_of == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_best_of', 'display: inline');
+                changeCss('.cust0m_best_of_middle', 'display: block');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_best_of, .cust0m_best_of_middle', 'display: none');
             });
         }
         $(window).resize();

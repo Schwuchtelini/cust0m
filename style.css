@@ -140,6 +140,7 @@
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/krone.png);
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .cust0m_bullshit
@@ -150,6 +151,7 @@
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/bullshit.png);
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .cust0m_bullshit:hover
