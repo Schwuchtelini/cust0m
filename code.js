@@ -311,8 +311,8 @@ function restore_options()
         $('#cust0m_input_bullshit_benis').text(items.bullshit_benis);
 
         $('#cust0m_input_best_of .cust0m_trigger').removeClass("active");
-        if(items.best_of == "ON") $('#cust0m_input__best_of .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input__best_of .cust0m_trigger_off').addClass("active");
+        if(items.best_of == "ON") $('#cust0m_input_best_of .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_best_of .cust0m_trigger_off').addClass("active");
         $('#cust0m_input_best_of_benis').text(items.best_of_benis);
     });
 }
