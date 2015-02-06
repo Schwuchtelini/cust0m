@@ -104,14 +104,14 @@ g.text = 'cust0m = {};\r\n' +
 '   cust0m.bullshit = false;\r\n' +
 '   cust0m.best_of = true;\r\n' +
 '   cust0m.free_click = true;\r\n' +
-'   $("a#tab-top.head-tab").click();\r\n' +
+'   p.reload();\r\n' +
 '};\r\n' +
 'cust0m.load_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = true;\r\n' +
 '   cust0m.best_of = false;\r\n' +
 '   cust0m.free_click = true;\r\n' +
-'   $("a#tab-new.head-tab").click();\r\n' +
+'   p.reload();\r\n' +
 '};\r\n' +
 '$("a#tab-top.head-tab").click().click(function()\r\n' +
 '{\r\n' +
