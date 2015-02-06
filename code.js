@@ -349,9 +349,9 @@ function restore_options()
     chrome.storage.local.get(standard,
     function (items)
     {
-        $('#cust0m_input_anzahl').text(items.anzahl);
+        $('#cust0m_input_anzahl').html(items.anzahl);
 
-        $('#cust0m_input_width').text(items.width);
+        $('#cust0m_input_width').html(items.width);
 
         $('#cust0m_input_pos .cust0m_trigger').removeClass("active");
         if(items.pos == "ON") $('#cust0m_input_pos .cust0m_trigger_on').addClass("active");
@@ -369,7 +369,7 @@ function restore_options()
         if(items.fullsize == "ON") $('#cust0m_input_fullsize .cust0m_trigger_on').addClass("active");
         else $('#cust0m_input_fullsize .cust0m_trigger_off').addClass("active");
 
-        $('#cust0m_input_thumbs').text(items.thumbs);
+        $('#cust0m_input_thumbs').html(items.thumbs);
 
         $('#cust0m_input_bullshit .cust0m_trigger').removeClass("active");
         if(items.bullshit == "ON") $('#cust0m_input_bullshit .cust0m_trigger_on').addClass("active");
