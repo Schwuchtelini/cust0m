@@ -104,16 +104,16 @@ g.text = 'cust0m = {};\r\n' +
 '   cust0m.bullshit = false;\r\n' +
 '   cust0m.best_of = true;\r\n' +
 '   cust0m.free_click = true;\r\n' +
-'   $("a#tab-top").click();\r\n' +
+'   $("a#tab-top.head-tab").click();\r\n' +
 '};\r\n' +
 'cust0m.load_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = true;\r\n' +
 '   cust0m.best_of = false;\r\n' +
 '   cust0m.free_click = true;\r\n' +
-'   $("a#tab-new").click();\r\n' +
+'   $("a#tab-new.head-tab").click();\r\n' +
 '};\r\n' +
-'$("a#tab-top").click().click(function()\r\n' +
+'$("a#tab-top.head-tab").click().click(function()\r\n' +
 '{\r\n' +
 '   if(!cust0m.free_click)\r\n' +
 '   {\r\n' +
@@ -122,7 +122,7 @@ g.text = 'cust0m = {};\r\n' +
 '   }\r\n' +
 '   cust0m.free_click = false;\r\n' +
 '});\r\n' +
-'$("a#tab-new").click().click(function()\r\n' +
+'$("a#tab-new.head-tab").click().click(function()\r\n' +
 '{\r\n' +
 '   if(!cust0m.free_click)\r\n' +
 '   {\r\n' +
