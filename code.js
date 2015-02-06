@@ -152,16 +152,16 @@ g.text = 'cust0m = {};\r\n' +
 '           _newestId = stream._newestId;\r\n' +
 '           stream._oldestId = Math.min(stream._oldestId, oldestId);\r\n' +
 '           stream._newestId = Math.max(stream._newestId, newestId);\r\n' +
-'           for (var i = 0; i < data2.items.length; i++) if ((!cust0m.best_of && !cust0m.bullshit) || (cust0m.best_of && data2.items[i].up - data2.items[i].down > cust0m.best_of_benis) || (cust0m.bullshit && data2.items[i].up - data2.items[i].down < cust0m.bullshit_benis)) data.items.push(data2.items[i]);\r\n' +
+'           for (var i = 0; i < data2.items.length; i++) if ( !((cust0m.bullshit || cust0m.best_of) && (options.newer != undefined || options.older != undefined)) || (!cust0m.best_of && !cust0m.bullshit) || (cust0m.best_of && data2.items[i].up - data2.items[i].down > cust0m.best_of_benis) || (cust0m.bullshit && data2.items[i].up - data2.items[i].down < cust0m.bullshit_benis)) data.items.push(data2.items[i]);\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
 '           console.log("cust0m Pr0gramm: Lade Items. Bis jetzt: " + data.items.length + " mit " + options);\r\n' +
-'           if((cust0m.bullshit || cust0m.best_of) && round > 50) $(".spinner").text((((data.items.length/120) * 100)).substr(0, 3) + "%");\r\n' +
-'           if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data, round); }\r\n' +
-'           else if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && !stream.reached.start) { console.log("cust0m Pr0gramm: Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data, round); }\r\n' +
+'           if((cust0m.bullshit || cust0m.best_of) && (options.newer != undefined || options.older != undefined) && round > 50) $(".spinner").text((((data.items.length/120) * 100)).substr(0, 3) + "%");\r\n' +
+'           if((cust0m.bullshit || cust0m.best_of) && (options.newer != undefined || options.older != undefined) && data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data, round); }\r\n' +
+'           else if((cust0m.bullshit || cust0m.best_of) && (options.newer != undefined || options.older != undefined) && data.items.length < 120 && !stream.reached.start) { console.log("cust0m Pr0gramm: Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data, round); }\r\n' +
 '           else \r\n' +
 '           {\r\n' +
-'           if((cust0m.bullshit || cust0m.best_of) && round > 50) $(".spinner").text("");\r\n' +
+'           if((cust0m.bullshit || cust0m.best_of) && (options.newer != undefined || options.older != undefined) && round > 50) $(".spinner").text("");\r\n' +
 '               stream._oldestId = _oldestId;\r\n' +
 '               stream._newestId = _newestId;\r\n' +
 '               position = stream._processResponse(data);\r\n' +
