@@ -106,7 +106,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $("#tab-top").addClass("cust0m_unactive");\r\n' +
 '   cust0m.best_of = true;\r\n' +
 '   cust0m.disableLoad = false;\r\n' +
-'   p.navigateTo("top?asd",0);\r\n' +
+'   p.navigateTo("top",0);\r\n' +
 '};\r\n' +
 'cust0m.load_bullshit = function ()\r\n' +
 '{\r\n' +
@@ -115,7 +115,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").addClass("cust0m_active");\r\n' +
 '   $("#tab-new").addClass("cust0m_unactive");\r\n' +
 '   cust0m.disableLoad = false;\r\n' +
-'   p.navigateTo("new?asd",0);\r\n' +
+'   p.navigateTo("new",0);\r\n' +
 '};\r\n' +
 'cust0m.disable_best_of = function ()\r\n' +
 '{\r\n' +
@@ -271,7 +271,7 @@ g.text = 'cust0m = {};\r\n' +
 '        debugger;\r\n' +
 '        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new"))) cust0m.disable_bullshit();\r\n' +
 '        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top"))) cust0m.disable_best_of();\r\n' +
-'        if(location == "top" || location == "new" && "http://pr0gramm.com/" + location == document.location.href)\r\n' +
+'        if((location == "top" || location == "new") && "http://pr0gramm.com/" + location == document.location.href)\r\n' +
 '        {\r\n' +
 '            p.navigateToOrginal(location == "top" ? "new" : "top", mode);\r\n' +
 '            setTimeout(function() {p.navigateToOrginal(location, mode);}, 500);\r\n' +
