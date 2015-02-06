@@ -274,7 +274,7 @@ g.text = 'cust0m = {};\r\n' +
 '        if(location == documemnt.href)\r\n' +
 '        {\r\n' +
 '            p.navigateToOrginal(location == "top" ? "new" : "top", mode);\r\n' +
-'            setTimeout(function() {p.navigateToOrginal(location, mode);}, 200);\r\n' +
+'            setTimeout(function() {p.navigateToOrginal(location, mode);}, 500);\r\n' +
 '        }\r\n' +
 '        else p.navigateToOrginal(location, mode);\r\n' +
 '   cust0m.disableLoad = true;\r\n' +
