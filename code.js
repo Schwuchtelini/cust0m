@@ -327,7 +327,7 @@ function save_options()
         {
             if(parseInt(set[k]) == set[k]) set[k] = parseInt(set[k]);
             else set[k] = standard[k];
-            set[k] = Math.max(standard[k + "min"], Math.min(standard[k + "max"], parseInt(set[k])));
+            set[k] = Math.max(standard[k + "_min"], Math.min(standard[k + "_max"], parseInt(set[k])));
         }
         else if(set[k] != "ON") set[k] = "OFF";
     }
