@@ -120,7 +120,7 @@ g.text = 'cust0m = {};\r\n' +
 '      cust0m.bullshit = false;\r\n' +
 '      cust0m.best_of = false;\r\n' +
 '       cust0m.free_click = false;\r\n' +
-'   });\r\n' +
+'   }\r\n' +
 '});\r\n' +
 '$("#tab-new").click().click(function()\r\n' +
 '{\r\n' +
@@ -129,7 +129,7 @@ g.text = 'cust0m = {};\r\n' +
 '      cust0m.bullshit = false;\r\n' +
 '      cust0m.best_of = false;\r\n' +
 '      cust0m.free_click = false;\r\n' +
-'   });\r\n' +
+'   }\r\n' +
 '});\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
