@@ -154,12 +154,17 @@
     cursor: pointer;
 }
 
-.cust0m_bullshit:hover
+.cust0m_bullshit:hover, .cust0m_bullshit.cust0m_active
 {
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/bullshit_active.png);
 }
 
-.cust0m_best_of:hover
+.cust0m_best_of:hover, .cust0m_best_of.cust0m_active
 {
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/krone_active.png);
+}
+
+.cust0m_unactive
+{
+    color: #F5F7F6 !important;
 }
