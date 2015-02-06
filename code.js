@@ -119,13 +119,11 @@ g.text = 'cust0m = {};\r\n' +
 '{\r\n' +
 '   cust0m.best_of = false;\r\n' +
 '   $("cust0m_best_of").removeClass("cust0m_active");\r\n' +
-'   p.navigateTo("top",0);\r\n' +
 '};\r\n' +
 'cust0m.disable_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = false;\r\n' +
 '   $("cust0m_bullshit").removeClass("cust0m_bullshit");\r\n' +
-'   p.navigateTo("new",0);\r\n' +
 '};\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
