@@ -264,8 +264,10 @@ g.text = 'cust0m = {};\r\n' +
 '      this.hasItems = true;\r\n' +
 '      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
+'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
-'    debugger;\r\n' +
+'        if(cust0m.bullshit && location.indexOf("new/") != 0) cust0m.disable_bullshit();\r\n' +
+'        if(cust0m.best_of && location.indexOf("top/") != 0) cust0m.disable_best_of();\r\n' +
 '        this._navigateSilent = (mode == p.NAVIGATE.SILENT);\r\n' +
 '        if (this._hasPushState) {\r\n' +
 '            var url = "/" + location;\r\n' +
