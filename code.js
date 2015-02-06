@@ -322,6 +322,7 @@ function save_options()
     };
     for (var k in set)
     {
+        debugger;
         if (standard[k + "_min"] != undefined)
         {
             if(parseInt(set[k]) == set[k]) set[k] = parseInt(set[k]);
