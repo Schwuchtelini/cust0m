@@ -137,7 +137,7 @@ g.text = 'cust0m = {};\r\n' +
 '        options.flags = p.user.flags;\r\n' +
 '        p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '           stream.reached.start = data2.atStart || stream.reached.start;\r\n' +
-'            stream.reached.end = data2.atEnd || stream.reached.end;\r\n' +
+'           stream.reached.end = data2.atEnd || stream.reached.end;\r\n' +
 '           var oldestId, newestId;\r\n' +
 '           if (stream.options.promoted) {\r\n' +
 '               data2.items.sort(p.Stream.sortByPromoted);\r\n' +
@@ -269,8 +269,8 @@ g.text = 'cust0m = {};\r\n' +
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
 '        debugger;\r\n' +
-'        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new"))) cust0m.disable_bullshit();\r\n' +
-'        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top"))) cust0m.disable_best_of();\r\n' +
+'        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new" && mode == 0))) cust0m.disable_bullshit();\r\n' +
+'        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top" && mode == 0))) cust0m.disable_best_of();\r\n' +
 '        if((location == "top" || location == "new") && "http://pr0gramm.com/" + location == document.location.href)\r\n' +
 '        {\r\n' +
 '            p.navigateToOrginal(location == "top" ? "new" : "top", mode);\r\n' +
