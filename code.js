@@ -102,7 +102,7 @@ g.text = 'cust0m = {};\r\n' +
 '{\r\n' +
 '   debugger\r\n' +
 '   cust0m.disable_bullshit();\r\n' +
-'   $("cust0m_best_of").addClass("cust0m_active");\r\n' +
+'   $(".cust0m_best_of").addClass("cust0m_active");\r\n' +
 '   cust0m.best_of = true;\r\n' +
 '   cust0m.free_click = true;\r\n' +
 '   p.navigateTo("top",0);\r\n' +
@@ -111,19 +111,19 @@ g.text = 'cust0m = {};\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = true;\r\n' +
 '   cust0m.disable_best_of();\r\n' +
-'   $("cust0m_bullshit").addClass("cust0m_active");\r\n' +
+'   $(".cust0m_bullshit").addClass("cust0m_active");\r\n' +
 '   cust0m.free_click = true;\r\n' +
 '   p.navigateTo("new",0);\r\n' +
 '};\r\n' +
 'cust0m.disable_best_of = function ()\r\n' +
 '{\r\n' +
 '   cust0m.best_of = false;\r\n' +
-'   $("cust0m_best_of").removeClass("cust0m_active");\r\n' +
+'   $(".cust0m_best_of").removeClass("cust0m_active");\r\n' +
 '};\r\n' +
 'cust0m.disable_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = false;\r\n' +
-'   $("cust0m_bullshit").removeClass("cust0m_bullshit");\r\n' +
+'   $(".cust0m_bullshit").removeClass("cust0m_bullshit");\r\n' +
 '};\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
