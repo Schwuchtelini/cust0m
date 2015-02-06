@@ -173,3 +173,10 @@
 {
     color: #ee4d2e !important;
 }
+
+.spinner
+{
+    font-size: 50px;
+    text-align: center;
+    color: #aaa;
+}
