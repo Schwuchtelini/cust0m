@@ -72,7 +72,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 '</div> ');
 
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
-$("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" href="/top">mm </a><a id="tab-top" class="head-tab cust0m_bullshit" href="/top">mm </a>');
+$("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick"cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" href="/top" onclick"cust0m.load_bullshit();">mm </a>');
 
 if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
 
@@ -93,8 +93,32 @@ var g = document.createElement('script');
 var s = document.getElementsByTagName('script')[0];
 g.text = 'cust0m = {};\r\n' +
 'cust0m.fullsize = true;\r\n' +
-'cust0m.benis = 1000;\r\n' +
-'\r\n' +
+'cust0m.best_of_benis = 500;\r\n' +
+'cust0m.bullshit_benis = -200;\r\n' +
+'cust0m.bullshit = false;\r\n' +
+'cust0m.best_of = false;\r\n' +
+'cust0m.load_best_of = function ()\r\n' +
+'{\r\n' +
+'   cust0m.bullshit = false;\r\n' +
+'   cust0m.best_of = true;\r\n' +
+'   $("#tab-top").click();\r\n' +
+'};\r\n' +
+'cust0m.load_bullshit = function ()\r\n' +
+'{\r\n' +
+'   cust0m.bullshit = true;\r\n' +
+'   cust0m.best_of = false;\r\n' +
+'   $("#tab-top").click();\r\n' +
+'};\r\n' +
+'$("#tab-top").click().click(function()\r\n' +
+'{\r\n' +
+'   cust0m.bullshit = false;\r\n' +
+'   cust0m.best_of = false;\r\n' +
+'});\r\n' +
+'$("#tab-new").click().click(function()\r\n' +
+'{\r\n' +
+'   cust0m.bullshit = false;\r\n' +
+'   cust0m.best_of = false;\r\n' +
+'});\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
 'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
@@ -119,7 +143,7 @@ g.text = 'cust0m = {};\r\n' +
 '           _newestId = stream._newestId;\r\n' +
 '           stream._oldestId = Math.min(stream._oldestId, oldestId);\r\n' +
 '           stream._newestId = Math.max(stream._newestId, newestId);\r\n' +
-'           for (var i = 0; i < data2.items.length; i++) if ((cust0m.benis >= 0 && data2.items[i].up - data2.items[i].down > cust0m.benis) || (cust0m.benis < 0 && data2.items[i].up - data2.items[i].down < cust0m.benis)) data.items.push(data2.items[i]);\r\n' +
+'           for (var i = 0; i < data2.items.length; i++) if ((cust0m.best_of && data2.items[i].up - data2.items[i].down > cust0m.best_of_benis) || (cust0m.bullshit && data2.items[i].up - data2.items[i].down < cust0m.bullshit_benis)) data.items.push(data2.items[i]);\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
 '           if(data.items.length < 120 && position == p.Stream.POSITION.APPEND && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data); }\r\n' +
@@ -248,7 +272,11 @@ standard =
     best_of: "ON",
     bullshit: "ON",
     best_of_benis: 500,
+    best_of_benis_max: 1000,
+    best_of_benis_min: -9000,
     bullshit_benis: -200,
+    bullshit_benis_max: -1000,
+    bullshit_benis_min: 9000
 };
 
 function save_options()
@@ -351,10 +379,18 @@ function update_settings()
         }
         thumbs /= 100;
 
+        best_of_benis = standard.best_of_benis;
+        if(parseInt(items.best_of_benis) == items.best_of_benis) best_of_benis = Math.max(standard.best_of_benis_min, Math.min(standard.best_of_benis_max, parseInt(items.width)));
+
+        bullshit_benis = standard.bullshit_benis;
+        if(parseInt(items.bullshit_benis) == items.bullshit_benis) bullshit_benis = Math.max(standard.bullshit_benis_min, Math.min(standard.bullshit_benis_max, parseInt(items.width)));
+
         var g = document.createElement('script');
         var s = document.getElementsByTagName('script')[0];
         g.text = "p.user.admin = " + (items.admin == "ON") + ";" +
             "cust0m.fullsize = " + (items.fullsize == "ON") + ";" +
+            "cust0m.best_of_benis = " + best_of_benis + ";" +
+            "cust0m.bullshit_benis = " + bullshit_benis + ";" +
             "CONFIG.AUTO_SYNC.INTERVAL = " + "1" + "; CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; $(window).resize();";
         s.parentNode.insertBefore(g, s);
 
