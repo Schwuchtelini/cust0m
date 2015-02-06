@@ -495,6 +495,7 @@ function update_settings()
 
 chrome.storage.onChanged.addListener(function(changes, namespace)
 {
+    restore_options();
     update_settings();
 });
 
