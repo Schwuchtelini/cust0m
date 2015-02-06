@@ -287,7 +287,7 @@ standard =
     anzahl_max: 9000,
     width: 0,
     width_min: 0,
-    width_max: 0,
+    width_max: 2000,
     pos: "ON",
     thumbs: 100,
     thumbs_min: 30,
