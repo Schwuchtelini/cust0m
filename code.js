@@ -99,6 +99,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
+'   debugger\r\n' +
 '   cust0m.bullshit = false;\r\n' +
 '   cust0m.best_of = true;\r\n' +
 '   $("#tab-top").click();\r\n' +
