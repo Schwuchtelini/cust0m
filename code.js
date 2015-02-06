@@ -97,17 +97,40 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit_benis = -200;\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
+'cust0m.free_click = false;\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
 '   debugger\r\n' +
 '   cust0m.bullshit = false;\r\n' +
 '   cust0m.best_of = true;\r\n' +
+'   cust0m.free_click = true;\r\n' +
+'   $("#tab-top").fastclick();\r\n' +
 '};\r\n' +
 'cust0m.load_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = true;\r\n' +
 '   cust0m.best_of = false;\r\n' +
+'   cust0m.free_click = true;\r\n' +
+'   $("#tab-new").fastclick();\r\n' +
 '};\r\n' +
+'$("#tab-top").click().click(function()\r\n' +
+'{\r\n' +
+'   if(!cust0m.free_click)\r\n' +
+'   {\r\n' +
+'      cust0m.bullshit = false;\r\n' +
+'      cust0m.best_of = false;\r\n' +
+'   }\r\n' +
+'   cust0m.free_click = false;\r\n' +
+'});\r\n' +
+'$("#tab-new").click().click(function()\r\n' +
+'{\r\n' +
+'   if(!cust0m.free_click)\r\n' +
+'   {\r\n' +
+'      cust0m.bullshit = false;\r\n' +
+'      cust0m.best_of = false;\r\n' +
+'   }\r\n' +
+'   cust0m.free_click = false;\r\n' +
+'});\r\n' +
 "setInterval(function() {if($(window).height() > $('body').height() - 400) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 '\r\n' +
 'p.Stream.prototype._loadCust0m = function (options, callback, data) {\r\n' +
