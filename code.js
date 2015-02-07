@@ -100,9 +100,10 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.disableLoad = false;\r\n' +
 'p.View.Stream.Item.prototype.showOrg = p.View.Stream.Item.prototype.show;\r\n' +
 'p.View.Stream.Item.prototype.show = function (rowIndex, itemData, defaultHeight, jumpToComment) {\r\n' +
-'   p.View.Stream.Item.prototype.showOrg(rowIndex, itemData, defaultHeight, jumpToComment);\r\n' +
+'   data = p.View.Stream.Item.prototype.showOrg(rowIndex, itemData, defaultHeight, jumpToComment);\r\n' +
 '   text = $(".score").attr("title");\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
+'   return data;\r\n' +
 '};\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
