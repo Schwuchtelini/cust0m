@@ -111,15 +111,15 @@
 
 }
 
+.cust0m_trigger:hover
+{
+    background-color: #444;
+}
+
 .cust0m_trigger.active:hover
 {
     cursor: auto;
     background-color: #333;
-}
-
-.cust0m_trigger:hover
-{
-    background-color: #444;
 }
 
 
