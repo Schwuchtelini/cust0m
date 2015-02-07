@@ -538,16 +538,16 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.stream-prev-icon', 'display: none !important');
-                changeCss('.cust0m_stream-prev-icon', 'display: inline block !important');
+                changeCss('.stream-prev-icon, .stream-next-icon', 'display: none !important');
+                changeCss('.cust0m_stream-prev-icon, .cust0m_stream-next-icon', 'display: inline block !important');
             });
         }
         else
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.stream-prev-icon', 'display: inline block !important');
-                changeCss('.cust0m_stream-prev-icon', 'display: none !important');
+                changeCss('.stream-prev-icon, .stream-next-icon', 'display: inline block !important');
+                changeCss('.cust0m_stream-prev-icon, .cust0m_stream-next-icon', 'display: none !important');
             });
         }
 
