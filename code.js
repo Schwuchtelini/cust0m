@@ -65,6 +65,12 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie stell ich den Ton in Pr0gramm ein?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Ton:</div> \r\n' +
+'        <div id="cust0m_input_ton" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">%</div> \r\n' +
+'    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
 '        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
@@ -318,17 +324,18 @@ standard =
     thumbs_min: 30,
     thumbs_max: 500,
     admin: "OFF",
-    benis: "OFF",
-    ups_downs: "OFF",
+    benis: "ON",
+    ups_downs: "ON",
     fullsize: "OFF",
     best_of: "ON",
     bullshit: "ON",
     best_of_benis: 500,
     best_of_benis_max: 2000,
     best_of_benis_min: -9000,
-    bullshit_benis: -150,
+    bullshit_benis: -100,
     bullshit_benis_max: 9000,
-    bullshit_benis_min: -150
+    bullshit_benis_min: -150,
+    ton: "OFF"
 };
 
 function save_options()
