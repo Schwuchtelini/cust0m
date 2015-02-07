@@ -241,7 +241,9 @@ span.cust0m_stream-next-icon, span.cust0m_stream-prev-icon {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 100px;
+    font-size: 80px;
+    margin-left: -50px;
+    margin-right: -50px;
 }
 
 div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.cust0m_stream-prev-icon {
