@@ -58,7 +58,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Möchtest du die Ups und Downs eines Beitrags direkt sehen können?.</div> \r\n' +
+'        <div class="cust0m_help">Möchtest du die Ups und Downs eines Beitrags direkt sehen können?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ups und Downs anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_ups_downs" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -66,7 +66,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Kommentarlinien helfen dir, bei vielen Kommentaren den Überblick zu behalten?.</div> \r\n' +
+'        <div class="cust0m_help">Kommentarlinien helfen dir, bei vielen Kommentaren den Überblick zu behalten.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Kommentarlinien anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_kommentarlinien" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
