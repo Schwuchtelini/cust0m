@@ -80,7 +80,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
-'        <div id="cust0m_input_best_of_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
