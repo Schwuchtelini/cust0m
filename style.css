@@ -131,7 +131,6 @@
     color: #F5F7F6;
 }
 
-
 .cust0m_best_of
 {
     margin-left: 15px !important;
@@ -188,4 +187,10 @@
     right: 0px;
     position: absolute;
     font-size: 10px;
+}
+
+.cust0m_item_info
+{
+    position: absolute;
+    font-size: 20px;
 }
