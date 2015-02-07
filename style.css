@@ -183,8 +183,8 @@
 
 .cust0m_version
 {
-    width: 20px;
-    color: #FFF;
+    width: 25px;
+    color: rgba(255, 255, 255, 0.65);
     right: 0px;
     position: absolute;
     font-size: 10px;
