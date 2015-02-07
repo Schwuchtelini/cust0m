@@ -58,7 +58,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Oben links erscheint eine Krone mit der du die Besten Beiträge sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
+'        <div class="cust0m_help">Oben links erscheint eine Krone mit der du die Beiträge mit dem längsten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Best of:</div> \r\n' +
 '        <div id="cust0m_input_best_of" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -71,7 +71,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">Benis</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Oben links erscheint eine scheißender Bulle, mit dem du die schlechtesten Beiträge sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
+'        <div class="cust0m_help">Oben links erscheint eine scheißender Bulle, mit dem du die Beiträge mit dem kürzesten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bullshit:</div> \r\n' +
 '        <div id="cust0m_input_bullshit" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
