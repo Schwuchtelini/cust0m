@@ -254,4 +254,9 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 .cust0m_tv_info
 {
     position: absolute;
+    top: 275px;
+    right: 100px;
+    color: #25189b;
+    font-size: 20px;
+}
 }
