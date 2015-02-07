@@ -134,7 +134,7 @@ g.text = 'cust0m = {};\r\n' +
 '        round++;\r\n' +
 '        var stream = this;\r\n' +
 '        options.flags = p.user.flags;\r\n' +
-'        p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
+'        if(!(round > 20 && data.items.length == 0)) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '           stream.reached.start = data2.atStart || stream.reached.start;\r\n' +
 '           stream.reached.end = data2.atEnd || stream.reached.end;\r\n' +
 '           var oldestId, newestId;\r\n' +
