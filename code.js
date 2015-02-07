@@ -1,4 +1,4 @@
-$(".user-info.user-only").prepend('<div class="cust0m_version">0.0</div><div class="cust0m_settings"> \r\n' +
+$(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">0.0</div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> \r\n' +
 '        <div id="cust0m_input_anzahl" class="cust0m_input" contenteditable="true"></div> \r\n' +
