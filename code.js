@@ -142,7 +142,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
 '};\r\n' +
 'p.View.TV.Channel.prototype.nextVideo = function () {        this.currentIndex = this.currentIndex % this.items.length;    if (this.currentIndex >= this.items.length) {            return;        }        if (!this.$currentVideo) {            var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;            this.currentIndex++;            this.$currentVideo = this.createVideoElement(src, this.videoCanPlay.bind(this));        } else {            this.$currentVideo.remove();            this.$currentVideo = this.$nextVideo;            this.resize();            this.$videoContainer.append(this.$currentVideo);            this.playVideo();        }        if (p.Video.canPlayWebM) {            this.$currentVideo[0].onended = this.nextVideo.bind(this);        } else {           this.$currentVideo.data(\'jsmpeg\').externalFinishedCallback = this.nextVideo.bind(this);        }        var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;        this.currentIndex++;        this.$nextVideo = this.createVideoElement(src); ' +
-'   $(".cust0m_tv_info").html("<a href=\'" + this.items[this.currentIndex].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");\r\n' +
+'   $(".cust0m_tv_info").html("<a href=\'http://pr0gramm.com/new/" + this.items[this.currentIndex].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");\r\n' +
 '   debugger;\r\n' +
 '}; \r\n' +
 'cust0m.load_best_of = function ()\r\n' +
