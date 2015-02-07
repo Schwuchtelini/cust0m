@@ -301,7 +301,7 @@ standard =
     best_of: "ON",
     bullshit: "ON",
     best_of_benis: 500,
-    best_of_benis_max: 1000,
+    best_of_benis_max: 2000,
     best_of_benis_min: -9000,
     bullshit_benis: -150,
     bullshit_benis_max: 9000,
