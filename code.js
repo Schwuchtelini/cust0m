@@ -155,7 +155,7 @@ g.text = 'cust0m = {};\r\n' +
 '           for (var i = 0; i < data2.items.length; i++) if ((!cust0m.best_of && !cust0m.bullshit) || (cust0m.best_of && data2.items[i].up - data2.items[i].down > cust0m.best_of_benis) || (cust0m.bullshit && data2.items[i].up - data2.items[i].down < cust0m.bullshit_benis)) data.items.push(data2.items[i]);\r\n' +
 '           data2.items = data.items;\r\n' +
 '           data = data2;\r\n' +
-'           console.log("cust0m Pr0gramm: Lade Items. Bis jetzt: " + data.items.length + " mit " + options);\r\n' +
+'           console.log("cust0m Pr0gramm: Lade Items. Bis jetzt: " + data.items.length + " mit " + stream._oldestId);\r\n' +
 '           //if((cust0m.bullshit || cust0m.best_of) && round > 50) $(".spinner").text((((data.items.length/120) * 100 + "").substr(0, 3) + "%"));\r\n' +
 '           if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && position == p.Stream.POSITION.PREPEND && !stream.reached.start) { console.log("cust0m Pr0gramm: Lade anfang"); stream._loadCust0m({newer: stream._newestId}, callback, data, round); }\r\n' +
 '           else if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data, round); }\r\n' +
