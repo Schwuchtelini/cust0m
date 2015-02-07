@@ -351,6 +351,7 @@ function save_options()
         fullsize: $('#cust0m_input_fullsize .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
         bullshit: $('#cust0m_input_bullshit .active').text(),
+        ton: $('#cust0m_input_ton .active').text(),
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
         bullshit_benis: $('#cust0m_input_bullshit_benis').text()
     };
@@ -406,6 +407,10 @@ function restore_options()
         $('#cust0m_input_fullsize .cust0m_trigger').removeClass("active");
         if(items.fullsize == "ON") $('#cust0m_input_fullsize .cust0m_trigger_on').addClass("active");
         else $('#cust0m_input_fullsize .cust0m_trigger_off').addClass("active");
+
+        $('#cust0m_input_ton .cust0m_trigger').removeClass("active");
+        if(items.ton == "ON") $('#cust0m_input_ton .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_ton .cust0m_trigger_off').addClass("active");
 
         $('#cust0m_input_thumbs').html(items.thumbs);
 
