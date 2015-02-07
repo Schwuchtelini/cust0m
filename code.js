@@ -69,7 +69,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"> \r\n' +
 '    <div class="cust0m_line"></div> \r\n' +
 '    <div id="cust0m_save" class="cust0m_button">speichern</div> \r\n' +
 '    <div id="cust0m_info" class="cust0m_button" style="display: none">gespeichert</div> \r\n' +
-'</div> ');
+'</div><div class="cust0m_version">0.0</div>');
 
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
 $("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" onclick="cust0m.load_bullshit();">mm </a>');

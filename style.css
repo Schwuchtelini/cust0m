@@ -180,3 +180,13 @@
     text-align: center;
     color: #aaa;
 }
+
+.cust0m_version
+{
+    width: 50px;
+    color: #FFF;
+    right: 0px;
+    margin-top: 34px;
+    position: absolute;
+    font-size: 10px;
+}
