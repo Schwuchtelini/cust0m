@@ -98,8 +98,8 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = false;\r\n' +
-"cust0m.split = p.View.Stream.Item.template.indexOf('<div class=\"item-vote\"');\r\n" +
-'p.View.Stream.Item.template = p.View.Stream.Item.template.substring(0, cust0m.split) + "<div class=\'cust0m_item_info\'>{item.up} up, {item.down} down</div>" + p.View.Stream.Item.template.substring(cust0m.split);\r\n' +
+"cust0m.split = p.View.Stream.Item.template.prototype.indexOf('<div class=\"item-vote\"');\r\n" +
+'p.View.Stream.Item.prototype.template = p.View.Stream.Item.prototype.template.substring(0, cust0m.split) + "<div class=\'cust0m_item_info\'>{item.up} up, {item.down} down</div>" + p.View.Stream.Item.prototype.template.substring(cust0m.split);\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
 '   cust0m.disable_bullshit();\r\n' +
