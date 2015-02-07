@@ -260,12 +260,12 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     transform: rotate(-12Grad);
 }
 
-a.cust0m_tv_info
+.cust0m_tv_info  a
 {
     color: #25189b;
 }
 
-a.cust0m_tv_info:hover
+.cust0m_tv_info a:hover
 {
     color: #18105f;
 }
