@@ -246,5 +246,5 @@ span.cust0m_stream-next-icon, span.cust0m_stream-prev-icon {
 
 span.cust0m_stream-next-icon:hover, span.cust0m_stream-prev-icon:hover {
     color: #ee4d2e;
-    background-color: transparent;
+    background-color: transparent !important;
 }
