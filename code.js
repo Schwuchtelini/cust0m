@@ -6,7 +6,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">Vorschaubilder</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Wie groß sollen die Vorschaubilder sein?<br>Normalerweise ist 100% eingetragen.</div> \r\n' +
+'        <div class="cust0m_help">Wie groß sollen die Vorschaubilder sein?<br>Normalerweise ist 100% eingetragen.<br>Limit: 30%</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">%</div> \r\n' +
@@ -66,6 +66,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
+'        <div class="cust0m_help">Limit: -150 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
 '        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
@@ -79,6 +80,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
+'        <div class="cust0m_help">Limit: 2000 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
 '        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
