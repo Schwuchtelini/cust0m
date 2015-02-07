@@ -161,7 +161,7 @@ g.text = 'cust0m = {};\r\n' +
 '           else if((cust0m.bullshit || cust0m.best_of) && data.items.length < 120 && !stream.reached.end) { console.log("cust0m Pr0gramm: Lade end"); stream._loadCust0m({older: stream._oldestId}, callback, data, round); }\r\n' +
 '           else \r\n' +
 '           {\r\n' +
-'               if((cust0m.bullshit || cust0m.best_of) && round > 50) $(".spinner").text("");\r\n' +
+'               if((cust0m.bullshit || cust0m.best_of) && round > 50) $(".spinner").html("<div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div>");\r\n' +
 '               stream._oldestId = _oldestId;\r\n' +
 '               stream._newestId = _newestId;\r\n' +
 '               position = stream._processResponse(data);\r\n' +
