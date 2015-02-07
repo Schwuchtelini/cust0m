@@ -86,8 +86,10 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
-'        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
-'        <div class="cust0m_label">Benis</div> \r\n' +
+'        <div id="cust0m_input_admin" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_line"></div> \r\n' +
 '    <div id="cust0m_save" class="cust0m_button">speichern</div> \r\n' +
