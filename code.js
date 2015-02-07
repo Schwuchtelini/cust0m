@@ -576,7 +576,7 @@ function update_settings()
             {
                 changeCss('div.comment-box', 'border-left: 5px solid #222; margin-left: 5px;');
                 changeCss('.comments>div.comment-box', 'border-left: none; margin-left: 0px;');
-                changeCss('div.comment-box div.comment-box.comment', 'margin-left: -3px');
+                changeCss('div.comment-box .comment', 'margin-left: -3px');
             });
         }
         else
