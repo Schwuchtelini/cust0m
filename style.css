@@ -232,7 +232,7 @@
     display: none;
 }
 
-span.stream-next-icon, span.stream-prev-icon {
+span.cust0m_stream-next-icon, span.cust0m_stream-prev-icon {
     width: auto;
     height: auto;
     background-color: transparent;
@@ -244,7 +244,7 @@ span.stream-next-icon, span.stream-prev-icon {
     font-size: 100px;
 }
 
-span.stream-next-icon:hover, span.stream-prev-icon:hover {
+span.cust0m_stream-next-icon:hover, span.cust0m_stream-prev-icon:hover {
     color: #ee4d2e;
     background-color: transparent;
 }
