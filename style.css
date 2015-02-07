@@ -244,7 +244,7 @@ span.cust0m_stream-next-icon, span.cust0m_stream-prev-icon {
     font-size: 100px;
 }
 
-span.cust0m_stream-next-icon:hover, span.cust0m_stream-prev-icon:hover, div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.cust0m_stream-prev-icon {
+div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.cust0m_stream-prev-icon {
     color: #ee4d2e;
-    background-color: transparent !important;
+    opacity: 0.9;
 }
