@@ -98,8 +98,8 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = false;\r\n' +
-'cust0m.show = p.View.Stream.Item.prototype.showItem;\r\n' +
-'p.View.Stream.Item.prototype.showItem = function ($item, scrollTo) {\r\n' +
+'cust0m.show = p.View.Stream.Main.prototype.showItem;\r\n' +
+'p.View.Stream.Main.prototype.showItem = function ($item, scrollTo) {\r\n' +
 '   data = cust0m.show($item, scrollTo);\r\n' +
 '   text = $(".score").attr("title");\r\n' +
 '   setTimeout(function() {$(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");}, 200);\r\n' +
