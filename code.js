@@ -12,7 +12,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Wie groß soll das Bilder eines Betrags minimal sein?<br>Normalerweise ist 0 eingetragen.</div> \r\n' +
+'        <div class="cust0m_help">Wie groß soll das Bild eines Betrags minimal sein?<br>Normalerweise ist 0 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bilder Mindesthöhe:</div> \r\n' +
 '        <div id="cust0m_input_width" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">px</div> \r\n' +
@@ -34,7 +34,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Willst du Programm aus der Sicht eines Admins sehen? Natürlich kannst du die angebotenen Features nicht nutzen</div> \r\n' +
+'        <div class="cust0m_help">Willst du Pr0gramm aus der Sicht eines Admins sehen? Natürlich hast du damit keine Admin Rechte.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Admin Sicht:</div> \r\n' +
 '        <div id="cust0m_input_admin" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
