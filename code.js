@@ -309,6 +309,7 @@ standard =
     thumbs_max: 500,
     admin: "OFF",
     benis: "OFF",
+    ups_downs: "OFF",
     fullsize: "OFF",
     best_of: "ON",
     bullshit: "ON",
@@ -377,6 +378,10 @@ function restore_options()
         $('#cust0m_input_benis .cust0m_trigger').removeClass("active");
         if(items.benis == "ON") $('#cust0m_input_benis .cust0m_trigger_on').addClass("active");
         else $('#cust0m_input_benis .cust0m_trigger_off').addClass("active");
+
+        $('#cust0m_input_ups_downs .cust0m_trigger').removeClass("active");
+        if(items.ups_downs == "ON") $('#cust0m_input_ups_downs .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_ups_downs .cust0m_trigger_off').addClass("active");
 
         $('#cust0m_input_fullsize .cust0m_trigger').removeClass("active");
         if(items.fullsize == "ON") $('#cust0m_input_fullsize .cust0m_trigger_on').addClass("active");
@@ -466,6 +471,21 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.cust0m_benis_head, .cust0m_benis_num', 'display: none');
+            });
+        }
+
+        if(items.ups_downs == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_item_info', 'display: block');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_item_info', 'display: none');
             });
         }
 
