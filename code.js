@@ -43,6 +43,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Ups und Downs anzeigen:</div> \r\n' +
+'        <div id="cust0m_input_ups_downs" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Best of: (sehr Langsam)</div> \r\n' +
 '        <div id="cust0m_input_best_of" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
