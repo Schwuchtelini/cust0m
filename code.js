@@ -330,6 +330,7 @@ function save_options()
         admin: $('#cust0m_input_admin .active').text(),
         thumbs: $('#cust0m_input_thumbs').text(),
         benis: $('#cust0m_input_benis .active').text(),
+        ups_downs: $('#cust0m_input_ups_downs .active').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
         bullshit: $('#cust0m_input_bullshit .active').text(),
