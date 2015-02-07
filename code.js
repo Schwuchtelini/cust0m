@@ -102,7 +102,7 @@ g.text = 'cust0m = {};\r\n' +
 'p.View.Stream.Item.prototype.showItem = function ($item, scrollTo) {\r\n' +
 '   data = cust0m.show($item, scrollTo);\r\n' +
 '   text = $(".score").attr("title");\r\n' +
-'   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
+'   setTimeout(function() {$(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");}, 200);\r\n' +
 '   return data;\r\n' +
 '};\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
