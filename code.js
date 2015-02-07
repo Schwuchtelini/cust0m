@@ -65,12 +65,6 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Wie stell ich den Ton in Pr0gramm ein?</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Ton:</div> \r\n' +
-'        <div id="cust0m_input_ton" class="cust0m_input" contenteditable="true"></div> \r\n' +
-'        <div class="cust0m_label">%</div> \r\n' +
-'    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
 '        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
@@ -86,7 +80,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
-'        <div id="cust0m_input_admin" class="cust0m_triggers"> \r\n' +
+'        <div id="cust0m_input_best_of_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">Benis</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie stell ich den Ton in Pr0gramm ein?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Ton:</div> \r\n' +
+'        <div id="cust0m_input_pos" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
