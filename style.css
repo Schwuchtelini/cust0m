@@ -250,3 +250,8 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     color: #ee4d2e;
     opacity: 0.9;
 }
+
+.cust0m_tv_info
+{
+    position: absolute;
+}
