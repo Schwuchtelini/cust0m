@@ -66,6 +66,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Kommentarlinien helfen dir, bei vielen Kommentaren den Überblick zu behalten?.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentarlinien anzeigen:</div> \r\n' +
+'        <div id="cust0m_input_kommentarlinien" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Oben links erscheint eine Krone mit der du die Beiträge mit dem längsten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Best of:</div> \r\n' +
 '        <div id="cust0m_input_best_of" class="cust0m_triggers"> \r\n' +
@@ -355,7 +363,8 @@ standard =
     bullshit_benis: -100,
     bullshit_benis_max: 9000,
     bullshit_benis_min: -150,
-    ton: "OFF"
+    ton: "OFF",
+    kommentarlinien: "OFF"
 };
 
 function save_options()
@@ -368,6 +377,7 @@ function save_options()
         thumbs: $('#cust0m_input_thumbs').text(),
         benis: $('#cust0m_input_benis .active').text(),
         ups_downs: $('#cust0m_input_ups_downs .active').text(),
+        kommentarlinien: $('#cust0m_input_kommentarlinien .active').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
         pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
@@ -428,6 +438,10 @@ function restore_options()
         $('#cust0m_input_fullsize .cust0m_trigger').removeClass("active");
         if(items.fullsize == "ON") $('#cust0m_input_fullsize .cust0m_trigger_on').addClass("active");
         else $('#cust0m_input_fullsize .cust0m_trigger_off').addClass("active");
+
+        $('#cust0m_input_kommentarlinien .cust0m_trigger').removeClass("active");
+        if(items.kommentarlinien == "ON") $('#cust0m_input_kommentarlinien .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_kommentarlinien .cust0m_trigger_off').addClass("active");
 
         $('#cust0m_input_pfeil .cust0m_trigger').removeClass("active");
         if(items.pfeil == "ON") $('#cust0m_input_pfeil .cust0m_trigger_on').addClass("active");
@@ -553,6 +567,25 @@ function update_settings()
             {
                 changeCss('.stream-prev-icon, .stream-next-icon', 'display: inline block !important');
                 changeCss('.cust0m_stream-prev-icon, .cust0m_stream-next-icon', 'display: none !important');
+            });
+        }
+
+        if(items.kommentarlinien == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('div.comment-box', 'border-left: 5px solid #222; margin-left: 5px;');
+                changeCss('.comments>div.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('div.comment-box.comment-box.comment', 'margin-left: -3px');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('div.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('.comments>div.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('div.comment-box.comment-box.comment', 'margin-left: 0px');
             });
         }
 
