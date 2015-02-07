@@ -6,16 +6,19 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">Vorschaubilder</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bilder Mindesthöhe:</div> \r\n' +
 '        <div id="cust0m_input_width" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">px</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Großes Bild laden</div> \r\n' +
 '        <div id="cust0m_input_fullsize" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -23,6 +26,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Kommentare in die Mitte:</div> \r\n' +
 '        <div id="cust0m_input_pos" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -30,6 +34,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Admin Sicht:</div> \r\n' +
 '        <div id="cust0m_input_admin" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -37,6 +42,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Benis anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_benis" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -44,6 +50,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ups und Downs anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_ups_downs" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -51,6 +58,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Best of: (sehr Langsam)</div> \r\n' +
 '        <div id="cust0m_input_best_of" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
@@ -63,6 +71,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">Benis</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bullshit: (sehr Langsam)</div> \r\n' +
 '        <div id="cust0m_input_bullshit" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
