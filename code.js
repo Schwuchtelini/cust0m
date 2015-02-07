@@ -6,7 +6,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">Vorschaubilder</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
+'        <div class="cust0m_help">Wie groß sollen die Vorschaubilder sein?<br>Normalerweise ist 100% eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">%</div> \r\n' +

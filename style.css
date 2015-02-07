@@ -213,7 +213,7 @@
     transition: 0.5s ease-in-out opacity;
 }
 
-.cust0m_middle:hover .cust0m_help
+.cust0m_middle:hover>.cust0m_help
 {
     transition-duration: 0.3s;
     opacity: 1;
