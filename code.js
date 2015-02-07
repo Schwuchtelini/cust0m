@@ -50,6 +50,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Willst du die alten Pfeile wieder haben?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Alten Pfeile anzeigen:</div> \r\n' +
+'        <div id="cust0m_input_pfeil" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Möchtest du die Ups und Downs eines Beitrags direkt sehen können?.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ups und Downs anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_ups_downs" class="cust0m_triggers"> \r\n' +
@@ -129,6 +137,8 @@ g.text = 'cust0m = {};\r\n' +
 "   if ($item.is(this.$currentItem)) {            this.hideItem();            this._wasHidden = true;            this.currentItemId = null;            return;        }        var $previousItem = this.$currentItem;        this.$currentItem = $item;        var $row = $item.parent();        var scrollTarget = 0;        if (scrollTo == this.SCROLL.FULL) {            scrollTarget = $row.offset().top - CONFIG.HEADER_HEIGHT + $item.height();        } else if (scrollTo == this.SCROLL.THUMB) {            scrollTarget = $row.offset().top - CONFIG.HEADER_HEIGHT - this.rowMargin;        } else {            scrollTarget = $(document).scrollTop();        }        var animate = !(scrollTo == this.SCROLL.FULL && this._scrolledToFullView);        this._scrolledToFullView = (scrollTo == this.SCROLL.FULL);        if (this.$itemContainer) {            var previousItemHeight = this.$itemContainer.find('.item-image').height() || 0;        }        if (!$row.next().hasClass('item-container')) {            if (this.$itemContainer) {                if (this.$itemContainer.offset().top < $item.offset().top) {                    scrollTarget -= this.$itemContainer.innerHeight() + this.rowMargin * 2;                }                if (animate) {                    this.$itemContainer.find('.gpt').remove();                    this.$itemContainer.slideUp('fast', function () {                        $(this).remove();                    });                } else {                    this.$itemContainer.remove();                }            }            this.$itemContainer = this.$itemContainerTemplate.clone(true);            this.$itemContainer.insertAfter($row);            if (animate && !this.jumpToItem) {                this.$itemContainer.slideDown('fast');            } else {                this.$itemContainer.show();            }        }        var id = $item[0].id.replace('item-', '');        var itemData = this.stream.items[id];        var rowIndex = $item.prevAll().length;       if (this.currentItemSubview) {            this.currentItemSubview.remove();        }        this.currentItemSubview = new p.View.Stream.Item(this.$itemContainer, this);        this.currentItemSubview.show(rowIndex, itemData, previousItemHeight, this.jumpToComment);        this.jumpToComment = null;        this.prefetch($item);        if (!this.jumpToItem) {            if (animate) {                $('body, html').stop(true, true).animate({                    scrollTop: scrollTarget                }, 'fast');            } else {                $('body, html').stop(true, true).scrollTop(scrollTarget); } }this.currentItemId = id;" +
 '   text = $(".score").attr("title");\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
+'   $(".stream-next").append("<span class=\'cust0m_stream-next-icon stream-next-icon\'>&gt;</span>");\r\n' +
+'   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon stream-prev-icon\'>&lt;</span>");\r\n' +
 '};\r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
@@ -331,6 +341,7 @@ standard =
     benis: "ON",
     ups_downs: "ON",
     fullsize: "OFF",
+    pfeil: "OFF",
     best_of: "ON",
     bullshit: "ON",
     best_of_benis: 500,
@@ -353,6 +364,7 @@ function save_options()
         benis: $('#cust0m_input_benis .active').text(),
         ups_downs: $('#cust0m_input_ups_downs .active').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
+        pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
         bullshit: $('#cust0m_input_bullshit .active').text(),
         ton: $('#cust0m_input_ton .active').text(),
@@ -411,6 +423,10 @@ function restore_options()
         $('#cust0m_input_fullsize .cust0m_trigger').removeClass("active");
         if(items.fullsize == "ON") $('#cust0m_input_fullsize .cust0m_trigger_on').addClass("active");
         else $('#cust0m_input_fullsize .cust0m_trigger_off').addClass("active");
+
+        $('#cust0m_input_pfeil .cust0m_trigger').removeClass("active");
+        if(items.pfeil == "ON") $('#cust0m_input_pfeil .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_pfeil .cust0m_trigger_off').addClass("active");
 
         $('#cust0m_input_ton .cust0m_trigger').removeClass("active");
         if(items.ton == "ON") $('#cust0m_input_ton .cust0m_trigger_on').addClass("active");
@@ -518,11 +534,28 @@ function update_settings()
             });
         }
 
+        if(items.pfeil == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.stream-prev-icon', 'display: none');
+                changeCss('.cust0m_stream-prev-icon', 'display: inline');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.stream-prev-icon', 'display: inline');
+                changeCss('.cust0m_stream-prev-icon', 'display: none');
+            });
+        }
+
         if(items.bullshit == "ON")
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_bullshit', 'display: inline');
+                changeCss('.cust0m_bullshitbullshit', 'display: inline');
                 changeCss('.cust0m_bullshit_middle', 'display: block');
             });
         }
@@ -531,7 +564,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.cust0m_bullshit', 'display: none');
-                changeCss('.cust0m_bullshit_middle', 'display: none');
+                 changeCss('.cust0m_bullshit_middle', 'display: none');
             });
         }
 
