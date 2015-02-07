@@ -232,3 +232,18 @@
     display: none;
 }
 
+span.stream-next-icon, span.stream-prev-icon {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    opacity: 0.1;
+    font-family: 'pict0gramm';
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 100px;
+}
+
+span.stream-next-icon:hover, span.stream-prev-icon:hover {
+    color: #ee4d2e;
+}
