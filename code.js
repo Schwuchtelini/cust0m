@@ -98,9 +98,9 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = false;\r\n' +
-'cust0m.show = p.View.Stream.Item.prototype.show;\r\n' +
-'p.View.Stream.Item.prototype.show = function (rowIndex, itemData, defaultHeight, jumpToComment) {\r\n' +
-'   data = cust0m.show(rowIndex, itemData, defaultHeight, jumpToComment);\r\n' +
+'cust0m.show = p.View.Stream.Item.prototype.showItem;\r\n' +
+'p.View.Stream.Item.prototype.showItem = function ($item, scrollTo) {\r\n' +
+'   data = cust0m.show($item, scrollTo);\r\n' +
 '   text = $(".score").attr("title");\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
 '   return data;\r\n' +
