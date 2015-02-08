@@ -97,6 +97,12 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Wie viele Tags möchtest du am Anfang sehen?<br>Normalerweise werden 5 angezeigt.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Start Tags:</div> \r\n' +
+'        <div id="cust0m_input_start_tags" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label"></div> \r\n' +
+'    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
 '        <div class="cust0m_help">Limit: 1500 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
@@ -397,7 +403,8 @@ standard =
     ton: "OFF",
     kommentarlinien: "OFF",
     kommentarklappen: "OFF",
-    kommentarklappen_default: "OFF"
+    kommentarklappen_default: "OFF",
+    start_tags: 4
 };
 
 function save_options()
@@ -405,6 +412,7 @@ function save_options()
     set = {
         anzahl: $('#cust0m_input_anzahl').text(),
         width: $('#cust0m_input_width').text(),
+        start_tags: $('#cust0m_input_start_tags').text(),
         pos: $('#cust0m_input_pos .active').text(),
         admin: $('#cust0m_input_admin .active').text(),
         thumbs: $('#cust0m_input_thumbs').text(),
@@ -453,6 +461,8 @@ function restore_options()
         $('#cust0m_input_anzahl').html(items.anzahl);
 
         $('#cust0m_input_width').html(items.width);
+
+        $('#cust0m_input_start_tags').html(items.start_tags);
 
         $('#cust0m_input_pos .cust0m_trigger').removeClass("active");
         if(items.pos == "ON") $('#cust0m_input_pos .cust0m_trigger_on').addClass("active");
@@ -546,6 +556,7 @@ function update_settings()
             "cust0m.kommentarklappen_default = " + (items.kommentarklappen_default == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
+            "CONFIG.TAGS_MAX_DISPLAY = " + items.start_tags + ";" +
             "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh();";
         s.parentNode.insertBefore(g, s);
 
