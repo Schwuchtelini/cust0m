@@ -157,9 +157,9 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = true;\r\n' +
-'cust0m.einklappen = true;\r\n' +
+'cust0m.kommentarklappen_default = true;\r\n' +
 'cust0m.kommentarklappen = true;\r\n' +
-'cust0m.LoadEinklappen = function() { if($(".comment-foot").length >= 3) {$(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.einklappen) cust0m.commentClick($(elem).find(".cust0m_comment"));}});} else setTimeout(cust0m.LoadEinklappen, 50)}\r\n' +
+'cust0m.LoadEinklappen = function() { if($(".comment-foot").length >= 3) {$(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default) cust0m.commentClick($(elem).find(".cust0m_comment"));}});} else setTimeout(cust0m.LoadEinklappen, 50)}\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = comment.parent().parent().next();\r\n' +
