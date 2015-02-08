@@ -626,7 +626,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('div.comment-box', 'border-left: none; margin-left: 0px;');
-                changeCss('.comments>div.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('comments>div.comment-box>div.comment', 'border-left: none; margin-left: 0px;');
                 changeCss('div.comment-box div.comment', 'margin-left: 0px');
             });
         }
