@@ -351,6 +351,7 @@ g.text = 'cust0m = {};\r\n' +
 '      this.hasItems = true;\r\n' +
 '      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
+*/
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
 '        var disable = false;\r\n' +
@@ -366,7 +367,7 @@ g.text = 'cust0m = {};\r\n' +
 '    },\r\n' +
 "p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
-*/
+
 standard =
 {
     anzahl: 20,
