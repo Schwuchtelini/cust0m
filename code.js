@@ -536,6 +536,8 @@ function update_settings()
         var s = document.getElementsByTagName('script')[0];
         g.text = "p.user.admin = " + (items.admin == "ON") + ";" +
             "cust0m.fullsize = " + (items.fullsize == "ON") + ";" +
+            "cust0m.kommentarklappen = " + (items.kommentarklappen == "ON") + ";" +
+            "cust0m.kommentarklappen_default = " + (items.kommentarklappen_default == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
             "CONFIG.AUTO_SYNC.INTERVAL = " + "1" + "; CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; $(window).resize();";
