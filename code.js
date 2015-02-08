@@ -208,7 +208,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").removeClass("cust0m_active");\r\n' +
 '   $("#tab-new").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
-"setInterval(function() {if($('.main-message').text().indexOf('Nichts gefunden') != -1) p.reload(); if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv') {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
+"setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv') {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 " \r\n" +
 'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
 '        round++;\r\n' +
@@ -217,12 +217,12 @@ g.text = 'cust0m = {};\r\n' +
 '        if(!(round > 20 && data.items.length <= 5)) p.api.get("items.get", p.merge(options, this.options), function (data2) {\r\n' +
 '           stream.reached.start = data2.atStart || stream.reached.start;\r\n' +
 '           stream.reached.end = data2.atEnd || stream.reached.end;\r\n' +
-'           var oldestId, newestId;\r\n' +
-'           if (stream.options.promoted) {\r\n' +
+'           var oldestId = stream._oldestId; var newestId = stream._newestId;\r\n' +
+'           if (stream.options.promoted && data2.items.length > 0) {\r\n' +
 '               data2.items.sort(p.Stream.sortByPromoted);\r\n' +
 '               oldestId = data2.items[data2.items.length - 1].promoted;\r\n' +
 '               newestId = data2.items[0].promoted;\r\n' +
-'           } else {\r\n' +
+'           } else if(data2.items.length > 0) {\r\n' +
 '               data2.items.sort(p.Stream.sortById);\r\n' +
 '               oldestId = data2.items[data2.items.length - 1].id;\r\n' +
 '               newestId = data2.items[0].id;\r\n' +
