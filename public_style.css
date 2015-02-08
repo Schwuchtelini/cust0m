@@ -1,4 +1,271 @@
-.cust0m_icon
+#settings-link
+{
+    padding: 10px 5px;
+    margin: -10px -5px;
+}
+
+.cust0m_settings
+{
+    width: 475px;
+    color: #FFF;
+    right: 0px;
+    margin-top: 15px;
+    padding-top: 19px;
+    position: absolute;
+    display: none;
+    font-size: 15px;
+}
+
+.cust0m_settings:hover
+{
+    display: block !important;
+}
+
+.cust0m_input
+{
+    border-bottom: 1px solid #FFF;
+    float: left;
+    min-width: 15px;
+    outline: none;
+    overflow: hidden;
+    max-height: 30px;
+    margin-right: 5px;
+}
+
+.cust0m_label
+{
+    float: left;
+}
+
+.cust0m_middle
+{
+    padding: 10px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.cust0m_button
+{
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.cust0m_button:hover
+{
+    color: #ee4d2e;
+}
+
+.cust0m_line
+{
+    width: 100%;
+    height: 1px;
+    background: #444;
+}
+
+.cust0m_lable_1
+{
+    width: 55%;
+}
+
+.cust0m_triggers
+{
+    float: left;
+    min-width: 15px;
+    outline: none;
+    overflow: hidden;
+    max-height: 30px;
+    border-radius: 3px;
+    width: 45%;
+    opacity: 0.9;
+}
+
+.cust0m_trigger
+{
+    width: 50%;
+    float: left;
+    height: 25px;
+    color: #444;
+    background-color: #222;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.cust0m_trigger_on
 {
 
+}
+
+.cust0m_trigger_off
+{
+
+}
+
+.cust0m_trigger.active, .cust0m_trigger:hover
+{
+    color: #ee4d2e;
+    background-color: #333;
+
+}
+
+.cust0m_trigger:hover
+{
+    background-color: #444;
+}
+
+.cust0m_trigger.active:hover
+{
+    cursor: auto;
+    background-color: #333;
+}
+
+
+.cust0m_benis_head
+{
+    margin-left: 15px;
+    display: inline;
+    color: transparent;
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/benis.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cust0m_benis_num
+{
+    display: inline;
+    color: #F5F7F6;
+}
+
+.cust0m_best_of
+{
+    margin-left: 15px !important;
+    display: inline;
+    color: transparent !important;
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/krone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.cust0m_bullshit
+{
+    margin-left: 15px !important;
+    display: inline;
+    color: transparent !important;
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/bullshit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.cust0m_bullshit:hover, .cust0m_bullshit.cust0m_active
+{
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/bullshit_active.png);
+}
+
+.cust0m_best_of:hover, .cust0m_best_of.cust0m_active
+{
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/krone_active.png);
+}
+
+.cust0m_unactive
+{
+    color: #aaa !important;
+}
+
+.cust0m_unactive:hover
+{
+    color: #ee4d2e !important;
+}
+
+.spinner
+{
+    font-size: 50px;
+    text-align: center;
+    color: #aaa;
+}
+
+.cust0m_version
+{
+    width: 28px;
+    color: rgba(255, 255, 255, 0.2);
+    right: 0px;
+    position: absolute;
+    font-size: 10px;
+}
+
+.cust0m_item_info
+{
+    position: absolute;
+    font-size: 17px;
+    top: 80px;
+    left: 10px;
+    color: #666;
+}
+
+.cust0m_help
+{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    right: 475px;
+    width: 350px;
+    margin-top: -11px;
+    border: 1px solid #333;
+    border-width: 1px 0px 1px 1px;
+    opacity: 0;
+    transition: 0.5s ease-in-out opacity;
+}
+
+.cust0m_middle:hover .cust0m_help
+{
+    transition-duration: 0.3s;
+    opacity: 1;
+}
+
+.cust0m_help:hover
+{
+    display: none;
+}
+
+span.cust0m_stream-next-icon, span.cust0m_stream-prev-icon {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    opacity: 0.1;
+    font-family: 'pict0gramm';
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 80px;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.cust0m_stream-prev-icon {
+    color: #ee4d2e;
+    opacity: 0.9;
+}
+
+.cust0m_tv_info
+{
+    position: absolute;
+    top: 382px;
+    right: 120px;
+    font-size: 25px;
+    transform: rotate(-12Grad);
+}
+
+.cust0m_tv_info  a
+{
+    color: #484184;
+}
+
+.cust0m_tv_info a:hover
+{
+    color: #ee4d2e;
 }
