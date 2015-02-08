@@ -75,7 +75,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Gibt dir die Möglichkeit Kommentare ein- und auszuklappen.</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentare ein- und ausklappbar machen.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Ein- und ausklappbare Kommentare</div> \r\n' +
 '        <div id="cust0m_input_kommentarklappen" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
