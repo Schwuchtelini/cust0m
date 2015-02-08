@@ -352,9 +352,10 @@ g.text = 'cust0m = {};\r\n' +
 '   };' +
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
-'        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new" && mode == 0))) cust0m.disable_bullshit();\r\n' +
-'        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top" && mode == 0))) cust0m.disable_best_of();\r\n' +
-'        if((location == "top" || location == "new") && "http://pr0gramm.com/" + location == document.location.href)\r\n' +
+'        var disable = false;\r\n' +
+'        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new" && mode == 0))) { cust0m.disable_bullshit(); disable = true;} \r\n' +
+'        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top" && mode == 0))) { cust0m.disable_best_of(); disable = true;} \r\n' +
+'        if((disable || cust0m.bullshit || cust0m.best_of) && (location == "top" || location == "new") && "http://pr0gramm.com/" + location == document.location.href)\r\n' +
 '        {\r\n' +
 '            p.navigateToOrginal(location == "top" ? "new" : "top", mode);\r\n' +
 '            setTimeout(function() {p.navigateToOrginal(location, mode);}, 500);\r\n' +
