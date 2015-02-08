@@ -404,7 +404,9 @@ standard =
     kommentarlinien: "OFF",
     kommentarklappen: "OFF",
     kommentarklappen_default: "OFF",
-    start_tags: 4
+    start_tags: 4,
+    start_tags_min: 1,
+    start_tags_max: 100
 };
 
 function save_options()
