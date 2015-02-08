@@ -251,8 +251,10 @@ g.text = 'cust0m = {};\r\n' +
 '           }\r\n' +
 '        });\r\n' +
 '    };\r\n' +
+'p.Stream.prototype._loadOrg = p.Stream.prototype._load; \r\n' +
 'p.Stream.prototype._load = function (options, callback) {\r\n' +
-'        this._loadCust0m(options, callback, {items: []}, -1);\r\n' +
+'        if(cust0m.bullshit || cust0m.best_of) this._loadCust0m(options, callback, {items: []}, -1);\r\n' +
+'        else this._loadOrg(options, callback);\r\n' +
 '    };\r\n' +
 'p.Stream.prototype._processResponse = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
