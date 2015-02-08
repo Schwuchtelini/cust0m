@@ -288,6 +288,7 @@ g.text = 'cust0m = {};\r\n' +
 '        return position;\r\n' +
 '    }; \r\n' +
 '\r\n' +
+/*
 'p.View.Stream.Main.prototype.loadedOFF = function (items, position, error) {\r\n' +
 '        this.loadedBound = this.loaded.bind(this);\r\n' +
 '        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
@@ -365,7 +366,7 @@ g.text = 'cust0m = {};\r\n' +
 '    },\r\n' +
 "p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
-
+*/
 standard =
 {
     anzahl: 20,
