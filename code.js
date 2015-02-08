@@ -681,7 +681,7 @@ function update_settings()
                  changeCss('.cust0m_best_of_middle', 'display: none');
             });
         }
-        setTimeout(function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();}, 1000);
+        setTimeout(function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();}, 5000);
     });
 }
 
