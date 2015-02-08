@@ -141,7 +141,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = true;\r\n' +
-'cust0m.cust0m.commentClick = function (comment)\r\n' +
+'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = $(comment).parent().parent().next();\r\n' +
 '   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> raus")} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein")}\r\n' +
