@@ -1,4 +1,4 @@
-$(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V1.0</div> \r\n' +
+$(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V1.2</div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe maximal haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> \r\n' +
