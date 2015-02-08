@@ -74,6 +74,22 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Kommentare ein- und ausklappbar machen.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Gibt dir die Möglichkeit Kommentare ein- und auszuklappen</div> \r\n' +
+'        <div id="cust0m_input_kommentarklappen" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_kommentarklappen_middle"> \r\n' +
+'        <div class="cust0m_help">Standardmäßig alle Kommentare einklappen.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare einklappen:</div> \r\n' +
+'        <div id="cust0m_input_kommentarklappen_default" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Oben links erscheint eine Krone mit der du die Beiträge mit dem längsten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Best of:</div> \r\n' +
 '        <div id="cust0m_input_best_of" class="cust0m_triggers"> \r\n' +
@@ -142,6 +158,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = true;\r\n' +
 'cust0m.einklappen = true;\r\n' +
+'cust0m.kommentarklappen = true;\r\n' +
 'cust0m.LoadEinklappen = function() { if($(".comment-foot").length >= 3) {$(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.einklappen) cust0m.commentClick($(elem).find(".cust0m_comment"));}});} else setTimeout(cust0m.LoadEinklappen, 50)}\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
@@ -155,7 +172,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
 '   $(".stream-next").append("<span class=\'cust0m_stream-next-icon\'>&gt;</span>");\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
-'   cust0m.LoadEinklappen();\r\n' +
+'   if(cust0m.kommentarklappen) cust0m.LoadEinklappen();\r\n' +
 '};\r\n' +
 'p.View.TV.Channel.prototype.nextVideo = function () {        this.currentIndex = this.currentIndex % this.items.length;  cust0m_index = this.currentIndex;  if (this.currentIndex >= this.items.length) {            return;        }        if (!this.$currentVideo) {            var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;            this.currentIndex++;            this.$currentVideo = this.createVideoElement(src, this.videoCanPlay.bind(this));  $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");      } else {            this.$currentVideo.remove();            this.$currentVideo = this.$nextVideo;            this.resize();            this.$videoContainer.append(this.$currentVideo);            this.playVideo();   $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index - 1].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");     }        if (p.Video.canPlayWebM) {            this.$currentVideo[0].onended = this.nextVideo.bind(this);        } else {           this.$currentVideo.data(\'jsmpeg\').externalFinishedCallback = this.nextVideo.bind(this);        }        var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;        this.currentIndex++;        this.$nextVideo = this.createVideoElement(src); ' +
 '   \r\n' +
@@ -372,7 +389,9 @@ standard =
     bullshit_benis_max: 9000,
     bullshit_benis_min: -150,
     ton: "OFF",
-    kommentarlinien: "OFF"
+    kommentarlinien: "OFF",
+    kommentarklappen: "OFF",
+    kommentarklappen_default: "OFF"
 };
 
 function save_options()
@@ -386,6 +405,8 @@ function save_options()
         benis: $('#cust0m_input_benis .active').text(),
         ups_downs: $('#cust0m_input_ups_downs .active').text(),
         kommentarlinien: $('#cust0m_input_kommentarlinien .active').text(),
+        kommentarklappen: $('#cust0m_input_kommentarklappen .active').text(),
+        kommentarklappen_default: $('#cust0m_input_kommentarklappen_default .active').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
         pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
@@ -450,6 +471,14 @@ function restore_options()
         $('#cust0m_input_kommentarlinien .cust0m_trigger').removeClass("active");
         if(items.kommentarlinien == "ON") $('#cust0m_input_kommentarlinien .cust0m_trigger_on').addClass("active");
         else $('#cust0m_input_kommentarlinien .cust0m_trigger_off').addClass("active");
+
+        $('#cust0m_input_kommentarklappen .cust0m_trigger').removeClass("active");
+        if(items.kommentarklappen == "ON") $('#cust0m_input_kommentarklappen .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_kommentarklappen .cust0m_trigger_off').addClass("active");
+
+        $('#cust0m_input_kommentarklappen_default .cust0m_trigger').removeClass("active");
+        if(items.kommentarklappen_default == "ON") $('#cust0m_input_kommentarklappen_default .cust0m_trigger_on').addClass("active");
+        else $('#cust0m_input_kommentarklappen_default .cust0m_trigger_off').addClass("active");
 
         $('#cust0m_input_pfeil .cust0m_trigger').removeClass("active");
         if(items.pfeil == "ON") $('#cust0m_input_pfeil .cust0m_trigger_on').addClass("active");
@@ -594,6 +623,21 @@ function update_settings()
                 changeCss('div.comment-box', 'border-left: none; margin-left: 0px;');
                 changeCss('.comments>div.comment-box', 'border-left: none; margin-left: 0px;');
                 changeCss('div.comment-box div.comment', 'margin-left: 0px');
+            });
+        }
+
+        if(items.kommentarklappen == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_kommentarklappen_middle', 'display: block');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                 changeCss('.cust0m_kommentarklappen_middle', 'display: none');
             });
         }
 
