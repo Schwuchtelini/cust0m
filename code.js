@@ -208,7 +208,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").removeClass("cust0m_active");\r\n' +
 '   $("#tab-new").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
-"setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('DAS BILD WURDE ALS') == -1 && $('.main-message').text().indexOf('NICHTS GEFUNDEN') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
+"setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 " \r\n" +
 'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
 '        round++;\r\n' +
@@ -545,7 +545,7 @@ function update_settings()
             "cust0m.kommentarklappen_default = " + (items.kommentarklappen_default == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
-            "CONFIG.AUTO_SYNC.INTERVAL = " + "1" + "; CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; if($('.main-message').text().indexOf('DAS BILD WURDE ALS') == -1) $(window).resize();";
+            "CONFIG.AUTO_SYNC.INTERVAL = " + "1" + "; CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) $(window).resize();";
         s.parentNode.insertBefore(g, s);
 
        changeCss('.item-image', 'min-height: ' + width + 'px;');
@@ -681,7 +681,7 @@ function update_settings()
                  changeCss('.cust0m_best_of_middle', 'display: none');
             });
         }
-        if($('.main-message').text().indexOf("DAS BILD WURDE ALS") == -1) $(window).resize();
+        if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();
     });
 }
 
