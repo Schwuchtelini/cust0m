@@ -144,7 +144,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = $(comment).parent().parent().next();\r\n' +
-'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> raus")} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein")}\r\n' +
+'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> raus")} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein");}\r\n' +
 '};\r\n' +
 "p.View.Stream.Comments.prototype.template.replace('<span class=\"pict\">r</span> antworten</a> <?js } ?>', '<span class=\"pict\">r</span> antworten</a><a class=\"action\" onclick=\"cust0m.commentClick(this);\"><span class=\"pict\">c</span> rein</a><?js } ?>');" +
 'setTimeout(function() {$(".tv-remote").append("<div class=\'cust0m_tv_info\'></div>");},2000);\r\n' +
