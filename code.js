@@ -141,10 +141,11 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = true;\r\n' +
+'cust0m.einklappen = true;\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
-'   box = $(comment).parent().parent().next();\r\n' +
-'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); $(comment).html("<span class=pict>c</span> raus");} else {box.css("display", "block"); $(comment).html("<span class=pict>c</span> rein");}\r\n' +
+'   box = comment.parent().parent().next();\r\n' +
+'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein");}\r\n' +
 '};\r\n' +
 'setTimeout(function() {$(".tv-remote").append("<div class=\'cust0m_tv_info\'></div>");},2000);\r\n' +
 'p.View.Stream.Main.prototype.showItem = function ($item, scrollTo) {' +
@@ -153,7 +154,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
 '   $(".stream-next").append("<span class=\'cust0m_stream-next-icon\'>&gt;</span>");\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
-'   $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) $(elem).append("<a class=\'action\' onclick=\'cust0m.commentClick(this);\'><span class=\'pict\'>c</span> rein</a>");});\r\n' +
+'   $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.einklappen) cust0m.commentClick($(elem).find(".cust0m_comment"));}});\r\n' +
 '};\r\n' +
 'p.View.TV.Channel.prototype.nextVideo = function () {        this.currentIndex = this.currentIndex % this.items.length;  cust0m_index = this.currentIndex;  if (this.currentIndex >= this.items.length) {            return;        }        if (!this.$currentVideo) {            var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;            this.currentIndex++;            this.$currentVideo = this.createVideoElement(src, this.videoCanPlay.bind(this));  $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");      } else {            this.$currentVideo.remove();            this.$currentVideo = this.$nextVideo;            this.resize();            this.$videoContainer.append(this.$currentVideo);            this.playVideo();   $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index - 1].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");     }        if (p.Video.canPlayWebM) {            this.$currentVideo[0].onended = this.nextVideo.bind(this);        } else {           this.$currentVideo.data(\'jsmpeg\').externalFinishedCallback = this.nextVideo.bind(this);        }        var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;        this.currentIndex++;        this.$nextVideo = this.createVideoElement(src); ' +
 '   \r\n' +
