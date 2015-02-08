@@ -159,6 +159,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.disableLoad = true;\r\n' +
 'cust0m.kommentarklappen_default = false;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
+"cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
 'cust0m.LoadEinklappen = function() { if($(".comment-foot").length >= 3) {$(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default) cust0m.commentClick($(elem).find(".cust0m_comment"));}});} else setTimeout(cust0m.LoadEinklappen, 50)}\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
@@ -208,7 +209,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").removeClass("cust0m_active");\r\n' +
 '   $("#tab-new").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
-"setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv') {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
+"setTimeout(function() { setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);}, 1000);\r\n" +
 " \r\n" +
 'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
 '        round++;\r\n' +
@@ -288,6 +289,7 @@ g.text = 'cust0m = {};\r\n' +
 '        return position;\r\n' +
 '    }; \r\n' +
 '\r\n' +
+/*
 'p.View.Stream.Main.prototype.loadedOFF = function (items, position, error) {\r\n' +
 '        this.loadedBound = this.loaded.bind(this);\r\n' +
 '        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
@@ -350,6 +352,7 @@ g.text = 'cust0m = {};\r\n' +
 '      this.hasItems = true;\r\n' +
 '      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
+*/
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
 '        var disable = false;\r\n' +
@@ -543,7 +546,7 @@ function update_settings()
             "cust0m.kommentarklappen_default = " + (items.kommentarklappen_default == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
-            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; $(window).resize();";
+            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh();";
         s.parentNode.insertBefore(g, s);
 
        changeCss('.item-image', 'min-height: ' + width + 'px;');
@@ -616,9 +619,9 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('div.comment-box', 'border-left: 5px solid #222; margin-left: 5px;');
-                changeCss('.comments>div.comment-box', 'border-left: none; margin-left: 0px;');
-                changeCss('div.comment-box .comment', 'margin-left: -3px');
+                changeCss('div.comment-box', 'border-left: 1px solid #222; margin-left: 7px;');
+                changeCss('div.comment-box div.comment', 'margin-left: -3px');
+                changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
             });
         }
         else
@@ -626,8 +629,8 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('div.comment-box', 'border-left: none; margin-left: 0px;');
-                changeCss('.comments>div.comment-box', 'border-left: none; margin-left: 0px;');
                 changeCss('div.comment-box div.comment', 'margin-left: 0px');
+                changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
             });
         }
 
@@ -679,7 +682,7 @@ function update_settings()
                  changeCss('.cust0m_best_of_middle', 'display: none');
             });
         }
-        $(window).resize();
+        setTimeout(function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();}, 400);
     });
 }
 
