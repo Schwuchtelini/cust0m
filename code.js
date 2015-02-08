@@ -208,7 +208,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").removeClass("cust0m_active");\r\n' +
 '   $("#tab-new").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
-"setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
+//"setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);\r\n" +
 " \r\n" +
 'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
 '        round++;\r\n' +
