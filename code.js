@@ -546,7 +546,7 @@ function update_settings()
             "cust0m.kommentarklappen_default = " + (items.kommentarklappen_default == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
-            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; setTimeout(function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();}, 400);";
+            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh();";
         s.parentNode.insertBefore(g, s);
 
        changeCss('.item-image', 'min-height: ' + width + 'px;');
