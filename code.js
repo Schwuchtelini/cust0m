@@ -98,7 +98,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Wie viele Tags möchtest du am Anfang sehen?<br>Normalerweise werden 5 angezeigt.</div> \r\n' +
+'        <div class="cust0m_help">Wie viele Tags möchtest du am Anfang sehen?<br>Normalerweise werden 4 angezeigt.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Sichtbare Tags:</div> \r\n' +
 '        <div id="cust0m_input_start_tags" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label"></div> \r\n' +
