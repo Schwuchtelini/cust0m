@@ -757,7 +757,7 @@ function saveView(id)
 {
     var array = {};
     array[(id + "")] = true;
-    chrome.storage.local.set(array);
+    chrome.storage.local.set(array, function(e){});
     views[id] = true;
 }
 
