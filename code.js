@@ -696,7 +696,7 @@ function update_settings()
         {
             if(items.time == future) chrome.storage.local.set(
             {
-                time: new Date().getTime();
+                time: new Date().getTime()
             });
         }
 
