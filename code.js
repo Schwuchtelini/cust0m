@@ -689,7 +689,7 @@ function update_settings()
         {
             chrome.storage.local.set(
             {
-                time: future;
+                time: future
             });
         }
         else
