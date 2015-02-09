@@ -414,8 +414,12 @@ standard =
     kommentarklappen_default: "OFF",
     start_tags: 4,
     start_tags_min: 1,
-    start_tags_max: 100
+    start_tags_max: 100,
+    save_views: "ON"
 };
+
+
+views = {};
 
 function save_options()
 {
@@ -548,6 +552,8 @@ function update_settings()
     chrome.storage.local.get(standard,
     function (items)
     {
+        views = items;
+
         anzahl = items.anzahl;
 
         width = items.width;
@@ -726,3 +732,27 @@ function changeCss(className, classValue)
 }
 
 update_settings();
+
+function setViews()
+{
+    if(views.save_views && lastThumbs < $(".thumb".length))
+    {
+        lastThumbs = $(".thumb".length);
+        $(".thumb").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen");});
+    }
+}
+
+lastThumbs = 0;
+setInterval(setViews, 1000);
+
+function saveView(id)
+{
+    chrome.storage.local.set({id: true});
+    views[id] = true;
+}
+
+function isView(id)
+{
+    if(views[id] == undefined) return false;
+    else return true;
+}

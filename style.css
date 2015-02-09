@@ -269,3 +269,8 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 {
     color: #ee4d2e;
 }
+
+.custom_seen
+{
+    box-shadow: inset 0px -10px 78px 11px rgba(158,46,46,1);
+}
