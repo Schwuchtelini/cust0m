@@ -171,6 +171,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.disableLoad = true;\r\n' +
 'cust0m.kommentarklappen_default = 20;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
+'$("body").append("<div style=\'display: none\' id=\'cust0m_viewed\'><div>");\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
 'cust0m.LoadEinklappen = function() ' +
 '{\r\n' +
@@ -383,6 +384,7 @@ g.text = 'cust0m = {};\r\n' +
 '        }\r\n' +
 '        else p.navigateToOrginal(location, mode);\r\n' +
 '   cust0m.disableLoad = true;\r\n' +
+'    if(location != "new" && location != "top") $("#cust0m_viewed").append("<div view=\'" + location + "\'></div>");\r\n' +
 '    },\r\n' +
 "p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
@@ -485,7 +487,7 @@ function restore_options()
 
         $('#cust0m_input_start_tags').html(items.start_tags);
 
-        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_update"];
+        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates"];
 
         for(i = 0; i < options.length; i++)
         {
@@ -685,7 +687,7 @@ function update_settings()
         }
 
         var future = 1000 * 60 * 60 * 24 * 365 * 100;
-        if(items.no_update == "OFF")
+        if(items.no_updates == "OFF")
         {
             chrome.storage.local.set(
             {
