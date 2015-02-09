@@ -171,7 +171,7 @@ g.text = 'cust0m = {};\r\n' +
 '{\r\n' +
 '    if($(".comment-foot").length >= 3) {\r\n' +
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
-'        $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default && parseInt($(elem).attr("tiefe")) > cust0m.kommentarklappenTiefe) cust0m.commentClick($(elem).find(".cust0m_comment"));}});\r\n' +
+'        $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default && parseInt($(elem).attr("tiefe")) >= cust0m.kommentarklappenTiefe) cust0m.commentClick($(elem).find(".cust0m_comment"));}});\r\n' +
 '   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
 '};\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
