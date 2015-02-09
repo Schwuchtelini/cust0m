@@ -129,6 +129,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
+'        <div class="cust0m_help">Willst du zukünftige Updates erhalten?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Updates ausschalten:</div> \r\n' +
+'        <div id="cust0m_input_no_updates" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
 '    <div class="cust0m_line"></div> \r\n' +
 '    <div id="cust0m_save" class="cust0m_button">speichern</div> \r\n' +
 '    <div id="cust0m_info" class="cust0m_button" style="display: none">gespeichert</div> \r\n' +
@@ -413,7 +421,8 @@ standard =
     start_tags: 4,
     start_tags_min: 1,
     start_tags_max: 100,
-    save_views: "ON"
+    save_views: "ON",
+    no_updates: "OFF"
 };
 
 views = {};
@@ -436,6 +445,7 @@ function save_options()
         pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
         bullshit: $('#cust0m_input_bullshit .active').text(),
+        no_updates: $('#cust0m_input_no_updates .active').text(),
         ton: $('#cust0m_input_ton .active').text(),
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
         bullshit_benis: $('#cust0m_input_bullshit_benis').text()
@@ -475,54 +485,21 @@ function restore_options()
 
         $('#cust0m_input_start_tags').html(items.start_tags);
 
-        $('#cust0m_input_pos .cust0m_trigger').removeClass("active");
-        if(items.pos == "ON") $('#cust0m_input_pos .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_pos .cust0m_trigger_off').addClass("active");
+        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_update"];
 
-        $('#cust0m_input_admin .cust0m_trigger').removeClass("active");
-        if(items.admin == "ON") $('#cust0m_input_admin .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_admin .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_benis .cust0m_trigger').removeClass("active");
-        if(items.benis == "ON") $('#cust0m_input_benis .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_benis .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_ups_downs .cust0m_trigger').removeClass("active");
-        if(items.ups_downs == "ON") $('#cust0m_input_ups_downs .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_ups_downs .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_fullsize .cust0m_trigger').removeClass("active");
-        if(items.fullsize == "ON") $('#cust0m_input_fullsize .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_fullsize .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_kommentarlinien .cust0m_trigger').removeClass("active");
-        if(items.kommentarlinien == "ON") $('#cust0m_input_kommentarlinien .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_kommentarlinien .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_kommentarklappen .cust0m_trigger').removeClass("active");
-        if(items.kommentarklappen == "ON") $('#cust0m_input_kommentarklappen .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_kommentarklappen .cust0m_trigger_off').addClass("active");
-
+        for(i = 0; i < options.length; i++)
+        {
+            option = options[i];
+            $('#cust0m_input_' + option + ' .cust0m_trigger').removeClass("active");
+            if(items[option] == "ON") $('#cust0m_input_' + option + ' .cust0m_trigger_on').addClass("active");
+            else $('#cust0m_input_' + option + ' .cust0m_trigger_off').addClass("active");
+        }
         $('#cust0m_input_kommentarklappen_default').html(items.kommentarklappen_default);
-
-        $('#cust0m_input_pfeil .cust0m_trigger').removeClass("active");
-        if(items.pfeil == "ON") $('#cust0m_input_pfeil .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_pfeil .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_ton .cust0m_trigger').removeClass("active");
-        if(items.ton == "ON") $('#cust0m_input_ton .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_ton .cust0m_trigger_off').addClass("active");
 
         $('#cust0m_input_thumbs').html(items.thumbs);
 
-        $('#cust0m_input_bullshit .cust0m_trigger').removeClass("active");
-        if(items.bullshit == "ON") $('#cust0m_input_bullshit .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_bullshit .cust0m_trigger_off').addClass("active");
         $('#cust0m_input_bullshit_benis').text(items.bullshit_benis);
 
-        $('#cust0m_input_best_of .cust0m_trigger').removeClass("active");
-        if(items.best_of == "ON") $('#cust0m_input_best_of .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_best_of .cust0m_trigger_off').addClass("active");
         $('#cust0m_input_best_of_benis').text(items.best_of_benis);
     });
 }
@@ -706,6 +683,23 @@ function update_settings()
                  changeCss('.cust0m_best_of_middle', 'display: none');
             });
         }
+
+        var future = 1000 * 60 * 60 * 24 * 365 * 100;
+        if(items.no_update == "ON")
+        {
+            chrome.storage.local.set(
+            {
+                time: future;
+            });
+        }
+        else
+        {
+            if(items.time == future) chrome.storage.local.set(
+            {
+                time: new Date().getTime();
+            });
+        }
+
         setTimeout(function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();}, 400);
     });
 }
