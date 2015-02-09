@@ -281,19 +281,20 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     width: 50%;
     text-align: center;
     cursor: pointer;
-    background-color: #333;
+    background-color: #111;
+    padding: 10px 0;
 }
 
 .cust0m_menu:hover, .cust0m_menu.active
 {
     color: #ee4d2e;
-    background-color: #444;
+    background-color: #222;
 }
 
 .cust0m_menu.active,
 {
     cursor: auto;
-    background-color: #333;
+    background-color: #1c1c1c;
 }
 
 .cust0m_menu_middle
