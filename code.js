@@ -558,7 +558,7 @@ function update_settings()
         thumbs = items.thumbs / 100;
 
         best_of_benis = items.best_of_benis;
-
+         items.kommentarklappen_default = 3;
         bullshit_benis = items.bullshit_benis;
 
         var g = document.createElement('script');
