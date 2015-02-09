@@ -42,6 +42,7 @@
     padding: 10px;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.9);
+    display: none;
 }
 
 .cust0m_button
@@ -301,4 +302,9 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 {
     overflow: hidden;
     background: rgba(0, 0, 0, 0.9);
+}
+
+.cust0m_general
+{
+    display: block;
 }
