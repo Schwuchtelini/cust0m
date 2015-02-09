@@ -295,3 +295,8 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     cursor: auto;
     background-color: #333;
 }
+
+.cust0m_menu_middle
+{
+    padding: 0;
+}
