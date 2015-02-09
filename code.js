@@ -3,13 +3,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_menu">Allgemein</div> \r\n' +
 '        <div class="cust0m_menu">Posts</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_line"></div> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe maximal haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> \r\n' +
 '        <div id="cust0m_input_anzahl" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Vorschaubilder</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie groß sollen die Vorschaubilder sein?<br>Normalerweise ist 100% eingetragen.<br>Limit: 30%</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
@@ -37,7 +38,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Willst du Pr0gramm aus der Sicht eines Admins sehen?<br>Natürlich hast du damit keine Admin Rechte.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Admin Sicht:</div> \r\n' +
 '        <div id="cust0m_input_admin" class="cust0m_triggers"> \r\n' +
@@ -45,7 +46,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Möchtest du oben im Header deinen Benis bestaunen können?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Benis anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_benis" class="cust0m_triggers"> \r\n' +
@@ -105,13 +106,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div id="cust0m_input_start_tags" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Tags</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_best_of_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Limit: 1500 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
 '        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Oben links erscheint eine scheißender Bulle, mit dem du die Beiträge mit dem kürzesten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bullshit:</div> \r\n' +
 '        <div id="cust0m_input_bullshit" class="cust0m_triggers"> \r\n' +
@@ -119,13 +120,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_bullshit_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Limit: -150 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
 '        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie stell ich den Ton in Pr0gramm ein?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ton:</div> \r\n' +
 '        <div id="cust0m_input_ton" class="cust0m_triggers"> \r\n' +
@@ -133,7 +134,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Willst du zukünftige Updates erhalten?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Updates:</div> \r\n' +
 '        <div id="cust0m_input_no_updates" class="cust0m_triggers"> \r\n' +
