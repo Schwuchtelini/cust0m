@@ -755,7 +755,9 @@ setInterval(setViews, 1000);
 
 function saveView(id)
 {
-    chrome.storage.local.set({(id + ""): true});
+    var array = {};
+    array[(id + "")] = true;
+    chrome.storage.local.set(array);
     views[id] = true;
 }
 
