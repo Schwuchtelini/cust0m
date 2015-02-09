@@ -424,7 +424,8 @@ standard =
     start_tags_min: 1,
     start_tags_max: 100,
     save_views: "ON",
-    no_updates: "ON"
+    no_updates: "ON",
+    time: new Date().getTime()
 };
 
 views = {};
