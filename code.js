@@ -1,7 +1,7 @@
 $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V1.2</div> \r\n' +
 '    <div class="cust0m_menu_middle"> \r\n' +
-'        <div class="cust0m_menu active" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_middle\').css(\'display\',\'none\'); $(\'.cust0m_general\').css(\'display\',\'block\');">Allgemein</div> \r\n' +
-'        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_middle\').css(\'display\',\'block\'); $(\'.cust0m_general\').css(\'display\',\'none\');">Posts</div> \r\n' +
+'        <div class="cust0m_menu active" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'none\'); $(\'.cust0m_general\').css(\'display\',\'block\');">Allgemein</div> \r\n' +
+'        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'block\'); $(\'.cust0m_general\').css(\'display\',\'none\');">Posts</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_line"></div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
@@ -16,13 +16,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Wie groß soll das Bild eines Betrags minimal sein?<br>Normalerweise ist 0 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bilder Mindesthöhe:</div> \r\n' +
 '        <div id="cust0m_input_width" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">px</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Soll für ein Beitrag das größerer Bild geladen werden, wenn genügend Platz ist?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Großes Bild laden</div> \r\n' +
 '        <div id="cust0m_input_fullsize" class="cust0m_triggers"> \r\n' +
@@ -30,7 +30,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Sollen die Kommentare in die Mitte statt Links?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Kommentare in die Mitte:</div> \r\n' +
 '        <div id="cust0m_input_pos" class="cust0m_triggers"> \r\n' +
@@ -54,7 +54,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Willst du die alten Pfeile wieder haben?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Die alten Pfeile anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_pfeil" class="cust0m_triggers"> \r\n' +
@@ -62,7 +62,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Möchtest du die Ups und Downs eines Beitrags direkt sehen können?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ups und Downs anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_ups_downs" class="cust0m_triggers"> \r\n' +
@@ -70,7 +70,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Kommentarlinien helfen dir, bei vielen Kommentaren den Überblick zu behalten.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Kommentarlinien anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_kommentarlinien" class="cust0m_triggers"> \r\n' +
@@ -78,7 +78,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Gibt dir die Möglichkeit Kommentare ein- und auszuklappen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ein- und ausklappbare Kommentare:</div> \r\n' +
 '        <div id="cust0m_input_kommentarklappen" class="cust0m_triggers"> \r\n' +
@@ -92,7 +92,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div id="cust0m_input_kommentarklappen_default" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Kommentaren einklappen</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Wie viele Tags möchtest du am Anfang sehen?<br>Normalerweise werden 4 angezeigt.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Sichtbare Tags:</div> \r\n' +
 '        <div id="cust0m_input_start_tags" class="cust0m_input" contenteditable="true"></div> \r\n' +
@@ -106,11 +106,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle cust0m_best_of_middle cust0m_general"> \r\n' +
+'    <div class="cust0m_general"> \r\n' +
+'    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
 '        <div class="cust0m_help">Limit: 1500 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
 '        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
+'    </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Oben links erscheint eine scheißender Bulle, mit dem du die Beiträge mit dem kürzesten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
@@ -120,11 +122,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle cust0m_bullshit_middle cust0m_general"> \r\n' +
+'    <div class="cust0m_general"> \r\n' +
+'    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
 '        <div class="cust0m_help">Limit: -150 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
 '        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
+'    </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie stell ich den Ton in Pr0gramm ein?</div> \r\n' +
