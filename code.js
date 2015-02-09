@@ -233,7 +233,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").removeClass("cust0m_active");\r\n' +
 '   $("#tab-new").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
-"setTimeout(function() { setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);}, 1000);\r\n" +
+"setTimeout(function() { setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);}, 500);\r\n" +
 " \r\n" +
 'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
 '        round++;\r\n' +
@@ -708,7 +708,7 @@ function update_settings()
             });
         }
 
-        setTimeout(function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();}, 400);
+        $(window).resize();
     });
 }
 
