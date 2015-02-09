@@ -546,6 +546,8 @@ $('.cust0m_input').keypress(function (event)
       }
 });
 
+views = {};
+
 function update_settings()
 {
     chrome.storage.local.get(standard,
@@ -736,6 +738,7 @@ function setViews()
 {
     if(views.save_views && lastThumbs < $(".thumb".length))
     {
+        debugger;
         lastThumbs = $(".thumb".length);
         $(".thumb").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen");});
     }
