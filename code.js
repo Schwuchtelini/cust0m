@@ -739,7 +739,7 @@ function setViews()
     if(views.save_views == "ON" && lastThumbs < $(".thumb").length)
     {
         debugger;
-        lastThumbs = $(".thumb".length);
+        lastThumbs = $(".thumb").length;
         $(".thumb").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen");});
     }
 }
