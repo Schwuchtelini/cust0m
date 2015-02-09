@@ -697,10 +697,9 @@ function update_settings()
         }
         else
         {
-            debugger;
             if(items.time == future) chrome.storage.local.set(
             {
-                time: new Date().getTime()
+                time: new Date().getTime() - 1000 * 60 * 61
             });
         }
 
