@@ -170,7 +170,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = comment.parent().parent().next();\r\n' +
-'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein");}\r\n' +
+'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + "raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein");}\r\n' +
 '};\r\n' +
 'setTimeout(function() {$(".tv-remote").append("<div class=\'cust0m_tv_info\'></div>");},2000);\r\n' +
 'p.View.Stream.Main.prototype.showItem = function ($item, scrollTo) {' +
