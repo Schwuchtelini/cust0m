@@ -1,9 +1,9 @@
 $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V1.2</div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_menu_middle"> \r\n' +
 '        <div class="cust0m_menu">Allgemein</div> \r\n' +
 '        <div class="cust0m_menu">Posts</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle cust0m_menu_middle"> \r\n' +
+'    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe maximal haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> \r\n' +
 '        <div id="cust0m_input_anzahl" class="cust0m_input" contenteditable="true"></div> \r\n' +
