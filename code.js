@@ -1,7 +1,7 @@
 $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V1.2</div> \r\n' +
-'    <div class="cust0m_middle cust0m_menu_middle"> \r\n' +
-'        <div class="cust0m_menu">Allgemein</div> \r\n' +
-'        <div class="cust0m_menu">Posts</div> \r\n' +
+'    <div class="cust0m_menu_middle"> \r\n' +
+'        <div class="cust0m_menu" onclick="$(\'cust0m_middle\').css(\'display\',\'none\'); $(\'cust0m_general\').css(\'display\',\'block\');">Allgemein</div> \r\n' +
+'        <div class="cust0m_menu" onclick="$(\'cust0m_middle\').css(\'display\',\'block\'); $(\'cust0m_general\').css(\'display\',\'none\');">Posts</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_line"></div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +

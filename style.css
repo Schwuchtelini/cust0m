@@ -299,5 +299,6 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 
 .cust0m_menu_middle
 {
-    padding: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
 }
