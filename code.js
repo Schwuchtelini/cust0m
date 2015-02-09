@@ -368,7 +368,6 @@ g.text = 'cust0m = {};\r\n' +
 */
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
-'        debugger;\r\n' +
 '        var disable = false;\r\n' +
 '        if(cust0m.bullshit && (location.indexOf("new") != 0 || (cust0m.disableLoad && location == "new" && mode == 0))) { cust0m.disable_bullshit(); disable = true;} \r\n' +
 '        if(cust0m.best_of && (location.indexOf("top") != 0 || (cust0m.disableLoad && location == "top" && mode == 0))) { cust0m.disable_best_of(); disable = true;} \r\n' +
