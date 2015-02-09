@@ -82,12 +82,10 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_kommentarklappen_middle"> \r\n' +
-'        <div class="cust0m_help">Standardmäßig alle Kommentare einklappen.</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentare zuerst einklappen:</div> \r\n' +
-'        <div id="cust0m_input_kommentarklappen_default" class="cust0m_triggers"> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
-'        </div> \r\n' +
+'        <div class="cust0m_help">Ab welcher Kommentartiefe willst du die Kommentare eingeklappt haben?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare ab einer tiefe von :</div> \r\n' +
+'        <div id="cust0m_input_kommentarklappen_default" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">Kommentaren einklappen</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Oben links erscheint eine Krone mit der du die Beiträge mit dem längsten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
@@ -163,15 +161,14 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = true;\r\n' +
-'cust0m.kommentarklappen_default = false;\r\n' +
+'cust0m.kommentarklappen_default = 20;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
-'cust0m.kommentarklappenTiefe = 2;\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
 'cust0m.LoadEinklappen = function() ' +
 '{\r\n' +
 '    if($(".comment-foot").length >= 3) {\r\n' +
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
-'        $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default && parseInt($(elem).attr("tiefe")) >= cust0m.kommentarklappenTiefe - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}});\r\n' +
+'        $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(parseInt($(elem).attr("tiefe")) >= cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}});\r\n' +
 '   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
 '};\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
@@ -410,13 +407,14 @@ standard =
     ton: "OFF",
     kommentarlinien: "OFF",
     kommentarklappen: "OFF",
-    kommentarklappen_default: "OFF",
+    kommentarklappen_default: 3,
+    kommentarklappen_default_min: 1,
+    kommentarklappen_default_max: 20,
     start_tags: 4,
     start_tags_min: 1,
     start_tags_max: 100,
     save_views: "ON"
 };
-
 
 views = {};
 
@@ -433,7 +431,7 @@ function save_options()
         ups_downs: $('#cust0m_input_ups_downs .active').text(),
         kommentarlinien: $('#cust0m_input_kommentarlinien .active').text(),
         kommentarklappen: $('#cust0m_input_kommentarklappen .active').text(),
-        kommentarklappen_default: $('#cust0m_input_kommentarklappen_default .active').text(),
+        kommentarklappen_default: $('#cust0m_input_kommentarklappen_default').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
         pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
@@ -505,9 +503,7 @@ function restore_options()
         if(items.kommentarklappen == "ON") $('#cust0m_input_kommentarklappen .cust0m_trigger_on').addClass("active");
         else $('#cust0m_input_kommentarklappen .cust0m_trigger_off').addClass("active");
 
-        $('#cust0m_input_kommentarklappen_default .cust0m_trigger').removeClass("active");
-        if(items.kommentarklappen_default == "ON") $('#cust0m_input_kommentarklappen_default .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_kommentarklappen_default .cust0m_trigger_off').addClass("active");
+        $('#cust0m_input_kommentarklappen_default').html(items.kommentarklappen_default);
 
         $('#cust0m_input_pfeil .cust0m_trigger').removeClass("active");
         if(items.pfeil == "ON") $('#cust0m_input_pfeil .cust0m_trigger_on').addClass("active");
@@ -570,7 +566,7 @@ function update_settings()
         g.text = "p.user.admin = " + (items.admin == "ON") + ";" +
             "cust0m.fullsize = " + (items.fullsize == "ON") + ";" +
             "cust0m.kommentarklappen = " + (items.kommentarklappen == "ON") + ";" +
-            "cust0m.kommentarklappen_default = " + (items.kommentarklappen_default == "ON") + ";" +
+            "cust0m.kommentarklappen_default = " + items.kommentarklappen_default + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
             "CONFIG.TAGS_MAX_DISPLAY = " + items.start_tags + ";" +
