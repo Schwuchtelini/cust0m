@@ -422,7 +422,7 @@ standard =
     start_tags_min: 1,
     start_tags_max: 100,
     save_views: "ON",
-    no_updates: "OFF"
+    no_updates: "ON"
 };
 
 views = {};
