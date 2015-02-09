@@ -167,7 +167,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
 'cust0m.kommentarklappenTiefe = 1;\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
-'cust0m.LoadEinklappen = function() { if($(".comment-foot").length >= 3) {$(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box") && $(elem).find(".cust0m_comment").length == 0) {  if($(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", $(elem).attr("tiefe") + 1); }); $(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default) cust0m.commentClick($(elem).find(".cust0m_comment"));}});} else setTimeout(cust0m.LoadEinklappen, 50)}\r\n' +
+'cust0m.LoadEinklappen = function() { if($(".comment-foot").length >= 3) {$(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box") && $(elem).find(".cust0m_comment").length == 0) { $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", $(elem).attr("tiefe") + 1); }); $(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default) cust0m.commentClick($(elem).find(".cust0m_comment"));}});} else setTimeout(cust0m.LoadEinklappen, 50)}\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = comment.parent().parent().next();\r\n' +
