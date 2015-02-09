@@ -736,7 +736,7 @@ update_settings();
 
 function setViews()
 {
-    if(views.save_views && lastThumbs < $(".thumb").length)
+    if(views.save_views == "ON" && lastThumbs < $(".thumb").length)
     {
         debugger;
         lastThumbs = $(".thumb".length);
