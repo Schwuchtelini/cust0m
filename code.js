@@ -83,7 +83,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_kommentarklappen_middle"> \r\n' +
 '        <div class="cust0m_help">Ab welcher Kommentartiefe willst du die Kommentare eingeklappt haben?</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentare ab einer tiefe von :</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare ab einer tiefe von </div> \r\n' +
 '        <div id="cust0m_input_kommentarklappen_default" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Kommentaren einklappen</div> \r\n' +
 '    </div> \r\n' +
@@ -131,7 +131,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    </div> \r\n' +
 '    <div class="cust0m_middle"> \r\n' +
 '        <div class="cust0m_help">Willst du zukünftige Updates erhalten?</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Updates ausschalten:</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Updates:</div> \r\n' +
 '        <div id="cust0m_input_no_updates" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
@@ -685,7 +685,7 @@ function update_settings()
         }
 
         var future = 1000 * 60 * 60 * 24 * 365 * 100;
-        if(items.no_update == "ON")
+        if(items.no_update == "OFF")
         {
             chrome.storage.local.set(
             {
