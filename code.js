@@ -732,7 +732,7 @@ function setViews()
     if(views.save_views == "ON" && lastThumbs < $(".thumb").length)
     {
         debugger;
-        $("#cust0m_viewed div").each(function (id, elem) {if($(elem).attr("id") != undefined) {saveView($(elem).attr("id"));}});
+        $("#cust0m_viewed div").each(function (id, elem) {if($(elem).attr("id") != undefined) {saveView("item-" + $(elem).attr("id"));}});
         $("#cust0m_viewed div").remove();
         lastThumbs = $(".thumb").length;
         $(".thumb").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen");});
