@@ -277,6 +277,21 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 
 .cust0m_menu
 {
-    float: laft;
+    float: left;
     width: 50%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #333;
+}
+
+.cust0m_menu:hover, .cust0m_menu.active,
+{
+    color: #ee4d2e;
+    background-color: #444;
+}
+
+.cust0m_menu.active,
+{
+    cursor: auto;
+    background-color: #333;
 }
