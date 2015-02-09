@@ -88,7 +88,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_kommentarklappen_middle"> \r\n' +
 '        <div class="cust0m_help">Ab welcher Kommentartiefe willst du die Kommentare eingeklappt haben?</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentare ab einer tiefe von </div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare ab einer Tiefe von</div> \r\n' +
 '        <div id="cust0m_input_kommentarklappen_default" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Kommentaren einklappen</div> \r\n' +
 '    </div> \r\n' +
