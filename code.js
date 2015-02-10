@@ -741,7 +741,7 @@ update_settings();
 
 function setViews()
 {
-    if(views.save_views == "ON" && (lastViewed != $(".custom_seen").length || lastThumbs != $(".thumb").length))
+    if(views.save_views == "ON" && (lastViewed == 0 || lastViewed != $(".custom_seen").length || lastThumbs != $(".thumb").length))
     {
         $("#cust0m_viewed div").each(function (id, elem) {if($(elem).attr("view") != undefined) {saveView("item-" + $(elem).attr("view"));}});
         $("#cust0m_viewed div").remove();
