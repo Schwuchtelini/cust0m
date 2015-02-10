@@ -818,7 +818,7 @@ function update_settings()
             if(items.time == future) chrome.storage.local.set(
             {
                 time: new Date().getTime() - 1000 * 60 * 61
-            });
+            }, update);
         }
 
         $(window).resize();
