@@ -17,7 +17,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
-'        <div class="cust0m_help">Markiert die Bilder die du schon gesehen hast.</div> \r\n' +
+'        <div class="cust0m_help">Markiert die Bilder, die du schon gesehen hast.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Gesehene Bilder markieren:</div> \r\n' +
 '        <div id="cust0m_input_save_views" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_small active cust0m_trigger_m1" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">M 1</div> \r\n' +
