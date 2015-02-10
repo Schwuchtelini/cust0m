@@ -645,7 +645,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.custom_op', 'border-color: #ee4d2e');
+                changeCss('.custom_op', 'border-color: #ee4d2e !important');
             });
         }
         else
