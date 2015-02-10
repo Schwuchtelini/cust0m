@@ -742,7 +742,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_bullshitbullshit', 'display: inline');
+                changeCss('.cust0m_bullshit', 'display: inline');
                 changeCss('.cust0m_bullshit_middle', 'display: block');
             });
         }
