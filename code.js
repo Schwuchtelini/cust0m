@@ -618,7 +618,7 @@ function update_settings()
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
             "CONFIG.TAGS_MAX_DISPLAY = " + items.start_tags + ";" +
-            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh();";
+            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh(); cust0m.LoadEinklappen();";
         s.parentNode.insertBefore(g, s);
 
        changeCss('.item-image', 'min-height: ' + width + 'px;');
