@@ -741,7 +741,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
-                changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: 'pict0gramm';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: 0.7;');
+                changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: \'pict0gramm\';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: 0.7;');
             });
         }
 
