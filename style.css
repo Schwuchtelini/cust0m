@@ -3,6 +3,11 @@
     padding: 10px 5px;
 }
 
+a.thumb
+{
+    overflow: hidden;
+}
+
 .cust0m_settings
 {
     width: 475px;
