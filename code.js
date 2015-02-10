@@ -723,8 +723,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_best_of', 'display: none');
-                 changeCss('.cust0m_best_of_middle', 'display: none');
+                changeCss('.custom_seen', 'opacity: 0.3');
             });
         }
 
