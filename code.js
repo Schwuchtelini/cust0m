@@ -853,7 +853,7 @@ function setViews()
         $("#cust0m_viewed div").remove();
         lastViewed = $(".custom_seen").length;
         lastThumbs = $(".thumb").length;
-        $(".thumb").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen");});
+        $(".thumb").not(".custom_checked");.each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen"); $(elem).addClass("custom_checked");});
         chrome.storage.local.set({viewed: views.viewed});
     }
 }
