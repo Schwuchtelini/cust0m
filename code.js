@@ -479,8 +479,13 @@ standard =
     start_tags_max: 100,
     save_views: "OFF",
     no_updates: "ON",
+    op: "OFF",
+    op_top: "OFF",
     time: new Date().getTime(),
-    viewed: {}
+    viewed: {},
+    kommentarlinienbreite: 1,
+    kommentarlinienbreite_min: 1,
+    kommentarlinienbreite_max: 10
 };
 
 views = {};
@@ -499,12 +504,15 @@ function save_options()
         kommentarlinien: $('#cust0m_input_kommentarlinien .active').text(),
         kommentarklappen: $('#cust0m_input_kommentarklappen .active').text(),
         kommentarklappen_default: $('#cust0m_input_kommentarklappen_default').text(),
+        kommentarlinienbreite: $('#cust0m_input_kommentarlinienbreite').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
         pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
         bullshit: $('#cust0m_input_bullshit .active').text(),
         no_updates: $('#cust0m_input_no_updates .active').text(),
         save_views: $('#cust0m_input_save_views .active').text(),
+        op: $('#cust0m_input_op .active').text(),
+        op_top: $('#cust0m_input_op_top .active').text(),
         ton: $('#cust0m_input_ton .active').text(),
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
         bullshit_benis: $('#cust0m_input_bullshit_benis').text()
@@ -543,7 +551,7 @@ function restore_options()
 
         $('#cust0m_input_start_tags').html(items.start_tags);
 
-        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views"];
+        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views", "op", "op_top"];
 
         for(i = 0; i < options.length; i++)
         {
@@ -556,6 +564,8 @@ function restore_options()
             else $('#cust0m_input_' + option + ' .cust0m_trigger_off').addClass("active");
         }
         $('#cust0m_input_kommentarklappen_default').html(items.kommentarklappen_default);
+
+        $('#cust0m_input_kommentarlinienbreite').html(items.kommentarlinienbreite);
 
         $('#cust0m_input_thumbs').html(items.thumbs);
 
@@ -605,6 +615,9 @@ function update_settings()
             "cust0m.fullsize = " + (items.fullsize == "ON") + ";" +
             "cust0m.kommentarklappen = " + (items.kommentarklappen == "ON") + ";" +
             "cust0m.kommentarklappen_default = " + items.kommentarklappen_default + ";" +
+            "cust0m.kommentarlinienbreite = " + items.kommentarlinienbreite + ";" +
+            "cust0m.op = " + (items.op == "ON") + ";" +
+            "cust0m.op_top = " + (items.op_top == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
             "CONFIG.TAGS_MAX_DISPLAY = " + items.start_tags + ";" +
@@ -684,6 +697,7 @@ function update_settings()
                 changeCss('div.comment-box', 'border-left: 1px solid #222; margin-left: 7px;');
                 changeCss('div.comment-box div.comment', 'margin-left: -3px');
                 changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('.cust0m_kommentarlinien_middle', 'display: block');
             });
         }
         else
@@ -693,6 +707,7 @@ function update_settings()
                 changeCss('div.comment-box', 'border-left: none; margin-left: 0px;');
                 changeCss('div.comment-box div.comment', 'margin-left: 0px');
                 changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('.cust0m_kommentarlinien_middle', 'display: none');
             });
         }
 
