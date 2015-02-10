@@ -214,9 +214,9 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = true;\r\n' +
-'cust0m.kommentarklappen_default = 20;\r\n' +
+'cust0m.kommentarklappen_default = 3;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
-'cust0m.op_top = true;\r\n' +
+'cust0m.op_top = false;\r\n' +
 '$("body").append("<div style=\'display: none\' id=\'cust0m_viewed\'><div>");\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
 'cust0m.LoadEinklappen = function() ' +
