@@ -436,7 +436,8 @@ standard =
     start_tags_max: 100,
     save_views: "ON",
     no_updates: "ON",
-    time: new Date().getTime()
+    time: new Date().getTime(),
+    viewed: {}
 };
 
 views = {};
@@ -758,11 +759,10 @@ function saveView(id)
     array = {};
     array[id] = true;
     chrome.storage.local.set(array, function(){});
-    views[id] = true;
+    views.viewed[id] = true;
 }
 
 function isView(id)
 {
-    if(views[id] == undefined) return false;
-    else return true;
+   return views.viewed[id] === true;
 }
