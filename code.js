@@ -73,6 +73,24 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
+'        <div class="cust0m_help">So kannst du den OP besser erkennen.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">OP markieren:</div> \r\n' +
+'        <div id="cust0m_input_op" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_posts"> \r\n' +
+'    <div class="cust0m_middle cust0m_op_middle"> \r\n' +
+'        <div class="cust0m_help">Dadurch werden die Kommentare des OPs ganz oben angezeigt?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">OP nach oben:</div> \r\n' +
+'        <div id="cust0m_input_op_top" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Sollen die Kommentare in die Mitte statt Links?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Kommentare in die Mitte:</div> \r\n' +
 '        <div id="cust0m_input_pos" class="cust0m_triggers"> \r\n' +
