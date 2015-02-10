@@ -201,7 +201,7 @@ g.text = 'cust0m = {};\r\n' +
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
 '        if(cust0m.kommentarklappen) $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) >= cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
 '        var op = $(".item-details .user").text();\r\n' +
-'        if(cust0m.op) $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { $(elem).css("border-color","#ee4d2e"); if(parseInt($(elem).attr("tiefe")) == 0) {  }} });\r\n' +
+'        if(cust0m.op) $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { $(elem).css("border-color","#ee4d2e"); if(parseInt($(elem).attr("tiefe")) == 0) { if($(elem).parent().next().hasClass("comment-box")) $(elem).parent().next().prepend(".comments"); $(elem).parent().prepend(".comments"); }} });\r\n' +
 '   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
 '};\r\n' +
 'cust0m.setOp = function() ' +
