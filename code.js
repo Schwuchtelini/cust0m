@@ -733,7 +733,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
-                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69);    content: "";    width: 100%;    height: 100%;    margin: -150% 0 0 75%;    display: block;  transform: rotate(45deg);');
+                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69);    content: "";    width: 100%;    height: 100%;    margin: -150% 0 0 90%;    display: block;  transform: rotate(45deg);');
             });
         }
         else if(items.save_views == "M 3")
