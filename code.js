@@ -223,7 +223,7 @@ g.text = 'cust0m = {};\r\n' +
 '{\r\n' +
 '    if($(".comment-foot").length >= 3) {\r\n' +
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().css("display","block"); $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
-'        if(cust0m.kommentarklappen) $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
+'        if(cust0m.kommentarklappen) $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> " + $(elem).parent().next().find(".comment").length + " rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
 '        var op = $(".item-details .user").text();\r\n' +
 '        $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { $(elem).addClass("custom_op"); if(cust0m.op_top && (parseInt($(elem).attr("tiefe")) == 0)) { if($(elem).parent().next().hasClass("comment-box")) $(elem).parent().next().prependTo(".comments>.comment-box"); $(elem).parent().prependTo(".comments>.comment-box"); }} });\r\n' +
 '   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
@@ -236,7 +236,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = comment.parent().parent().next();\r\n' +
-'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + " raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein");}\r\n' +
+'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + " raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + " rein");}\r\n' +
 '};\r\n' +
 'setTimeout(function() {$(".tv-remote").append("<div class=\'cust0m_tv_info\'></div>");},2000);\r\n' +
 'p.View.Stream.Main.prototype.showItem = function ($item, scrollTo) {' +
