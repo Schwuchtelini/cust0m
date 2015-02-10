@@ -614,7 +614,6 @@ function update_settings()
             "cust0m.fullsize = " + (items.fullsize == "ON") + ";" +
             "cust0m.kommentarklappen = " + (items.kommentarklappen == "ON") + ";" +
             "cust0m.kommentarklappen_default = " + items.kommentarklappen_default + ";" +
-            "cust0m.kommentarlinienbreite = " + items.kommentarlinienbreite + ";" +
             "cust0m.op_top = " + (items.op_top == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
@@ -707,8 +706,8 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('div.comment-box', 'border-left: 1px solid #222; margin-left: 7px;');
-                changeCss('div.comment-box div.comment', 'margin-left: -3px');
+                changeCss('div.comment-box', 'border-left: ' + items.kommentarlinienbreite + 'px solid #222; margin-left: ' + (items.kommentarlinienbreite + 6) + 'px;');
+                changeCss('div.comment-box div.comment', 'margin-left: -' + (items.kommentarlinienbreite + 2) + 'px');
                 changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
                 changeCss('.cust0m_kommentarlinien_middle', 'display: block');
             });
