@@ -192,14 +192,22 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.disableLoad = true;\r\n' +
 'cust0m.kommentarklappen_default = 20;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
+'cust0m.op = true;\r\n' +
 '$("body").append("<div style=\'display: none\' id=\'cust0m_viewed\'><div>");\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
 'cust0m.LoadEinklappen = function() ' +
 '{\r\n' +
 '    if($(".comment-foot").length >= 3) {\r\n' +
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
-'        $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) >= cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
+'        if(cust0m.kommentarklappen) $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) >= cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
+'        var op = $(".item-details .user").text();\r\n' +
+'        if(cust0m.op) $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { $(elem).css("border-color","#ee4d2e"); if(parseInt($(elem).attr("tiefe")) == 0) {  }} });\r\n' +
 '   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
+'};\r\n' +
+'cust0m.setOp = function() ' +
+'{\r\n' +
+'    if($(".comment-foot").length >= 3) {\r\n' +
+'   } else setTimeout(cust0m.setOp, 50);\r\n' +
 '};\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
@@ -213,7 +221,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
 '   $(".stream-next").append("<span class=\'cust0m_stream-next-icon\'>&gt;</span>");\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
-'   if(cust0m.kommentarklappen) cust0m.LoadEinklappen();\r\n' +
+'   cust0m.LoadEinklappen();\r\n' +
 '};\r\n' +
 'p.View.TV.Channel.prototype.nextVideo = function () {        this.currentIndex = this.currentIndex % this.items.length;  cust0m_index = this.currentIndex;  if (this.currentIndex >= this.items.length) {            return;        }        if (!this.$currentVideo) {            var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;            this.currentIndex++;            this.$currentVideo = this.createVideoElement(src, this.videoCanPlay.bind(this));  $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");      } else {            this.$currentVideo.remove();            this.$currentVideo = this.$nextVideo;            this.resize();            this.$videoContainer.append(this.$currentVideo);            this.playVideo();   $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index - 1].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");     }        if (p.Video.canPlayWebM) {            this.$currentVideo[0].onended = this.nextVideo.bind(this);        } else {           this.$currentVideo.data(\'jsmpeg\').externalFinishedCallback = this.nextVideo.bind(this);        }        var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;        this.currentIndex++;        this.$nextVideo = this.createVideoElement(src); ' +
 '   \r\n' +
