@@ -510,7 +510,7 @@ function restore_options()
 
         $('#cust0m_input_start_tags').html(items.start_tags);
 
-        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "viewed"];
+        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views"];
 
         for(i = 0; i < options.length; i++)
         {
