@@ -1,4 +1,4 @@
-$(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V1.2</div> \r\n' +
+$(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
 '    <div class="cust0m_menu_middle"> \r\n' +
 '        <div class="cust0m_menu active" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'none\'); $(\'.cust0m_general\').css(\'display\',\'block\');">Allgemein</div> \r\n' +
 '        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'block\'); $(\'.cust0m_general\').css(\'display\',\'none\');">Posts</div> \r\n' +
