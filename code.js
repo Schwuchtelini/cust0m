@@ -748,6 +748,7 @@ function setViews()
         $("#cust0m_viewed div").remove();
         lastThumbs = $(".thumb").length;
         $(".thumb").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen");});
+        chrome.storage.local.set({viewed: views.viewed}, function(){});
     }
 }
 
@@ -756,9 +757,6 @@ setInterval(setViews, 1000);
 
 function saveView(id)
 {
-    array = {};
-    array[id] = true;
-    chrome.storage.local.set(array, function(){});
     views.viewed[id] = true;
 }
 
