@@ -741,7 +741,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
-                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69);    content: "";    width: 256px;    height: 256px;    margin: -256px 0 0 128px;    display: block;    z-index: 99; transform: rotate(45deg);');
+                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69); content: ""; height: 8px; margin-top: -8px; display: block; transform: rotate(0deg);');
             });
         }
 
