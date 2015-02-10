@@ -309,10 +309,8 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     display: block;
 }
 
-.custom_seen img::after
+.custom_seen::after
 {
-    margin-bottom: 4px;
-    padding-bottom: 2px;
     border-bottom: 4px solid rgb(32, 229, 19);
     content: "";
     width: 100%;
