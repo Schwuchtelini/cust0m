@@ -79,16 +79,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
-'    </div> \r\n' +
-'    <div class="cust0m_posts"> \r\n' +
-'    <div class="cust0m_middle cust0m_op_middle"> \r\n' +
+'    </div> \r\n' ++
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Dadurch werden die Kommentare des OPs ganz oben angezeigt.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">OP nach oben:</div> \r\n' +
 '        <div id="cust0m_input_op_top" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
-'    </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Sollen die Kommentare in die Mitte statt Links?</div> \r\n' +
@@ -219,6 +217,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.kommentarklappen_default = 20;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
 'cust0m.op = true;\r\n' +
+'cust0m.op_top = true;\r\n' +
 '$("body").append("<div style=\'display: none\' id=\'cust0m_viewed\'><div>");\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
 'cust0m.LoadEinklappen = function() ' +
@@ -227,7 +226,7 @@ g.text = 'cust0m = {};\r\n' +
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
 '        if(cust0m.kommentarklappen) $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) >= cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
 '        var op = $(".item-details .user").text();\r\n' +
-'        if(cust0m.op) $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { $(elem).css("border-color","#ee4d2e"); if(parseInt($(elem).attr("tiefe")) == 0) { if($(elem).parent().next().hasClass("comment-box")) $(elem).parent().next().prependTo(".comments>.comment-box"); $(elem).parent().prependTo(".comments>.comment-box"); }} });\r\n' +
+'        if(cust0m.op || cust0m.op_top) $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { if(cust0m.op) $(elem).css("border-color","#ee4d2e"); ifcust0m.op_top && (parseInt($(elem).attr("tiefe")) == 0) { if($(elem).parent().next().hasClass("comment-box")) $(elem).parent().next().prependTo(".comments>.comment-box"); $(elem).parent().prependTo(".comments>.comment-box"); }} });\r\n' +
 '   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
 '};\r\n' +
 'cust0m.setOp = function() ' +
