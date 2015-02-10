@@ -46,6 +46,10 @@ a.thumb
     padding: 10px;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.9);
+}
+
+.cust0m_posts
+{
     display: none;
 }
 
