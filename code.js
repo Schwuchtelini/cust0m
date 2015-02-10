@@ -717,6 +717,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
+                changeCss('.custom_seen::after', '');
             });
         }
         else if(items.save_views == "M 1")
@@ -724,6 +725,21 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', 'opacity: 0.3');
+                changeCss('.custom_seen::after', '');
+            });
+        }
+        else if(items.save_views == "M 2")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69);    content: "";    width: 256px;    height: 256px;    margin: -256px 0 0 128px;    display: block;    z-index: 99; transform: rotate(45deg);');
+            });
+        }
+        else if(items.save_views == "M 3")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69);    content: "";    width: 256px;    height: 256px;    margin: -256px 0 0 128px;    display: block;    z-index: 99; transform: rotate(45deg);');
             });
         }
 
