@@ -741,11 +741,12 @@ update_settings();
 
 function setViews()
 {
-    if(views.save_views == "ON" && lastThumbs < $(".thumb").length)
+    if(views.save_views == "ON" && (lastThumbs < $(".custom_seen").length || lastThumbs < $(".thumb").length))
     {
         debugger;
         $("#cust0m_viewed div").each(function (id, elem) {if($(elem).attr("view") != undefined) {saveView("item-" + $(elem).attr("view"));}});
         $("#cust0m_viewed div").remove();
+        lastThumbs = $(".custom_seen").length;
         lastThumbs = $(".thumb").length;
         $(".thumb").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen");});
         chrome.storage.local.set({viewed: views.viewed});
@@ -753,6 +754,7 @@ function setViews()
 }
 
 lastThumbs = 0;
+lastViewed = 0;
 setInterval(setViews, 1000);
 
 function saveView(id)
