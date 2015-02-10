@@ -437,7 +437,7 @@ g.text = 'cust0m = {};\r\n' +
 '        }\r\n' +
 '        else p.navigateToOrginal(location, mode);\r\n' +
 '   cust0m.disableLoad = true;\r\n' +
-'    if(location != "new" && location != "top"){ $("#cust0m_viewed").append("<div view=\'" + location.slice(-6); + "\'></div>"); $("#item-" + location.slice(-6)).addClass("custom_seen");}\r\n' +
+'    if(location != "new" && location != "top"){ $("#cust0m_viewed").append("<div view=\'" + location.slice(-6) + "\'></div>"); $("#item-" + location.slice(-6)).addClass("custom_seen");}\r\n' +
 '    },\r\n' +
 "p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
