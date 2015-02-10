@@ -16,6 +16,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
+'        <div class="cust0m_help">Willst du sehen welche Bilder du schon gesehen hast?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Gesehene Bilder markieren:</div> \r\n' +
+'        <div id="cust0m_input_no_updates" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Wie groß soll das Bild eines Betrags minimal sein?<br>Normalerweise ist 0 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bilder Mindesthöhe:</div> \r\n' +
