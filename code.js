@@ -706,7 +706,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('div.comment-box', 'border-left: ' + items.kommentarlinienbreite + 'px solid #222; margin-left: ' + (items.kommentarlinienbreite + 6) + 'px;');
+                changeCss('div.comment-box', 'border-left: ' + items.kommentarlinienbreite + 'px solid #222; margin-left: ' + (8 - items.kommentarlinienbreite) + 'px;');
                 changeCss('div.comment-box div.comment', 'margin-left: -' + (items.kommentarlinienbreite + 2) + 'px');
                 changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
                 changeCss('.cust0m_kommentarlinien_middle', 'display: block');
