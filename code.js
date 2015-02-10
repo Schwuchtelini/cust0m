@@ -110,7 +110,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    <div class="cust0m_middle cust0m_kommentarlinien_middle"> \r\n' +
 '        <div class="cust0m_help">Wie breit sollen die Kommentarlinien sein?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Kommentarelinienbreite:</div> \r\n' +
-'        <div id="cust0m_input_kommentarklappen_default" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div id="cust0m_input_kommentarlinienbreite" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">px</div> \r\n' +
 '    </div> \r\n' +
 '    </div> \r\n' +
