@@ -19,11 +19,11 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Markiert die Bilder die du schon gesehen hast.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Gesehene Bilder markieren:</div> \r\n' +
-'        <div id="cust0m_input_viewed" class="cust0m_triggers"> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_small active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">M 1</div> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_small" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">M 2</div> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_small" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">M 3</div> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_small" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        <div id="cust0m_input_save_views" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small active cust0m_trigger_m1" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">M 1</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small cust0m_trigger_m2" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">M 2</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small cust0m_trigger_m3" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">M 3</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
@@ -444,7 +444,7 @@ standard =
     start_tags: 4,
     start_tags_min: 1,
     start_tags_max: 100,
-    save_views: "ON",
+    save_views: "OFF",
     no_updates: "ON",
     time: new Date().getTime(),
     viewed: {}
@@ -471,6 +471,7 @@ function save_options()
         best_of: $('#cust0m_input_best_of .active').text(),
         bullshit: $('#cust0m_input_bullshit .active').text(),
         no_updates: $('#cust0m_input_no_updates .active').text(),
+        save_views: $('#cust0m_input_save_views .active').text(),
         ton: $('#cust0m_input_ton .active').text(),
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
         bullshit_benis: $('#cust0m_input_bullshit_benis').text()
@@ -483,7 +484,6 @@ function save_options()
             else set[k] = standard[k];
             set[k] = Math.max(standard[k + "_min"], Math.min(standard[k + "_max"], parseInt(set[k])));
         }
-        else if(set[k] != "ON") set[k] = "OFF";
     }
     chrome.storage.local.set(set,
     function ()
@@ -517,6 +517,9 @@ function restore_options()
             option = options[i];
             $('#cust0m_input_' + option + ' .cust0m_trigger').removeClass("active");
             if(items[option] == "ON") $('#cust0m_input_' + option + ' .cust0m_trigger_on').addClass("active");
+            else if(items[option] == "M 1") $('#cust0m_input_' + option + ' .cust0m_trigger_m1').addClass("active");
+            else if(items[option] == "M 2") $('#cust0m_input_' + option + ' .cust0m_trigger_m2').addClass("active");
+            else if(items[option] == "M 3") $('#cust0m_input_' + option + ' .cust0m_trigger_m3').addClass("active");
             else $('#cust0m_input_' + option + ' .cust0m_trigger_off').addClass("active");
         }
         $('#cust0m_input_kommentarklappen_default').html(items.kommentarklappen_default);
@@ -709,6 +712,22 @@ function update_settings()
             });
         }
 
+        if(items.save_views == "OFF")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_seen', '');
+            });
+        }
+        else if(items.save_views == "M 1")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_best_of', 'display: none');
+                 changeCss('.cust0m_best_of_middle', 'display: none');
+            });
+        }
+
         var future = 1000 * 60 * 60 * 24 * 365 * 100;
         if(items.no_updates == "OFF")
         {
@@ -751,7 +770,7 @@ update_settings();
 
 function setViews()
 {
-    if(views.save_views == "ON" && (lastViewed == 0 || lastViewed != $(".custom_seen").length || lastThumbs != $(".thumb").length))
+    if(views.save_views != "OFF" && (lastViewed == 0 || lastViewed != $(".custom_seen").length || lastThumbs != $(".thumb").length))
     {
         $("#cust0m_viewed div").each(function (id, elem) {if($(elem).attr("view") != undefined) {saveView("item-" + $(elem).attr("view"));}});
         $("#cust0m_viewed div").remove();
