@@ -8,10 +8,11 @@ Feature  | Status
 ------------- | -------------
 Kommentare links und Bild rechts | ![Idee](/idea.png)
 Ups und Downs von Kommentare anzeigen | ![Idee](/idea.png)
-Ups und Downs von tags anzeigen | ![Unmöglich](/x.png)
+Ups und Downs von Tags anzeigen | ![Unmöglich](/x.png)
 Maximale Vorschaubilder pro Reihe | ![OK](/haken.png)
 Vorschaubilder Größe | ![OK](/haken.png)
 Gesehene Bilder markieren | ![OK](/haken.png)
+Farbe der Markierung | ![Idee](/idea.png)
 Admin Sicht | ![OK](/haken.png)
 Benis Anzeige | ![OK](/haken.png)
 Best of | ![OK](/haken.png)
