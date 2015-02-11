@@ -6,6 +6,8 @@ Stell dein Pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
+Anzahl an Favoriten Klicks anzeigen| ![Idee](/idea.png)
+SFW / NSFW / NSFL Tag Anzeige| ![Idee](/idea.png)
 Kommentare links und Bild rechts | ![Idee](/idea.png)
 Ups und Downs von Kommentare anzeigen | ![Idee](/idea.png)
 Ups und Downs von Tags anzeigen | ![Unmöglich](/x.png)
