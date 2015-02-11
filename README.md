@@ -6,6 +6,8 @@ Stell dein Pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
+Info über Benutzer bei Mouseover | ![Idee](/idea.png)
+Kommentare von Benutzergruppen ausblenden | ![Idee](/idea.png)
 Zeit Filter | ![Idee](/idea.png)
 Tag Filter | ![Idee](/idea.png)
 Posts vorladen | ![Idee](/idea.png)
@@ -39,7 +41,7 @@ Ein- und ausklappbare Kommentare | ![OK](/haken.png)
 Kommentare ab einer Tiefe von x Kommentaren einklappen | ![OK](/haken.png)
 Sichtbare Tags | ![OK](/haken.png)
 
-Status  | Beschreibung
+Status | Beschreibung
 ------------- | -------------
 ![OK](/haken.png) | Fertig
 ![Bearbeitung](/rad.png) | In Bearbeitung
