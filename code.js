@@ -249,7 +249,6 @@ g.text = 'cust0m = {};\r\n' +
 '};\r\n' +
 'p.View.TV.Channel.prototype.nextVideo = function () {        this.currentIndex = this.currentIndex % this.items.length;  cust0m_index = this.currentIndex;  if (this.currentIndex >= this.items.length) {            return;        }        if (!this.$currentVideo) {            var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;            this.currentIndex++;            this.$currentVideo = this.createVideoElement(src, this.videoCanPlay.bind(this));  $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");      } else {            this.$currentVideo.remove();            this.$currentVideo = this.$nextVideo;            this.resize();            this.$videoContainer.append(this.$currentVideo);            this.playVideo();   $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index - 1].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");     }        if (p.Video.canPlayWebM) {            this.$currentVideo[0].onended = this.nextVideo.bind(this);        } else {           this.$currentVideo.data(\'jsmpeg\').externalFinishedCallback = this.nextVideo.bind(this);        }        var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;        this.currentIndex++;        this.$nextVideo = this.createVideoElement(src); ' +
 '   \r\n' +
-'   debugger;\r\n' +
 '}; \r\n' +
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
