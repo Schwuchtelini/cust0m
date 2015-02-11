@@ -6,6 +6,7 @@ Stell dein Pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
+Pfeile auch im Kommentarbereich | ![Idee](/idea.png)
 Random Button | ![Idee](/idea.png)
 Anzahl an Favoriten Klicks anzeigen | ![Idee](/idea.png)
 SFW / NSFW / NSFL Tag Anzeige | ![Idee](/idea.png)
