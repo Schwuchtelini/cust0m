@@ -36,6 +36,11 @@ a.thumb
     margin-right: 5px;
 }
 
+.cust0m_slider
+{
+    height: 30px;
+}
+
 .cust0m_label
 {
     float: left;

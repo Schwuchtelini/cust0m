@@ -30,7 +30,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    <div class="cust0m_middle cust0m_save_views_middle"> \r\n' +
 '        <div class="cust0m_help">Wie Transparent soll die Markierung sein?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
-'        <input id="cust0m_input_save_views_opacity cust0m_slider" type="range" min="0" max="50" value="25" step="5" /> \r\n' +
+'        <input id="cust0m_input_save_views_opacity cust0m_slider" type="range" min="0" max="100" value="25" step="1" /> \r\n' +
 '        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
 '    </div> \r\n' +
