@@ -38,7 +38,9 @@ a.thumb
 
 .cust0m_slider
 {
-    height: 30px;
+    height: 2px;
+    float: left;
+    width: 45%;
 }
 
 .cust0m_label
