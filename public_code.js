@@ -1,23 +1,38 @@
-$(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V1.0</div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+$(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
+'    <div class="cust0m_menu_middle"> \r\n' +
+'        <div class="cust0m_menu active" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'none\'); $(\'.cust0m_general\').css(\'display\',\'block\');">Allgemein</div> \r\n' +
+'        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'block\'); $(\'.cust0m_general\').css(\'display\',\'none\');">Posts</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_line"></div> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe maximal haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> \r\n' +
 '        <div id="cust0m_input_anzahl" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Vorschaubilder</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie groß sollen die Vorschaubilder sein?<br>Normalerweise ist 100% eingetragen.<br>Limit: 30%</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
+'        <div class="cust0m_help">Markiert die Bilder, die du schon gesehen hast.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Gesehene Bilder markieren:</div> \r\n' +
+'        <div id="cust0m_input_save_views" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small active cust0m_trigger_m1" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">M 1</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small cust0m_trigger_m2" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">M 2</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small cust0m_trigger_m3" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">M 3</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_small cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Wie groß soll das Bild eines Betrags minimal sein?<br>Normalerweise ist 0 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bilder Mindesthöhe:</div> \r\n' +
 '        <div id="cust0m_input_width" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">px</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Soll für ein Beitrag das größerer Bild geladen werden, wenn genügend Platz ist?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Großes Bild laden</div> \r\n' +
 '        <div id="cust0m_input_fullsize" class="cust0m_triggers"> \r\n' +
@@ -25,15 +40,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
-'        <div class="cust0m_help">Sollen die Kommentare in die Mitte statt Links?</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentare in die Mitte:</div> \r\n' +
-'        <div id="cust0m_input_pos" class="cust0m_triggers"> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
-'        </div> \r\n' +
-'    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Willst du Pr0gramm aus der Sicht eines Admins sehen?<br>Natürlich hast du damit keine Admin Rechte.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Admin Sicht:</div> \r\n' +
 '        <div id="cust0m_input_admin" class="cust0m_triggers"> \r\n' +
@@ -41,7 +48,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Möchtest du oben im Header deinen Benis bestaunen können?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Benis anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_benis" class="cust0m_triggers"> \r\n' +
@@ -49,7 +56,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Willst du die alten Pfeile wieder haben?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Die alten Pfeile anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_pfeil" class="cust0m_triggers"> \r\n' +
@@ -57,7 +64,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Möchtest du die Ups und Downs eines Beitrags direkt sehen können?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ups und Downs anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_ups_downs" class="cust0m_triggers"> \r\n' +
@@ -65,7 +72,31 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
+'        <div class="cust0m_help">So kannst du den OP besser erkennen.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">OP markieren:</div> \r\n' +
+'        <div id="cust0m_input_op" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
+'        <div class="cust0m_help">Dadurch werden die Kommentare des OPs ganz oben angezeigt.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">OP nach oben:</div> \r\n' +
+'        <div id="cust0m_input_op_top" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
+'        <div class="cust0m_help">Sollen die Kommentare in die Mitte statt Links?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare in die Mitte:</div> \r\n' +
+'        <div id="cust0m_input_pos" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Kommentarlinien helfen dir, bei vielen Kommentaren den Überblick zu behalten.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Kommentarlinien anzeigen:</div> \r\n' +
 '        <div id="cust0m_input_kommentarlinien" class="cust0m_triggers"> \r\n' +
@@ -73,7 +104,15 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    <div class="cust0m_posts"> \r\n' +
+'    <div class="cust0m_middle cust0m_kommentarlinien_middle"> \r\n' +
+'        <div class="cust0m_help">Wie breit sollen die Kommentarlinien sein?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentarelinienbreite:</div> \r\n' +
+'        <div id="cust0m_input_kommentarlinienbreite" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">px</div> \r\n' +
+'    </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Gibt dir die Möglichkeit Kommentare ein- und auszuklappen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ein- und ausklappbare Kommentare:</div> \r\n' +
 '        <div id="cust0m_input_kommentarklappen" class="cust0m_triggers"> \r\n' +
@@ -81,15 +120,21 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_posts"> \r\n' +
 '    <div class="cust0m_middle cust0m_kommentarklappen_middle"> \r\n' +
-'        <div class="cust0m_help">Standardmäßig alle Kommentare einklappen.</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentare zuerst einklappen:</div> \r\n' +
-'        <div id="cust0m_input_kommentarklappen_default" class="cust0m_triggers"> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
-'        </div> \r\n' +
+'        <div class="cust0m_help">Ab welcher Kommentartiefe willst du die Kommentare eingeklappt haben?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare ab einer Tiefe von</div> \r\n' +
+'        <div id="cust0m_input_kommentarklappen_default" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">Kommentaren einklappen</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
+'        <div class="cust0m_help">Wie viele Tags möchtest du am Anfang sehen?<br>Normalerweise werden 4 angezeigt.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Sichtbare Tags:</div> \r\n' +
+'        <div id="cust0m_input_start_tags" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">Tags</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Oben links erscheint eine Krone mit der du die Beiträge mit dem längsten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Best of:</div> \r\n' +
 '        <div id="cust0m_input_best_of" class="cust0m_triggers"> \r\n' +
@@ -97,13 +142,15 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_general"> \r\n' +
 '    <div class="cust0m_middle cust0m_best_of_middle"> \r\n' +
 '        <div class="cust0m_help">Limit: 1500 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Best of mindest Benis:</div> \r\n' +
 '        <div id="cust0m_input_best_of_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Oben links erscheint eine scheißender Bulle, mit dem du die Beiträge mit dem kürzesten Benis sehen kannst.<br>Leider braucht das je nach Einstellung ein bisschen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Bullshit:</div> \r\n' +
 '        <div id="cust0m_input_bullshit" class="cust0m_triggers"> \r\n' +
@@ -111,16 +158,26 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+'    <div class="cust0m_general"> \r\n' +
 '    <div class="cust0m_middle cust0m_bullshit_middle"> \r\n' +
 '        <div class="cust0m_help">Limit: -150 Benis.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Für Bullshit höchst Benis:</div> \r\n' +
 '        <div id="cust0m_input_bullshit_benis" class="cust0m_input" contenteditable="true"></div> \r\n' +
 '        <div class="cust0m_label">Benis</div> \r\n' +
 '    </div> \r\n' +
-'    <div class="cust0m_middle"> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie stell ich den Ton in Pr0gramm ein?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ton:</div> \r\n' +
 '        <div id="cust0m_input_ton" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_general"> \r\n' +
+'        <div class="cust0m_help">Willst du zukünftige Updates für cust0m pr0gramm erhalten?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Updates:</div> \r\n' +
+'        <div id="cust0m_input_no_updates" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
@@ -157,14 +214,29 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.bullshit = false;\r\n' +
 'cust0m.best_of = false;\r\n' +
 'cust0m.disableLoad = true;\r\n' +
-'cust0m.kommentarklappen_default = false;\r\n' +
+'cust0m.kommentarklappen_default = 3;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
+'cust0m.op_top = false;\r\n' +
+'$("body").append("<div style=\'display: none\' id=\'cust0m_viewed\'><div>");\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
-'cust0m.LoadEinklappen = function() { if($(".comment-foot").length >= 3) {$(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> rein</a>"); if(cust0m.kommentarklappen_default) cust0m.commentClick($(elem).find(".cust0m_comment"));}});} else setTimeout(cust0m.LoadEinklappen, 50)}\r\n' +
+'cust0m.LoadEinklappen = function() ' +
+'{\r\n' +
+'    if($(".comment-foot").length >= 3) {\r\n' +
+'        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().css("display","block"); $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
+'        if(cust0m.kommentarklappen) $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> " + $(elem).parent().next().find(".comment").length + " rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
+'        var op = $(".item-details .user").text();\r\n' +
+'        $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { $(elem).addClass("custom_op"); if(cust0m.op_top && (parseInt($(elem).attr("tiefe")) == 0)) { if($(elem).parent().next().hasClass("comment-box")) $(elem).parent().next().prependTo(".comments>.comment-box"); $(elem).parent().prependTo(".comments>.comment-box"); }} });\r\n' +
+'   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
+'};\r\n' +
+'cust0m.setOp = function() ' +
+'{\r\n' +
+'    if($(".comment-foot").length >= 3) {\r\n' +
+'   } else setTimeout(cust0m.setOp, 50);\r\n' +
+'};\r\n' +
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = comment.parent().parent().next();\r\n' +
-'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> rein");}\r\n' +
+'   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + " raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + " rein");}\r\n' +
 '};\r\n' +
 'setTimeout(function() {$(".tv-remote").append("<div class=\'cust0m_tv_info\'></div>");},2000);\r\n' +
 'p.View.Stream.Main.prototype.showItem = function ($item, scrollTo) {' +
@@ -173,7 +245,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
 '   $(".stream-next").append("<span class=\'cust0m_stream-next-icon\'>&gt;</span>");\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
-'   if(cust0m.kommentarklappen) cust0m.LoadEinklappen();\r\n' +
+'   cust0m.LoadEinklappen();\r\n' +
 '};\r\n' +
 'p.View.TV.Channel.prototype.nextVideo = function () {        this.currentIndex = this.currentIndex % this.items.length;  cust0m_index = this.currentIndex;  if (this.currentIndex >= this.items.length) {            return;        }        if (!this.$currentVideo) {            var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;            this.currentIndex++;            this.$currentVideo = this.createVideoElement(src, this.videoCanPlay.bind(this));  $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");      } else {            this.$currentVideo.remove();            this.$currentVideo = this.$nextVideo;            this.resize();            this.$videoContainer.append(this.$currentVideo);            this.playVideo();   $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index - 1].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");     }        if (p.Video.canPlayWebM) {            this.$currentVideo[0].onended = this.nextVideo.bind(this);        } else {           this.$currentVideo.data(\'jsmpeg\').externalFinishedCallback = this.nextVideo.bind(this);        }        var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;        this.currentIndex++;        this.$nextVideo = this.createVideoElement(src); ' +
 '   \r\n' +
@@ -209,7 +281,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".cust0m_bullshit").removeClass("cust0m_active");\r\n' +
 '   $("#tab-new").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
-"setTimeout(function() { setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);}, 1000);\r\n" +
+"setTimeout(function() { setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);}, 500);\r\n" +
 " \r\n" +
 'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
 '        round++;\r\n' +
@@ -365,6 +437,7 @@ g.text = 'cust0m = {};\r\n' +
 '        }\r\n' +
 '        else p.navigateToOrginal(location, mode);\r\n' +
 '   cust0m.disableLoad = true;\r\n' +
+'    if(location != "new" && location != "top"){ $("#cust0m_viewed").append("<div view=\'" + location.slice(-6) + "\'></div>"); $("#item-" + location.slice(-6)).addClass("custom_seen");}\r\n' +
 '    },\r\n' +
 "p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
 s.parentNode.insertBefore(g, s);
@@ -397,14 +470,31 @@ standard =
     ton: "OFF",
     kommentarlinien: "OFF",
     kommentarklappen: "OFF",
-    kommentarklappen_default: "OFF"
+    kommentarklappen_default: 3,
+    kommentarklappen_default_min: 1,
+    kommentarklappen_default_max: 20,
+    start_tags: 4,
+    start_tags_min: 1,
+    start_tags_max: 100,
+    save_views: "OFF",
+    no_updates: "ON",
+    op: "ON",
+    op_top: "ON",
+    time: new Date().getTime(),
+    viewed: {},
+    kommentarlinienbreite: 1,
+    kommentarlinienbreite_min: 1,
+    kommentarlinienbreite_max: 10
 };
+
+views = {};
 
 function save_options()
 {
     set = {
         anzahl: $('#cust0m_input_anzahl').text(),
         width: $('#cust0m_input_width').text(),
+        start_tags: $('#cust0m_input_start_tags').text(),
         pos: $('#cust0m_input_pos .active').text(),
         admin: $('#cust0m_input_admin .active').text(),
         thumbs: $('#cust0m_input_thumbs').text(),
@@ -412,11 +502,16 @@ function save_options()
         ups_downs: $('#cust0m_input_ups_downs .active').text(),
         kommentarlinien: $('#cust0m_input_kommentarlinien .active').text(),
         kommentarklappen: $('#cust0m_input_kommentarklappen .active').text(),
-        kommentarklappen_default: $('#cust0m_input_kommentarklappen_default .active').text(),
+        kommentarklappen_default: $('#cust0m_input_kommentarklappen_default').text(),
+        kommentarlinienbreite: $('#cust0m_input_kommentarlinienbreite').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
         pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
         bullshit: $('#cust0m_input_bullshit .active').text(),
+        no_updates: $('#cust0m_input_no_updates .active').text(),
+        save_views: $('#cust0m_input_save_views .active').text(),
+        op: $('#cust0m_input_op .active').text(),
+        op_top: $('#cust0m_input_op_top .active').text(),
         ton: $('#cust0m_input_ton .active').text(),
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
         bullshit_benis: $('#cust0m_input_bullshit_benis').text()
@@ -429,7 +524,6 @@ function save_options()
             else set[k] = standard[k];
             set[k] = Math.max(standard[k + "_min"], Math.min(standard[k + "_max"], parseInt(set[k])));
         }
-        else if(set[k] != "ON") set[k] = "OFF";
     }
     chrome.storage.local.set(set,
     function ()
@@ -454,56 +548,28 @@ function restore_options()
 
         $('#cust0m_input_width').html(items.width);
 
-        $('#cust0m_input_pos .cust0m_trigger').removeClass("active");
-        if(items.pos == "ON") $('#cust0m_input_pos .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_pos .cust0m_trigger_off').addClass("active");
+        $('#cust0m_input_start_tags').html(items.start_tags);
 
-        $('#cust0m_input_admin .cust0m_trigger').removeClass("active");
-        if(items.admin == "ON") $('#cust0m_input_admin .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_admin .cust0m_trigger_off').addClass("active");
+        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views", "op", "op_top"];
 
-        $('#cust0m_input_benis .cust0m_trigger').removeClass("active");
-        if(items.benis == "ON") $('#cust0m_input_benis .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_benis .cust0m_trigger_off').addClass("active");
+        for(i = 0; i < options.length; i++)
+        {
+            option = options[i];
+            $('#cust0m_input_' + option + ' .cust0m_trigger').removeClass("active");
+            if(items[option] == "ON") $('#cust0m_input_' + option + ' .cust0m_trigger_on').addClass("active");
+            else if(items[option] == "M 1") $('#cust0m_input_' + option + ' .cust0m_trigger_m1').addClass("active");
+            else if(items[option] == "M 2") $('#cust0m_input_' + option + ' .cust0m_trigger_m2').addClass("active");
+            else if(items[option] == "M 3") $('#cust0m_input_' + option + ' .cust0m_trigger_m3').addClass("active");
+            else $('#cust0m_input_' + option + ' .cust0m_trigger_off').addClass("active");
+        }
+        $('#cust0m_input_kommentarklappen_default').html(items.kommentarklappen_default);
 
-        $('#cust0m_input_ups_downs .cust0m_trigger').removeClass("active");
-        if(items.ups_downs == "ON") $('#cust0m_input_ups_downs .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_ups_downs .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_fullsize .cust0m_trigger').removeClass("active");
-        if(items.fullsize == "ON") $('#cust0m_input_fullsize .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_fullsize .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_kommentarlinien .cust0m_trigger').removeClass("active");
-        if(items.kommentarlinien == "ON") $('#cust0m_input_kommentarlinien .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_kommentarlinien .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_kommentarklappen .cust0m_trigger').removeClass("active");
-        if(items.kommentarklappen == "ON") $('#cust0m_input_kommentarklappen .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_kommentarklappen .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_kommentarklappen_default .cust0m_trigger').removeClass("active");
-        if(items.kommentarklappen_default == "ON") $('#cust0m_input_kommentarklappen_default .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_kommentarklappen_default .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_pfeil .cust0m_trigger').removeClass("active");
-        if(items.pfeil == "ON") $('#cust0m_input_pfeil .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_pfeil .cust0m_trigger_off').addClass("active");
-
-        $('#cust0m_input_ton .cust0m_trigger').removeClass("active");
-        if(items.ton == "ON") $('#cust0m_input_ton .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_ton .cust0m_trigger_off').addClass("active");
+        $('#cust0m_input_kommentarlinienbreite').html(items.kommentarlinienbreite);
 
         $('#cust0m_input_thumbs').html(items.thumbs);
 
-        $('#cust0m_input_bullshit .cust0m_trigger').removeClass("active");
-        if(items.bullshit == "ON") $('#cust0m_input_bullshit .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_bullshit .cust0m_trigger_off').addClass("active");
         $('#cust0m_input_bullshit_benis').text(items.bullshit_benis);
 
-        $('#cust0m_input_best_of .cust0m_trigger').removeClass("active");
-        if(items.best_of == "ON") $('#cust0m_input_best_of .cust0m_trigger_on').addClass("active");
-        else $('#cust0m_input_best_of .cust0m_trigger_off').addClass("active");
         $('#cust0m_input_best_of_benis').text(items.best_of_benis);
     });
 }
@@ -523,11 +589,15 @@ $('.cust0m_input').keypress(function (event)
       }
 });
 
+views = {};
+
 function update_settings()
 {
     chrome.storage.local.get(standard,
     function (items)
     {
+        views = items;
+
         anzahl = items.anzahl;
 
         width = items.width;
@@ -543,10 +613,12 @@ function update_settings()
         g.text = "p.user.admin = " + (items.admin == "ON") + ";" +
             "cust0m.fullsize = " + (items.fullsize == "ON") + ";" +
             "cust0m.kommentarklappen = " + (items.kommentarklappen == "ON") + ";" +
-            "cust0m.kommentarklappen_default = " + (items.kommentarklappen_default == "ON") + ";" +
+            "cust0m.kommentarklappen_default = " + items.kommentarklappen_default + ";" +
+            "cust0m.op_top = " + (items.op_top == "ON") + ";" +
             "cust0m.best_of_benis = " + best_of_benis + ";" +
             "cust0m.bullshit_benis = " + bullshit_benis + ";" +
-            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh();";
+            "CONFIG.TAGS_MAX_DISPLAY = " + items.start_tags + ";" +
+            "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh(); cust0m.LoadEinklappen();";
         s.parentNode.insertBefore(g, s);
 
        changeCss('.item-image', 'min-height: ' + width + 'px;');
@@ -565,6 +637,21 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('div.item-comments, div.item-info', 'margin: 0; max-width: 9999px');
+            });
+        }
+
+        if(items.op == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_op', 'border-color: #ee4d2e !important');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_op', '');
             });
         }
 
@@ -619,9 +706,10 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('div.comment-box', 'border-left: 1px solid #222; margin-left: 7px;');
-                changeCss('div.comment-box div.comment', 'margin-left: -3px');
+                changeCss('div.comment-box', 'border-left: ' + items.kommentarlinienbreite + 'px solid #222; margin-left: 5px;');
+                changeCss('div.comment-box div.comment', 'margin-left: ' + (items.kommentarlinienbreite * 0.4 - 5) + 'px');
                 changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('.cust0m_kommentarlinien_middle', 'display: block');
             });
         }
         else
@@ -631,6 +719,7 @@ function update_settings()
                 changeCss('div.comment-box', 'border-left: none; margin-left: 0px;');
                 changeCss('div.comment-box div.comment', 'margin-left: 0px');
                 changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
+                changeCss('.cust0m_kommentarlinien_middle', 'display: none');
             });
         }
 
@@ -653,7 +742,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_bullshitbullshit', 'display: inline');
+                changeCss('.cust0m_bullshit', 'display: inline');
                 changeCss('.cust0m_bullshit_middle', 'display: block');
             });
         }
@@ -682,7 +771,57 @@ function update_settings()
                  changeCss('.cust0m_best_of_middle', 'display: none');
             });
         }
-        setTimeout(function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1) $(window).resize();}, 400);
+
+        if(items.save_views == "OFF")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_seen', '');
+                changeCss('.custom_seen::after', '');
+            });
+        }
+        else if(items.save_views == "M 1")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_seen', 'opacity: 0.3');
+                changeCss('.custom_seen::after', '');
+            });
+        }
+        else if(items.save_views == "M 2")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_seen', '');
+                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69);    content: "";    width: 100%;    height: 100%;    margin: -150% 0 0 90%;    display: block;  transform: rotate(45deg);');
+            });
+        }
+        else if(items.save_views == "M 3")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.custom_seen', '');
+                changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: \'pict0gramm\';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: 0.7;');
+            });
+        }
+
+        var future = 1000 * 60 * 60 * 24 * 365 * 100;
+        if(items.no_updates == "OFF")
+        {
+            chrome.storage.local.set(
+            {
+                time: future
+            });
+        }
+        else
+        {
+            if(items.time == future) chrome.storage.local.set(
+            {
+                time: new Date().getTime() - 1000 * 60 * 61
+            }, update);
+        }
+
+        $(window).resize();
     });
 }
 
@@ -705,3 +844,30 @@ function changeCss(className, classValue)
 }
 
 update_settings();
+
+function setViews()
+{
+    if(views.save_views != "OFF" && (lastViewed == 0 || lastViewed != $(".custom_seen").length || lastThumbs != $(".thumb").length))
+    {
+        $("#cust0m_viewed div").each(function (id, elem) {if($(elem).attr("view") != undefined) {saveView("item-" + $(elem).attr("view"));}});
+        $("#cust0m_viewed div").remove();
+        lastViewed = $(".custom_seen").length;
+        lastThumbs = $(".thumb").length;
+        $(".thumb").not(".custom_checked").each(function (id, elem) {if(isView($(elem).attr("id"))) $(elem).addClass("custom_seen"); $(elem).addClass("custom_checked");});
+        chrome.storage.local.set({viewed: views.viewed});
+    }
+}
+
+lastThumbs = 0;
+lastViewed = 0;
+setInterval(setViews, 1000);
+
+function saveView(id)
+{
+    views.viewed[id] = true;
+}
+
+function isView(id)
+{
+   return views.viewed[id] === true;
+}
