@@ -26,3 +26,9 @@ Kommentarelinienbreite | ![ok](/haken.png)
 Ein- und ausklappbare Kommentare | ![ok](/haken.png)
 Kommentare ab einer Tiefe von x Kommentaren einklappen | ![ok](/haken.png)
 Sichtbare Tags | ![ok](/haken.png)
+
+Status  | Beschreiung
+------------- | -------------
+![ok](/haken.png) | Fertig
+![ok](/rad.png) | In Bearbeitung
+![ok](/rad.png) | Nicht möglich
