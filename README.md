@@ -39,7 +39,7 @@ Ein- und ausklappbare Kommentare | ![OK](/haken.png)
 Kommentare ab einer Tiefe von x Kommentaren einklappen | ![OK](/haken.png)
 Sichtbare Tags | ![OK](/haken.png)
 
-Status  | Beschreiung
+Status  | Beschreibung
 ------------- | -------------
 ![OK](/haken.png) | Fertig
 ![Bearbeitung](/rad.png) | In Bearbeitung
