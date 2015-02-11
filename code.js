@@ -14,6 +14,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_help">Wie groß sollen die Vorschaubilder sein?<br>Normalerweise ist 100% eingetragen.<br>Limit: 30%</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Vorschaubilder Größe:</div> \r\n' +
 '        <div id="cust0m_input_thumbs" class="cust0m_input" contenteditable="true"></div> \r\n' +
+'        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help ">Markiert die Bilder, die du schon gesehen hast.</div> \r\n' +
@@ -30,7 +31,6 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_help">Wie Transparent soll die Markierung sein?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Transparenz der Markierung</div> \r\n' +
 '        <input id="cust0m_input_save_views_opacity" class="cust0m_slider" type="range" min="0" max="100" value="25" step="1" /> \r\n' +
-'        <div class="cust0m_label">%</div> \r\n' +
 '    </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
