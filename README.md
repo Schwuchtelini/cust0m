@@ -1,8 +1,10 @@
 # cust0m pr0gramm
-Stell dein Pr0gramm ein wie du es willst.
-## Aktuelle Features
-> Maximale Vorschaubilder pro Reihe
 
+Stell dein Pr0gramm ein wie du es willst.
+
+## Aktuelle Features
+
+> Maximale Vorschaubilder pro Reihe
 
 > Vorschaubilder Größe
 
@@ -41,3 +43,8 @@ Stell dein Pr0gramm ein wie du es willst.
 > Kommentare ab einer Tiefe von x Kommentaren einklappen
 
 > Sichtbare Tags
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
