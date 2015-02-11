@@ -6,6 +6,7 @@ Stell dein Pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
+Tag filter | ![Idee](/idea.png)
 Pfeile auch im Kommentarbereich | ![Idee](/idea.png)
 Random Button | ![Idee](/idea.png)
 Pr0gramm TV Button | ![Idee](/idea.png)
