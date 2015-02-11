@@ -6,8 +6,8 @@ Stell dein Pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
-Zeit filter | ![Idee](/idea.png)
-Tag filter | ![Idee](/idea.png)
+Zeit Filter | ![Idee](/idea.png)
+Tag Filter | ![Idee](/idea.png)
 Posts vorladen | ![Idee](/idea.png)
 Pfeile auch im Kommentarbereich | ![Idee](/idea.png)
 Random Button | ![Idee](/idea.png)
