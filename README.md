@@ -3,6 +3,7 @@ Stell dein Pr0gramm ein wie du es willst.
 ## Aktuelle Features
 > Maximale Vorschaubilder pro Reihe
 
+
 > Vorschaubilder Größe
 
 > Gesehene Bilder markieren
