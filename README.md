@@ -33,7 +33,7 @@ Stell dein Pr0gramm ein wie du es willst.
 
 > Kommentarlinien anzeigen
 
-> Kommentarelinienbreite einstellen
+> Kommentarelinienbreite
 
 > Ein- und ausklappbare Kommentare
 
