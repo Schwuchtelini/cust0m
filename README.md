@@ -31,4 +31,4 @@ Status  | Beschreiung
 ------------- | -------------
 ![ok](/haken.png) | Fertig
 ![ok](/rad.png) | In Bearbeitung
-![ok](/rad.png) | Nicht möglich
+![ok](/x.png) | Nicht möglich
