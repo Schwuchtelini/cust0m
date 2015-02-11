@@ -6,30 +6,33 @@ Stell dein Pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
-Maximale Vorschaubilder pro Reihe | ![ok](/haken.png)
-Vorschaubilder Größe | ![ok](/haken.png)
-Gesehene Bilder markieren | ![ok](/haken.png)
-Admin Sicht | ![ok](/haken.png)
-Benis Anzeige | ![ok](/haken.png)
-Best of | ![ok](/haken.png)
-Bullshit | ![ok](/haken.png)
-Ton | ![ok](/haken.png)
-Bilder Mindesthöhe | ![ok](/haken.png)
-Großes Bild laden | ![ok](/haken.png)
-Die alten Pfeile anzeigen | ![ok](/haken.png)
-Ups und Downs anzeigen | ![ok](/haken.png)
-OP markieren | ![ok](/haken.png)
-OP nach oben | ![ok](/haken.png)
-Kommentare in die Mitte | ![ok](/haken.png)
-Kommentarlinien anzeigen | ![ok](/haken.png)
-Kommentarelinienbreite | ![ok](/haken.png)
-Ein- und ausklappbare Kommentare | ![ok](/haken.png)
-Kommentare ab einer Tiefe von x Kommentaren einklappen | ![ok](/haken.png)
-Sichtbare Tags | ![ok](/haken.png)
+Kommentare links und Bild rechts | ![Idee](/idea.png)
+Ups und Downs von Kommentare anzeigen | ![Idee](/idea.png)
+Ups und Downs von tags anzeigen | ![Unmöglich](/x.png)
+Maximale Vorschaubilder pro Reihe | ![OK](/haken.png)
+Vorschaubilder Größe | ![OK](/haken.png)
+Gesehene Bilder markieren | ![OK](/haken.png)
+Admin Sicht | ![OK](/haken.png)
+Benis Anzeige | ![OK](/haken.png)
+Best of | ![OK](/haken.png)
+Bullshit | ![OK](/haken.png)
+Ton | ![OK](/haken.png)
+Bilder Mindesthöhe | ![OK](/haken.png)
+Großes Bild laden | ![OK](/haken.png)
+Die alten Pfeile anzeigen | ![OK](/haken.png)
+Ups und Downs anzeigen | ![OK](/haken.png)
+OP markieren | ![OK](/haken.png)
+OP nach oben | ![OK](/haken.png)
+Kommentare in die Mitte | ![OK](/haken.png)
+Kommentarlinien anzeigen | ![OK](/haken.png)
+Kommentarelinienbreite | ![OK](/haken.png)
+Ein- und ausklappbare Kommentare | ![OK](/haken.png)
+Kommentare ab einer Tiefe von x Kommentaren einklappen | ![OK](/haken.png)
+Sichtbare Tags | ![OK](/haken.png)
 
 Status  | Beschreiung
 ------------- | -------------
-![ok](/haken.png) | Fertig
-![ok](/rad.png) | In Bearbeitung
-![ok](/idea.png) | Die Idee ist da
-![ok](/x.png) | Nicht möglich
+![OK](/haken.png) | Fertig
+![Bearbeitung](/rad.png) | In Bearbeitung
+![Idee](/idea.png) | Die Idee ist da
+![Unmöglich](/x.png) | Nicht möglich
