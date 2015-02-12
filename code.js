@@ -1,5 +1,5 @@
 // Ich mach jetzt auch mal ein paar Kommentare
-// Achja, diesen Code als Text zu programmieren macht alles einfacher und viel Übersichtlicher und richtig viel spaß
+// Achja, diesen Code als Text zu programmieren macht alles einfacher, viel Übersichtlicher und richtig viel spaß
 
 // Also hier sieht man das Menu das oben links raus poppt.
 $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
