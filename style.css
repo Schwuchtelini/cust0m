@@ -333,7 +333,7 @@ div.item-comments {
     top: 50px;
     left: 0px;
     position: fixed;
-    background: #111;
+    background: #161618;
     z-index: 11;
     height: calc(100% - 50px);
     overflow-y: scroll;
@@ -364,6 +364,8 @@ div.item-container {
     right: 0;
     width: calc(100% - 500px);
     height: calc(100% - 50px);
+    background: rgba(22, 22, 24, 0.95);
+    z-index: 100;
 }
 
 div.item-pointer {
