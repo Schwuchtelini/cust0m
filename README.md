@@ -6,6 +6,7 @@ Stell dein Pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
+Screensaver | ![Idee](/idea.png)
 Relativer Benis | ![Bearbeitung](/rad.png)
 Info über Benutzer bei Mouseover | ![Idee](/idea.png)
 Kommentare von Benutzergruppen ausblenden | ![Idee](/idea.png)
