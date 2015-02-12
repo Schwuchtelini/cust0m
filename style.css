@@ -400,5 +400,8 @@ div.comments {
 }
 
 #footer-links {
-    width: auto;
+    width: 200px;
+    right: 0 !important;
+    left: inherit !important;
+    margin: 0;
 }
