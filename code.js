@@ -472,11 +472,10 @@ g.text = 'cust0m = {};\r\n' +
 '        if (!this.heightKnown) {\r\n' +
 '            return;\r\n' +
 '        }\r\n' +
-'        var ih = this.$image.height();\r\n' +
+'        var ih = cust0m.pfeile_weiter ? this.$container.height() : this.$image.height();\r\n' +
 '        var h = ih / 2 - 32;\r\n' +
 '        var p = ($(window).scrollTop() - this.$container.offset().top).limit(32, ih - 32 - 96) + 96;\r\n' +
-'        if (cust0m.pfeile_weiter) p = ($(window).scrollTop() - this.$container.offset().top).limit(32, ih - 32) + 96;\r\n' +
-'        if (p == this.navTop && !cust0m.pfeile_weiter) return;\r\n' +
+'        if (p == this.navTop) return;\r\n' +
 '        this.navTop = p;\r\n' +
 '        this.$streamPrev.css("padding-top", p);\r\n' +
 '        this.$streamNext.css("padding-top", p);\r\n' +
