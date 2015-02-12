@@ -398,3 +398,7 @@ div.item-comments > form.comment-form
 div.comments {
     padding: 8px 15px;
 }
+
+#footer-links {
+    width: auto;
+}
