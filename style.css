@@ -335,6 +335,7 @@ div.item-comments, div.item-info {
     position: fixed;
     background: #111;
     z-index: 11;
+    height: calc(100% - 50px);
 }
 
 .side-wide-skyscraper
@@ -349,4 +350,9 @@ div.item-container-content {
 .comments-large-rectangle
 {
     display: none;
+}
+
+div.comment-box div.comment-box
+{
+    padding: 0 0 0 15px;
 }
