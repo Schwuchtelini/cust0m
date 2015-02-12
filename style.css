@@ -392,7 +392,7 @@ div.item-comments > form.comment-form
     background-color: transparent;
 }
 
-#head {
+div#head {
     width: 100% !important;
     padding: 0 10px !important;
     background-color: rgba(0,0,0,0.95);
