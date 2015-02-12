@@ -287,7 +287,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
 /* Nimmt die Flag (NSFL etc.) eines Posts und fügt sie in eine extra Anzeige ein*/
 '   text = p.Stream.FLAG_NAME[itemData.flags];\r\n' +
-'   if(!p.user.admin) $(".item-info").append("<span class=\'flags flags-" + itemData.flags + "\'>" + text + "</span>");\r\n' +
+'   if(!p.user.admin) $(".item-details").append("<span class=\'flags flags-" + itemData.flags + "\'>" + text + "</span>");\r\n' +
 /* Fügt bei Jedem Post die Pfeile hinzu*/
 '   $(".stream-next").append("<span class=\'cust0m_stream-next-icon\'>&gt;</span>");\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
