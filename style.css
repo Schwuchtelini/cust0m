@@ -324,3 +324,29 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 {
     display: block;
 }
+
+/* Comments right, pic left*/
+
+div.item-comments, div.item-info {
+    margin: 0;
+    width: 500px;
+    top: 50px;
+    left: 0px;
+    position: fixed;
+    background: #111;
+    z-index: 11;
+}
+
+.side-wide-skyscraper
+{
+    z-index: 0;
+}
+
+div.item-container-content {
+    overflow: visible;
+}
+
+.comments-large-rectangle
+{
+    display: none;
+}
