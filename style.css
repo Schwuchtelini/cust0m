@@ -336,6 +336,7 @@ div.item-comments, div.item-info {
     background: #111;
     z-index: 11;
     height: calc(100% - 50px);
+    overflow: scroll;
 }
 
 .side-wide-skyscraper
