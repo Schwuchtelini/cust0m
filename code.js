@@ -475,6 +475,7 @@ g.text = 'cust0m = {};\r\n' +
 '        var h = ih / 2 - 32;\r\n' +
 '        var p = ($(window).scrollTop() - this.$container.offset().top).limit(32, ih - 32 - 96) + 96;\r\n' +
 '        this.navTop = p;\r\n' +
+'       if (p == this.navTop) {return;}\r\n' +
 '        this.$streamPrev.css("padding-top", p);\r\n' +
 '        this.$streamNext.css("padding-top", p);\r\n' +
 '    };'
