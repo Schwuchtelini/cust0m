@@ -864,7 +864,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.custom_seen', 'opacity: ' + (save_views_opacity / 100));
+                changeCss('.custom_seen', 'opacity: ' + (items.save_views_opacity / 100));
                 changeCss('.custom_seen::after', '');
             });
         }
@@ -873,7 +873,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
-                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, ' + (save_views_opacity / 100) + ');    content: "";    width: 100%;    height: 100%;    margin: -150% 0 0 90%;    display: block;  transform: rotate(45deg);');
+                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, ' + (items.save_views_opacity / 100) + ');    content: "";    width: 100%;    height: 100%;    margin: -150% 0 0 90%;    display: block;  transform: rotate(45deg);');
             });
         }
         else if(items.save_views == "M 3")
@@ -881,7 +881,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
-                changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: \'pict0gramm\';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: ' + (save_views_opacity / 100) + ';');
+                changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: \'pict0gramm\';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: ' + (items.save_views_opacity / 100) + ';');
             });
         }
 
