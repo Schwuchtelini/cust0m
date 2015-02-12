@@ -554,7 +554,9 @@ standard =
     viewed: {},
     kommentarlinienbreite: 1,
     kommentarlinienbreite_min: 1,
-    kommentarlinienbreite_max: 10
+    save_views_opacity: 50,
+    save_views_opacity_min: 1,
+    save_views_opacity_max: 100
 };
 
 /* Speichert die angeschauten Posts*/
@@ -585,7 +587,8 @@ function save_options()
         op_top: $('#cust0m_input_op_top .active').text(),
         ton: $('#cust0m_input_ton .active').text(),
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
-        bullshit_benis: $('#cust0m_input_bullshit_benis').text()
+        bullshit_benis: $('#cust0m_input_bullshit_benis').text(),
+        save_views_opacity: $('#save_views_opacity').val()
     };
     for (var k in set)
     {
@@ -643,6 +646,8 @@ function restore_options()
         $('#cust0m_input_bullshit_benis').text(items.bullshit_benis);
 
         $('#cust0m_input_best_of_benis').text(items.best_of_benis);
+
+        $('#save_views_opacity').val(items.save_views_opacity);
     });
 }
 restore_options();
@@ -859,7 +864,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.custom_seen', 'opacity: 0.3');
+                changeCss('.custom_seen', 'opacity: ' + (save_views_opacity / 100));
                 changeCss('.custom_seen::after', '');
             });
         }
@@ -868,7 +873,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
-                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, 0.69);    content: "";    width: 100%;    height: 100%;    margin: -150% 0 0 90%;    display: block;  transform: rotate(45deg);');
+                changeCss('.custom_seen::after', 'background: rgba(137, 43, 43, ' + (save_views_opacity / 100) + ');    content: "";    width: 100%;    height: 100%;    margin: -150% 0 0 90%;    display: block;  transform: rotate(45deg);');
             });
         }
         else if(items.save_views == "M 3")
@@ -876,7 +881,7 @@ function update_settings()
             $(window).resize().resize(function(event)
             {
                 changeCss('.custom_seen', '');
-                changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: \'pict0gramm\';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: 0.7;');
+                changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: \'pict0gramm\';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: ' + (save_views_opacity / 100) + ';');
             });
         }
 
