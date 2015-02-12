@@ -2,8 +2,8 @@
 /* Achja, diesen Code als Text zu programmieren macht alles einfacher, viel Übersichtlicher und richtig viel spaß*/
 
 /* Für die Scrollbar*/
-$("head").append('<script src="https://raw.githubusercontent.com/malihu/malihu-custom-scrollbar-plugin/master/js/minified/jquery.mousewheel.min.js"></script>');
-$("head").append('<script src="https://raw.githubusercontent.com/malihu/malihu-custom-scrollbar-plugin/master/js/minified/jquery.mCustomScrollbar.min.js"></script>');
+$("head").append('<script type="text/javascript" src="https://raw.githubusercontent.com/malihu/malihu-custom-scrollbar-plugin/master/js/minified/jquery.mousewheel.min.js"></script>');
+$("head").append('<script type="text/javascript" src="https://raw.githubusercontent.com/malihu/malihu-custom-scrollbar-plugin/master/js/minified/jquery.mCustomScrollbar.min.js"></script>');
 
 /* Also hier sieht man das Menu das oben links raus poppt.*/
 $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
