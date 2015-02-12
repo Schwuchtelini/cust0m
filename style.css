@@ -376,12 +376,13 @@ div.item-info {
 }
 
 div.comments-head {
-    padding-left: 32px;
+    padding-left: 15px;
 }
 
 div.item-comments > form.comment-form
 {
-    padding-left: 32px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #head-content {
@@ -392,4 +393,8 @@ div.item-comments > form.comment-form
     width: 100% !important;
     padding: 0 10px !important;
     background-color: rgba(0,0,0,0.8);
+}
+
+div.comments {
+    padding: 8px 15px;
 }
