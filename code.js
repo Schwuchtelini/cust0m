@@ -851,7 +851,7 @@ function update_settings()
                  changeCss('.cust0m_best_of_middle', 'display: none');
             });
         }
-
+        debugger;
         if(items.save_views == "OFF")
         {
             $(window).resize().resize(function(event)
