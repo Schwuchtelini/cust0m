@@ -374,3 +374,12 @@ div.item-info {
     margin: 10px auto 0 autp;
     max-width: 1200px;
 }
+
+div.comments-head {
+    padding-left: 32px;
+}
+
+div.item-comments > form.comment-form
+{
+    padding-left: 32px;
+}
