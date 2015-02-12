@@ -244,6 +244,7 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.kommentarklappen_default = 3;\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
 'cust0m.op_top = false;\r\n' +
+'cust0m.pfeile_weiter = true;\r\n' +
 '$("body").append("<div style=\'display: none\' id=\'cust0m_viewed\'><div>");\r\n' +
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
 'cust0m.LoadEinklappen = function() ' +
@@ -475,7 +476,7 @@ g.text = 'cust0m = {};\r\n' +
 '        var h = ih / 2 - 32;\r\n' +
 '        var p = ($(window).scrollTop() - this.$container.offset().top).limit(32, ih - 32 - 96) + 96;\r\n' +
 '        this.navTop = p;\r\n' +
-'       if (p == this.navTop) {return;}\r\n' +
+'        if (p == this.navTop && !cust0m.pfeile_weiter) {return;}\r\n' +
 '        this.$streamPrev.css("padding-top", p);\r\n' +
 '        this.$streamNext.css("padding-top", p);\r\n' +
 '    };'
