@@ -395,7 +395,7 @@ div.item-comments > form.comment-form
 div#head {
     width: 100% !important;
     padding: 0 10px !important;
-    background-color: rgba(0,0,0,0.95);
+    background: rgba(22, 22, 24, 0.98);
     z-index: 200;
 }
 
