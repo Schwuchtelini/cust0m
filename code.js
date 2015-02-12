@@ -40,7 +40,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        <div class="cust0m_label">px</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
-'        <div class="cust0m_help">Soll für ein Beitrag das größerer Bild geladen werden, wenn genügend Platz ist?</div> \r\n' +
+'        <div class="cust0m_help">Soll für ein Beitrag das größere Bild geladen werden, wenn genügend Platz ist?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Großes Bild laden</div> \r\n' +
 '        <div id="cust0m_input_fullsize" class="cust0m_triggers"> \r\n' +
 '             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
