@@ -63,6 +63,18 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
 '        </div> \r\n' +
 '    </div> \r\n' +
+
+'    <div class="cust0m_general"> \r\n' +
+'    <div class="cust0m_middle cust0m_benis_middle"> \r\n' +
+'        <div class="cust0m_help">Soll dein Benis oben im Header relativ zu heute sein?<br>Wenn du diese Einstellung aktivierst wird angezeigt,<br> wie stark dein Benis seit jetzt gewachsen ist.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Relativer Benis:</div> \r\n' +
+'        <div id="cust0m_input_benis_since" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    </div> \r\n' +
+
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Willst du die alten Pfeile wieder haben?</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Die alten Pfeile anzeigen:</div> \r\n' +
