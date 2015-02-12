@@ -331,7 +331,7 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 div.item-comments {
     margin: 0;
     width: 500px;
-    top: 50px;
+    top: 52px;
     left: 0px;
     position: fixed;
     background: rgba(22, 22, 24, 1);
@@ -361,7 +361,7 @@ div.comment-box div.comment-box
 
 div.item-container {
     position: fixed;
-    top: 50px;
+    top: 52px;
     right: 0;
     width: calc(100% - 500px);
     height: calc(100% - 50px);
@@ -418,4 +418,15 @@ div.comments {
 .stream-next
 {
     padding-top: 50% !important;
+}
+
+/* scroll */
+
+.mCSB_inside>.mCSB_container {
+margin-right: 12px;
+}
+
+mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+width: 8px;
+border-radius: 2px;
 }
