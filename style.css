@@ -426,7 +426,7 @@ div.comments {
 margin-right: 12px;
 }
 
-mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
 width: 8px;
 border-radius: 2px;
 }
