@@ -423,10 +423,10 @@ div.comments {
 /* scroll */
 
 .mCSB_inside>.mCSB_container {
-margin-right: 12px;
+margin-right: 12px !important;
 }
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-width: 8px;
-border-radius: 2px;
+width: 8px !important;
+border-radius: 2px !important;
 }
