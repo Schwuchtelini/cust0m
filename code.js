@@ -1,3 +1,7 @@
+// Ich mach jetzt auch mal ein paar Kommentare
+// Achja, diesen Code als Text zu programmieren macht alles einfacher und viel Übersichtlicher und richtig viel spaß
+
+// Also hier sieht man das Menu das oben links raus poppt.
 $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
 '    <div class="cust0m_menu_middle"> \r\n' +
 '        <div class="cust0m_menu active" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'none\'); $(\'.cust0m_general\').css(\'display\',\'block\');">Allgemein</div> \r\n' +
@@ -214,11 +218,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '    <div id="cust0m_info" class="cust0m_button" style="display: none">gespeichert</div> \r\n' +
 '</div>');
 
+// Weiter geht es mit dem Benis im Header
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
+
+// und dann Kommen auch schon die "Best of" und "Bullshit" Buttons
 $("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" onclick="cust0m.load_bullshit();">mm </a>');
 
+// Aktualisiert den Benis
 if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
-
 function loadBenis()
 {
     $.ajax(
@@ -232,8 +239,10 @@ function loadBenis()
 }
 loadBenis();
 
+// Hier wird das script dass das Pr0gramm script ändert erstellt
 var g = document.createElement('script');
 var s = document.getElementsByTagName('script')[0];
+// Zuerst definier ich ein paar Konstantenn die später noch mit den richtigen Werten gefüllt werden. Aber zuerst kommen default Werte rein.
 g.text = 'cust0m = {};\r\n' +
 'cust0m.fullsize = true;\r\n' +
 'cust0m.best_of_benis = 500;\r\n' +
@@ -245,39 +254,47 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.kommentarklappen = false;\r\n' +
 'cust0m.op_top = false;\r\n' +
 'cust0m.pfeile_weiter = true;\r\n' +
+// Das brauche ich um die Gesehenen Posts zu speichern. Die werden in dieses Div eingefügt und dann von dem anderen script ausgelesen. Ich kann nämlich nicht direkt methoden aus dem Pr0gramm script aufrufen
 '$("body").append("<div style=\'display: none\' id=\'cust0m_viewed\'><div>");\r\n' +
+// Diese script sorgt dafür das die Einstellungen geladen werden
 "cust0m.refresh = function() { if($('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.thumb').length > 0) $(window).resize(); else setTimeout(cust0m.refresh, 50)}\r\n" +
+// Sorgt für das ein und ausklappen von Kommentaren.
 'cust0m.LoadEinklappen = function() ' +
 '{\r\n' +
 '    if($(".comment-foot").length >= 3) {\r\n' +
+// Zuerst wird die Tiefe für jedes Kommentar eingetragen und vorhandene Ein-ausklapptexte entfrent
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().css("display","block"); $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
+// Dann werden die ein- und ausklapp mechanismen eingefügt und gegebenfalls einmal ausgeführt um die Kommentare einzuklappen
 '        if(cust0m.kommentarklappen) $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) {$(elem).append("<a class=\'action cust0m_comment\' onclick=\'cust0m.commentClick($(this));\'><span class=\'pict\'>c</span> " + $(elem).parent().next().find(".comment").length + " rein</a>"); if(parseInt($(elem).attr("tiefe")) == cust0m.kommentarklappen_default - 1) cust0m.commentClick($(elem).find(".cust0m_comment"));}}});\r\n' +
+// Hier wird der OP markiert und nach oben verschoben
 '        var op = $(".item-details .user").text();\r\n' +
 '        $(".comment-foot").each(function(index, elem) { if($(elem).find(".user").text() == op) { $(elem).addClass("custom_op"); if(cust0m.op_top && (parseInt($(elem).attr("tiefe")) == 0)) { if($(elem).parent().next().hasClass("comment-box")) $(elem).parent().next().prependTo(".comments>.comment-box"); $(elem).parent().prependTo(".comments>.comment-box"); }} });\r\n' +
 '   } else setTimeout(cust0m.LoadEinklappen, 50);\r\n' +
 '};\r\n' +
-'cust0m.setOp = function() ' +
-'{\r\n' +
-'    if($(".comment-foot").length >= 3) {\r\n' +
-'   } else setTimeout(cust0m.setOp, 50);\r\n' +
-'};\r\n' +
+// Blendet die Kommentare eines Kommentars ein bzw. aus
 'cust0m.commentClick = function (comment)\r\n' +
 '{\r\n' +
 '   box = comment.parent().parent().next();\r\n' +
 '   if(box.hasClass("comment-box")) if(box.css("display") == "block") {box.css("display", "none"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + " raus");} else {box.css("display", "block"); comment.html("<span class=pict>c</span> " + box.find(".comment").length + " rein");}\r\n' +
 '};\r\n' +
+// Fügt die Src info beim pr0gramm TV hinzu
 'setTimeout(function() {$(".tv-remote").append("<div class=\'cust0m_tv_info\'></div>");},2000);\r\n' +
+// Überschreibung einer orginal "Zeige den Folgenden Post" Methode
 'p.View.Stream.Main.prototype.showItem = function ($item, scrollTo) {' +
 "   if ($item.is(this.$currentItem)) {            this.hideItem();            this._wasHidden = true;            this.currentItemId = null;            return;        }        var $previousItem = this.$currentItem;        this.$currentItem = $item;        var $row = $item.parent();        var scrollTarget = 0;        if (scrollTo == this.SCROLL.FULL) {            scrollTarget = $row.offset().top - CONFIG.HEADER_HEIGHT + $item.height();        } else if (scrollTo == this.SCROLL.THUMB) {            scrollTarget = $row.offset().top - CONFIG.HEADER_HEIGHT - this.rowMargin;        } else {            scrollTarget = $(document).scrollTop();        }        var animate = !(scrollTo == this.SCROLL.FULL && this._scrolledToFullView);        this._scrolledToFullView = (scrollTo == this.SCROLL.FULL);        if (this.$itemContainer) {            var previousItemHeight = this.$itemContainer.find('.item-image').height() || 0;        }        if (!$row.next().hasClass('item-container')) {            if (this.$itemContainer) {                if (this.$itemContainer.offset().top < $item.offset().top) {                    scrollTarget -= this.$itemContainer.innerHeight() + this.rowMargin * 2;                }                if (animate) {                    this.$itemContainer.find('.gpt').remove();                    this.$itemContainer.slideUp('fast', function () {                        $(this).remove();                    });                } else {                    this.$itemContainer.remove();                }            }            this.$itemContainer = this.$itemContainerTemplate.clone(true);            this.$itemContainer.insertAfter($row);            if (animate && !this.jumpToItem) {                this.$itemContainer.slideDown('fast');            } else {                this.$itemContainer.show();            }        }        var id = $item[0].id.replace('item-', '');        var itemData = this.stream.items[id];        var rowIndex = $item.prevAll().length;       if (this.currentItemSubview) {            this.currentItemSubview.remove();        }        this.currentItemSubview = new p.View.Stream.Item(this.$itemContainer, this);        this.currentItemSubview.show(rowIndex, itemData, previousItemHeight, this.jumpToComment);        this.jumpToComment = null;        this.prefetch($item);        if (!this.jumpToItem) {            if (animate) {                $('body, html').stop(true, true).animate({                    scrollTop: scrollTarget                }, 'fast');            } else {                $('body, html').stop(true, true).scrollTop(scrollTarget); } }this.currentItemId = id;" +
+// Nimmt die ups und downs eines Posts und fügt sie in eine extra Anzeige ein
 '   text = $(".score").attr("title");\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
+// Fügt bei Jedem Post die Pfeile hinzu
 '   $(".stream-next").append("<span class=\'cust0m_stream-next-icon\'>&gt;</span>");\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
+// Ruft cust0m.LoadEinklappen auf, um die Kommentare einzuklappen
 '   cust0m.LoadEinklappen();\r\n' +
 '};\r\n' +
+// Überschreibung einer orginal "nächstes Video im Pr0gramm-TV" Methode. Ich hab hierbei an 2 Stellen das einfügen der Aktuellen post-ID in meine Anzeige programmiert.
 'p.View.TV.Channel.prototype.nextVideo = function () {        this.currentIndex = this.currentIndex % this.items.length;  cust0m_index = this.currentIndex;  if (this.currentIndex >= this.items.length) {            return;        }        if (!this.$currentVideo) {            var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;            this.currentIndex++;            this.$currentVideo = this.createVideoElement(src, this.videoCanPlay.bind(this));  $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");      } else {            this.$currentVideo.remove();            this.$currentVideo = this.$nextVideo;            this.resize();            this.$videoContainer.append(this.$currentVideo);            this.playVideo();   $(".cust0m_tv_info").html("<a target=\'_blank\' href=\'http://pr0gramm.com/new/" + this.items[cust0m_index - 1].id + "\'>Src: " + this.items[this.currentIndex].id + "</a>");     }        if (p.Video.canPlayWebM) {            this.$currentVideo[0].onended = this.nextVideo.bind(this);        } else {           this.$currentVideo.data(\'jsmpeg\').externalFinishedCallback = this.nextVideo.bind(this);        }        var src = CONFIG.PATH.IMAGES + this.items[this.currentIndex].image;        this.currentIndex++;        this.$nextVideo = this.createVideoElement(src); ' +
-'   \r\n' +
 '}; \r\n' +
+// Aktiviert best of
 'cust0m.load_best_of = function ()\r\n' +
 '{\r\n' +
 '   cust0m.disable_bullshit();\r\n' +
@@ -287,6 +304,7 @@ g.text = 'cust0m = {};\r\n' +
 '   cust0m.disableLoad = false;\r\n' +
 '   p.navigateTo("top",0);\r\n' +
 '};\r\n' +
+// Aktiviert Bullshit
 'cust0m.load_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = true;\r\n' +
@@ -296,20 +314,23 @@ g.text = 'cust0m = {};\r\n' +
 '   cust0m.disableLoad = false;\r\n' +
 '   p.navigateTo("new",0);\r\n' +
 '};\r\n' +
+// Deaktiviert best of
 'cust0m.disable_best_of = function ()\r\n' +
 '{\r\n' +
 '   cust0m.best_of = false;\r\n' +
 '   $(".cust0m_best_of").removeClass("cust0m_active");\r\n' +
 '   $("#tab-top").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
+// Deaktiviert Bullshit
 'cust0m.disable_bullshit = function ()\r\n' +
 '{\r\n' +
 '   cust0m.bullshit = false;\r\n' +
 '   $(".cust0m_bullshit").removeClass("cust0m_active");\r\n' +
 '   $("#tab-new").removeClass("cust0m_unactive");\r\n' +
 '};\r\n' +
+// Diese script sorgt dafür das Genügend Bilder geladen werden, in dem es ein event aufruft
 "setTimeout(function() { setInterval(function() {if($(window).height() > $('body').height() - 400 && document.location.href != 'http://pr0gramm.com/tv' && $('.main-message').text().indexOf('Das Bild wurde als') == -1 && $('.main-message').text().indexOf('Nichts gefunden') == -1) {$(window).scroll(); console.log('cust0m Pr0gramm: scroll event');}}, 1500);}, 500);\r\n" +
-" \r\n" +
+// Das Herz von "Best of" und "bullshit". Lädt solange Posts bis es 120 oder mehr hat.
 'p.Stream.prototype._loadCust0m = function (options, callback, data, round) {\r\n' +
 '        round++;\r\n' +
 '        var stream = this;\r\n' +
@@ -351,11 +372,13 @@ g.text = 'cust0m = {};\r\n' +
 '           }\r\n' +
 '        });\r\n' +
 '    };\r\n' +
+// hier überschreibe ich die load Matheode um "Best of" und "bullshit" möglich zu machen
 'p.Stream.prototype._loadOrg = p.Stream.prototype._load; \r\n' +
 'p.Stream.prototype._load = function (options, callback) {\r\n' +
 '        if(cust0m.bullshit || cust0m.best_of) this._loadCust0m(options, callback, {items: []}, -1);\r\n' +
 '        else this._loadOrg(options, callback);\r\n' +
 '    };\r\n' +
+// Überschreibung der Vorschaubilder verarbeitungs methode
 'p.Stream.prototype._processResponse = function (data) { \r\n' +
 '        if (!data.items || !data.items.length) {\r\n' +
 '            return null;\r\n' +
@@ -380,6 +403,7 @@ g.text = 'cust0m = {};\r\n' +
 '        for (var i = 0; i < data.items.length; i++) {\r\n' +
 '            var item = data.items[i];\r\n' +
 '            item.thumb = CONFIG.PATH.THUMBS + item.thumb;\r\n' +
+// Und das alles nur um hier das Fullscreenbild einzufügen
 '            item.image = (cust0m.fullsize && item.fullsize) ? (CONFIG.PATH.FULLSIZE + item.fullsize) : (CONFIG.PATH.IMAGES + item.image);\r\n' +
 '            item.fullsize = item.fullsize ? CONFIG.PATH.FULLSIZE + item.fullsize : null;\r\n' +
 '            item.vote = itemVotes[item.id] || 0;\r\n' +
