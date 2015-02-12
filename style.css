@@ -327,7 +327,7 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 
 /* Comments right, pic left*/
 
-div.item-comments, div.item-info {
+div.item-comments {
     margin: 0;
     width: 500px;
     top: 50px;
@@ -356,4 +356,16 @@ div.item-container-content {
 div.comment-box div.comment-box
 {
     padding: 0 0 0 15px;
+}
+
+div.item-container {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: calc(100% - 500px);
+    height: calc(100% - 50px);
+}
+
+div.item-pointer {
+    display: none;
 }
