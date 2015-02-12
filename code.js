@@ -465,7 +465,21 @@ g.text = 'cust0m = {};\r\n' +
 '   cust0m.disableLoad = true;\r\n' +
 '    if(location != "new" && location != "top"){ $("#cust0m_viewed").append("<div view=\'" + location.slice(-6) + "\'></div>"); $("#item-" + location.slice(-6)).addClass("custom_seen");}\r\n' +
 '    },\r\n' +
-"p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;
+/*"p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;*/
+
+'p.View.Stream.Item.prototype.onScroll = function () {\r\n' +
+'        if (!this.heightKnown) {\r\n' +
+'            return;\r\n' +
+'        }\r\n' +
+'        var ih = this.$image.height();\r\n' +
+'        var h = ih / 2 - 32;\r\n' +
+'        var p = ($(window).scrollTop() - this.$container.offset().top).limit(32, ih - 32 - 96) + 96;\r\n' +
+'        this.navTop = p;\r\n' +
+'        this.$streamPrev.css("padding-top", p);\r\n' +
+'        this.$streamNext.css("padding-top", p);\r\n' +
+'    };'
+
+
 s.parentNode.insertBefore(g, s);
 
 standard =
