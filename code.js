@@ -655,6 +655,7 @@ restore_options();
 /* Events zum speichern der Einstellungen*/
 $('#cust0m_save').click(save_options);
 $('.cust0m_trigger').click(save_options);
+$('#cust0m_input_save_views_opacity').onchange(save_options);
 
 $('#settings-link').mouseout(function () {$('.cust0m_settings').css('display', 'none');});
 $('#settings-link').mouseover(function () {$('.cust0m_settings').css('display', 'block');});
