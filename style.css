@@ -337,7 +337,7 @@ div.item-comments {
     background: rgba(22, 22, 24, 1);
     z-index: 11;
     height: calc(100% - 50px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .side-wide-skyscraper
