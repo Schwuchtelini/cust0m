@@ -476,6 +476,7 @@ g.text = 'cust0m = {};\r\n' +
 '      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
 '   };' +
 */
+// Überschreibung einer orginal "Gehe zu den Folgenden Post" Methode. Die regelt jetzt "Best of" und "bullshit" mit.
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
 '        var disable = false;\r\n' +
@@ -488,10 +489,11 @@ g.text = 'cust0m = {};\r\n' +
 '        }\r\n' +
 '        else p.navigateToOrginal(location, mode);\r\n' +
 '   cust0m.disableLoad = true;\r\n' +
+// Liest die ID des Aktuellen Post aus und gibt die Id den Angeschauten zähler (Wie gesagt ich kann nicht direkt methoden aufrufen)
 '    if(location != "new" && location != "top"){ $("#cust0m_viewed").append("<div view=\'" + location.slice(-6) + "\'></div>"); $("#item-" + location.slice(-6)).addClass("custom_seen");}\r\n' +
 '    },\r\n' +
 /*"p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;*/
-
+// Überschreibung der Pfeilbewegung um die Pfeile über das Bild hinaus zu bewegen
 'p.View.Stream.Item.prototype.onScroll = function () {\r\n' +
 '        if (!this.heightKnown) {\r\n' +
 '            return;\r\n' +
@@ -504,10 +506,10 @@ g.text = 'cust0m = {};\r\n' +
 '        this.$streamPrev.css("padding-top", p);\r\n' +
 '        this.$streamNext.css("padding-top", p);\r\n' +
 '    };'
-
-
+// Fügt das Script letzten Endes ein
 s.parentNode.insertBefore(g, s);
 
+// Hier definiere ich die Standards für die Einstellungen sowie max bzw. min
 standard =
 {
     anzahl: 20,
@@ -553,8 +555,9 @@ standard =
     kommentarlinienbreite_max: 10
 };
 
+// Speichert die angeschauten Posts
 views = {};
-
+// Speichert die Einstellungen
 function save_options()
 {
     set = {
@@ -605,6 +608,7 @@ function save_options()
     });
 }
 
+// Lädt die Einstellungen und stellt das Menu ein
 function restore_options()
 {
     chrome.storage.local.get(standard,
@@ -641,6 +645,7 @@ function restore_options()
 }
 restore_options();
 
+// Events zum speichern der Einstellungen
 $('#cust0m_save').click(save_options);
 $('.cust0m_trigger').click(save_options);
 
@@ -655,8 +660,7 @@ $('.cust0m_input').keypress(function (event)
       }
 });
 
-views = {};
-
+// Lädt die Einstellungen und stellt das Pr0gramm individuell ein
 function update_settings()
 {
     chrome.storage.local.get(standard,
@@ -674,6 +678,7 @@ function update_settings()
 
         bullshit_benis = items.bullshit_benis;
 
+        // fügt in das Pr0gramm script Atribute ein
         var g = document.createElement('script');
         var s = document.getElementsByTagName('script')[0];
         g.text = "p.user.admin = " + (items.admin == "ON") + ";" +
@@ -686,6 +691,8 @@ function update_settings()
             "CONFIG.TAGS_MAX_DISPLAY = " + items.start_tags + ";" +
             "CONFIG.LAYOUT.THUMBS_PER_ROW.MAX = " + anzahl + "; CONFIG.LAYOUT.THUMB.WIDTH = " + (128 * thumbs) + "; CONFIG.LAYOUT.THUMB.HEIGHT = " + (128 * thumbs) + "; cust0m.refresh(); cust0m.LoadEinklappen();";
         s.parentNode.insertBefore(g, s);
+
+       // Ich setzte jetzt die ganzen Eigenschaften
 
        changeCss('.item-image', 'min-height: ' + width + 'px;');
 
@@ -891,6 +898,7 @@ function update_settings()
     });
 }
 
+// Fügt custom CSS ein
 function changeCss(className, classValue)
 {
     var cssMainContainer = $('#css-modifier-container');
@@ -909,8 +917,10 @@ function changeCss(className, classValue)
     classContainer.html('<style>' + className + ' {' + classValue + '}</style>');
 }
 
+// Lädt die Einstellungen ins Pr0gramm
 update_settings();
 
+// Setzt die schon gesehenen Posts
 function setViews()
 {
     if(views.save_views != "OFF" && (lastViewed == 0 || lastViewed != $(".custom_seen").length || lastThumbs != $(".thumb").length))
@@ -926,6 +936,7 @@ function setViews()
 
 lastThumbs = 0;
 lastViewed = 0;
+// updatet die gesehenen Posts
 setInterval(setViews, 1000);
 
 function saveView(id)
