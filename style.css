@@ -369,3 +369,8 @@ div.item-container {
 div.item-pointer {
     display: none;
 }
+
+div.item-info {
+    margin: 10px auto 0 autp;
+    max-width: 1200px;
+}
