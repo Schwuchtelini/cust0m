@@ -333,7 +333,7 @@ div.item-comments {
     top: 50px;
     left: 0px;
     position: fixed;
-    background: #161618;
+    background-color: rgba(0,0,0,0.85);
     z-index: 11;
     height: calc(100% - 50px);
     overflow-y: scroll;
