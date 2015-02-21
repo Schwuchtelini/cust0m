@@ -6,6 +6,9 @@ Stell dein pr0gramm ein wie du es willst.
 
 Feature  | Status
 ------------- | -------------
+Gesehene Posts nicht anzeigen | ![Idee](/idea.png)
+Angabe der Autoren ähnlicher Skripte | ![Idee](/idea.png)
+Youtube ähnliche Benis Leiste | ![Idee](/idea.png)
 Screensaver | ![Idee](/idea.png)
 Relativer Benis | ![Bearbeitung](/rad.png)
 Info über Benutzer bei Mouseover | ![Idee](/idea.png)
