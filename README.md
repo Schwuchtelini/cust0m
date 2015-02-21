@@ -1,6 +1,6 @@
 # cust0m pr0gramm
 
-Stell dein Pr0gramm ein wie du es willst.
+Stell dein pr0gramm ein wie du es willst.
 
 ## Features
 
