@@ -895,7 +895,7 @@ function update_settings()
             });
         }
 
-        if(items.flag == "ON" && items.admin = "OFF")
+        if(items.flag == "ON" && items.admin == "OFF")
         {
             $(window).resize().resize(function(event)
             {
