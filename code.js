@@ -265,8 +265,6 @@ g.text = 'cust0m = {};\r\n' +
 'cust0m.LoadEinklappen = function() ' +
 '{\r\n' +
 '    if($(".comment-foot").length >= 3) {\r\n' +
-/* Custon scroll bar*/
-'    $(".item-comments").mCustomScrollbar({mouseWheel:{ preventDefault: true }, scrollInertia: 0});\r\n' +
 /* Zuerst wird die Tiefe für jedes Kommentar eingetragen und vorhandene Ein-ausklapptexte entfernt*/
 '        $(".comment-foot").attr("tiefe", "0"); $(".comment-foot").each(function(index, elem) { if($(elem).parent().next().hasClass("comment-box")) { $(elem).parent().next().css("display","block"); $(elem).parent().next().find(".comment-foot").each(function(index, elem) { $(elem).attr("tiefe", (parseInt($(elem).attr("tiefe")) + 1) + ""); }); $(elem).find(".cust0m_comment").remove();}});\r\n' +
 /* Dann werden die ein- und ausklapp mechanismen eingefügt und gegebenfalls einmal ausgeführt um die Kommentare einzuklappen*/
