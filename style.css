@@ -224,7 +224,7 @@ a.thumb
 {
     position: absolute;
     font-size: 17px;
-    top: 80px;
+    top: 78px;
     left: 10px;
     color: #666;
 }
@@ -329,11 +329,14 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 .cust0m_item_info_bar {
   width: 110px;
   height: 2px;
-  background: #000;
+  background: #472222;
+  position: absolute;
+  top: 100px;
+  left: 10px;
 }
 
 .cust0m_item_info_bar_green {
   width: 110px;
   height: 2px;
-  background: #060;
+  background: #0A300A;
 }
