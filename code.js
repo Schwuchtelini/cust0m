@@ -233,7 +233,7 @@ function loadBenis()
 {
     $.ajax(
     {
-        url: "http://pr0gramm.com/api/user/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
+        url: "http://pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
         success: function(data)
         {
             $(".cust0m_benis_num").text(JSON.parse(data).user.score);
