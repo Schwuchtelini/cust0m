@@ -566,7 +566,8 @@ standard =
     save_views_opacity: 50,
     save_views_opacity_min: 1,
     save_views_opacity_max: 100,
-    flag: "OFF"
+    flag: "OFF",
+    ups_downs_comment: "ON",
 };
 
 /* Speichert die angeschauten Posts*/
