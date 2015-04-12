@@ -902,7 +902,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_flag', 'display: block');
+                changeCss('.cust0m_flag', 'display: inline');
             });
         }
         else
