@@ -911,6 +911,21 @@ function update_settings()
             });
         }
 
+        if(items.ups_downs_comment == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_ups_downs_comment', 'display: inline');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_ups_downs_comment', 'display: none');
+            });
+        }
+
         var future = 1000 * 60 * 60 * 24 * 365 * 100;
         if(items.no_updates == "OFF")
         {
