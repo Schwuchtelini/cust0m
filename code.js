@@ -222,18 +222,18 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '</div>');
 
 /* Weiter geht es mit dem Benis im Header*/
-$(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
+$("#user-profile-name").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
 
 /* und dann Kommen auch schon die "Best of" und "Bullshit" Buttons*/
 $("#tab-stalk").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" onclick="cust0m.load_bullshit();">mm </a>');
 
 /* Aktualisiert den Benis*/
-if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
+if($("#user-profile-name").text() != "") setInterval(loadBenis, 30000);
 function loadBenis()
 {
     $.ajax(
     {
-        url: "http://pr0gramm.com/api/user/info?name=" + $(".user-name.head-link").text() + "&flags=1&self=true",
+        url: "http://pr0gramm.com/api/user/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
         success: function(data)
         {
             $(".cust0m_benis_num").text(JSON.parse(data).user.score);
