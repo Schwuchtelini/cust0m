@@ -294,7 +294,7 @@ g.text = 'cust0m = {};\r\n' +
 /* Nimmt die ups und downs eines Posts und fügt sie in eine extra Anzeige ein*/
 '   text = $(".score").attr("title");\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
-'   $(".item-info").append("<div class=\'cust0m_item_info_bar\' style=\'width: " + $(cust0m_item_info).width() + ";\'><div class=\'cust0m_item_info_bar_green\' style=\'width: " + (text.split(" ")[0] / (text.split(" ")[0] + text.split(" ")[2])) * $(cust0m_item_info).width() + ";\'></div></div>");\r\n' +
+'   $(".item-info").append("<div class=\'cust0m_item_info_bar\' style=\'width: " + $(".cust0m_item_info").width() + ";\'><div class=\'cust0m_item_info_bar_green\' style=\'width: " + (text.split(" ")[0] / (text.split(" ")[0] + text.split(" ")[2])) * $(".cust0m_item_info").width() + ";\'></div></div>");\r\n' +
 /* Nimmt die Flag (NSFL etc.) eines Posts und fügt sie in eine extra Anzeige ein*/
 '   text = p.Stream.FLAG_NAME[itemData.flags];\r\n' +
 '   $(".item-details").append("<span class=\'cust0m_flag flags flags-" + itemData.flags + "\'>" + text + "</span>");\r\n' +
