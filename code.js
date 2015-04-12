@@ -598,7 +598,9 @@ function save_options()
         ton: $('#cust0m_input_ton .active').text(),
         best_of_benis: $('#cust0m_input_best_of_benis').text(),
         bullshit_benis: $('#cust0m_input_bullshit_benis').text(),
-        save_views_opacity: $('#cust0m_input_save_views_opacity').val()
+        save_views_opacity: $('#cust0m_input_save_views_opacity').val(),
+        ups_downs_comment: $('#cust0m_input_ups_downs_comment .active').text(),
+        flag: $('#cust0m_input_flag .active').text()
     };
     for (var k in set)
     {
