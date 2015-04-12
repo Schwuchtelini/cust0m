@@ -767,14 +767,14 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_item_info', 'display: block');
+                changeCss('.cust0m_item_info, .cust0m_item_info_bar', 'display: block');
             });
         }
         else
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.cust0m_item_info', 'display: none');
+                changeCss('.cust0m_item_info, .cust0m_item_info_bar', 'display: none');
             });
         }
 
