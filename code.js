@@ -107,6 +107,14 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
+'        <div class="cust0m_help">Möchtest du den SFW / NSFW / NSFL Status eines Posts sehen?</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">SFW / NSFW / NSFL anzeigen:</div> \r\n' +
+'        <div id="cust0m_input_flag" class="cust0m_triggers"> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
+'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
+'        </div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">So kannst du den OP besser erkennen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">OP markieren:</div> \r\n' +
 '        <div id="cust0m_input_op" class="cust0m_triggers"> \r\n' +
@@ -290,7 +298,7 @@ g.text = 'cust0m = {};\r\n' +
 '   $(".item-info").append("<div class=\'cust0m_item_info\'>" + text + "</div>");\r\n' +
 /* Nimmt die Flag (NSFL etc.) eines Posts und fügt sie in eine extra Anzeige ein*/
 '   text = p.Stream.FLAG_NAME[itemData.flags];\r\n' +
-'   if(!p.user.admin) $(".item-details").append("<span class=\'flags flags-" + itemData.flags + "\'>" + text + "</span>");\r\n' +
+'   $(".item-details").append("<span class=\'cust0m_flag flags flags-" + itemData.flags + "\'>" + text + "</span>");\r\n' +
 /* Fügt bei Jedem Post die Pfeile hinzu*/
 '   $(".stream-next").append("<span class=\'cust0m_stream-next-icon\'>&gt;</span>");\r\n' +
 '   $(".stream-prev").append("<span class=\'cust0m_stream-prev-icon\'>&lt;</span>");\r\n' +
@@ -557,7 +565,8 @@ standard =
     kommentarlinienbreite_min: 1,
     save_views_opacity: 50,
     save_views_opacity_min: 1,
-    save_views_opacity_max: 100
+    save_views_opacity_max: 100,
+    flag: "OFF"
 };
 
 /* Speichert die angeschauten Posts*/
@@ -626,7 +635,7 @@ function restore_options()
 
         $('#cust0m_input_start_tags').html(items.start_tags);
 
-        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views", "op", "op_top"];
+        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views", "op", "op_top", "flag", "ups_downs_comment"];
 
         for(i = 0; i < options.length; i++)
         {
@@ -883,6 +892,21 @@ function update_settings()
             {
                 changeCss('.custom_seen', '');
                 changeCss('.custom_seen::after', 'content: "v";height: 20px;margin: -18px 0 0 -5px;padding-right: 3px;display: block;transform: rotate(0deg);color: #FFF;font-family: \'pict0gramm\';text-shadow: 0 0 1px #000, 0 0 2px #000;text-align: right;opacity: ' + (items.save_views_opacity / 100) + ';');
+            });
+        }
+
+        if(items.flag == "ON" && items.admin = "OFF")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_flag', 'display: block');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('.cust0m_flag', 'display: none');
             });
         }
 
