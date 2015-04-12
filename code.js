@@ -865,7 +865,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('.custom_seen', 'opacity: ' + (items.save_views_opacity / 100));
+                changeCss('.custom_seen', 'opacity: ' + (100 - items.save_views_opacity / 100));
                 changeCss('.custom_seen::after', '');
             });
         }
