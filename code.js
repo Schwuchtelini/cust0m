@@ -225,7 +225,7 @@ $(".user-info.user-only").prepend('<div class="cust0m_settings"><div class="cust
 $(".user-name.head-link").after('<div class="cust0m_benis_head">mm</div><div class="cust0m_benis_num"></div>');
 
 /* und dann Kommen auch schon die "Best of" und "Bullshit" Buttons*/
-$("#tab-top").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" onclick="cust0m.load_bullshit();">mm </a>');
+$("#tab-stalk").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" onclick="cust0m.load_bullshit();">mm </a>');
 
 /* Aktualisiert den Benis*/
 if($(".user-name.head-link").text() != "") setInterval(loadBenis, 30000);
