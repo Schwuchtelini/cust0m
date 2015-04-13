@@ -351,9 +351,8 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
   margin-top: 15px;
   padding-top: 19px;
   position: absolute;
-  display: block;
+  display: none;
   font-size: 15px;
-  height: 150px;
 }
 
 .cust0m_benis_graph:hover
@@ -367,4 +366,5 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     color: #FFF;
     right: 0px;
     background: rgba(0, 0, 0, 0.9);
+    height: 150px;
 }
