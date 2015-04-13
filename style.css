@@ -346,17 +346,25 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 
 .cust0m_benis_graph
 {
-    width: 475px;
-    color: #FFF;
-    right: 0px;
-    margin-top: 15px;
-    padding-top: 19px;
-    position: absolute;
-    display: none;
-    font-size: 15px;
+  width: 100%;
+  right: 0px;
+  margin-top: 15px;
+  padding-top: 19px;
+  position: absolute;
+  display: block;
+  font-size: 15px;
+  height: 150px;
 }
 
-cust0m_benis_graph:hover
+.cust0m_benis_graph:hover
 {
     display: block !important;
+}
+
+.cust0m_benis_graph_inner
+{
+    width: 100%;
+    color: #FFF;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.9);
 }
