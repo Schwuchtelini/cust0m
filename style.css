@@ -351,7 +351,7 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
   margin-top: 15px;
   padding-top: 19px;
   position: absolute;
-  display: block;
+  display: none;
   font-size: 15px;
 }
 
