@@ -452,10 +452,12 @@ g.text = 'cust0m = {};\r\n' +
 '        this.$streamNext.css("padding-top", p);\r\n' +
 '    };\r\n' +
 /* Fügt den Benis graph ein*/
-'setTimeout(function () { ' +
+'cust0m.load_benis_graph = function () { ' +
 '    $("#cust0m_benis_graph").width($("#head-content").width());' +
 '    $("#cust0m_benis_graph").highcharts({ chart: { type: \'spline\', backgroundColor: "transparent" }, title: { text: "" }, xAxis: { type: \'datetime\', labels: { enabled: false }, lineColor: "#333", tickColor: "#333" }, legend: { enabled: false }, yAxis: { title: { text: \'\' }, gridLineColor: "#333", alternateGridColor: null }, tooltip: { valueSuffix: \' Benis\' }, plotOptions: { spline: { lineWidth: 2, states: { hover: { lineWidth: 3 } }, marker: { enabled: false }, pointInterval: 3600000 * 24, pointStart: Date.UTC(2015, 9, 6, 0, 0, 0) } }, tooltip: { backgroundColor: "rgba(0,0,0,0.95)", foregroundcolor: "#999", formatter: function() { var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; var date = new Date(this.x); var day = date.getDate(); var monthIndex = date.getMonth(); return \'<text style="color: #CCC"><b>\' + this.y + \'</b> Benis am <b>\'+ day + ". " + monthNames[monthIndex] + \'</b></text>\' }, useHTML: true }, series: [{ name: \'\', data: [0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600], color: "#ee4d2e" }] }); ' +
-'    $("#cust0m_benis_graph").width("100%"); }, 1000);';
+'    };' +
+'setTimeout(cust0m.load_benis_graph, 1000);';
+'$(window).resize().resize(setTimeout(cust0m.load_benis_graph, 1000));';
 /* Fügt das Script letzten Endes ein*/
 s.parentNode.insertBefore(g, s);
 
