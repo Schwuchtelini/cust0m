@@ -1,11 +1,11 @@
 /* Ich mach jetzt auch mal ein paar Kommentare */
 /* Achja, diesen Code als Text zu programmieren macht alles einfacher, viel Übersichtlicher und richtig viel spaß*/
 
-/* Für die Scrollbar*/
-$("head").append('<link rel="stylesheet" type="text/css" href="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.min.css"><script type="text/javascript" src="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.concat.min.js"></script>');
+/* Für die Scrollbar/Benis Graph*/
+$("head").append('<link rel="stylesheet" type="text/css" href="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.min.css"><script type="text/javascript" src="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.concat.min.js"></script><script src="http://code.highcharts.com/highcharts.js"></script>');
 
 /* Also hier sieht man das Menu das oben links raus poppt.*/
-$(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="cust0m_benis_graph_inner"></div></div><div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
+$(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="cust0m_benis_graph_inner" id="cust0m_benis_graph"></div></div><div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
 '    <div class="cust0m_menu_middle"> \r\n' +
 '        <div class="cust0m_menu active" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'none\'); $(\'.cust0m_general\').css(\'display\',\'block\');">Allgemein</div> \r\n' +
 '        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'block\'); $(\'.cust0m_general\').css(\'display\',\'none\');">Posts</div> \r\n' +
@@ -422,70 +422,6 @@ g.text = 'cust0m = {};\r\n' +
 '        return position;\r\n' +
 '    }; \r\n' +
 '\r\n' +
-/*
-'p.View.Stream.Main.prototype.loadedOFF = function (items, position, error) {\r\n' +
-'        this.loadedBound = this.loaded.bind(this);\r\n' +
-'        this.itemsPerRow = p.mainView.thumbsPerRow;\r\n' +
-'        this.$container.find(".spinner").remove();\r\n' +
-'        if (!items) {\r\n' +
-'            var msg = null;\r\n' +
-'            var fm = null;\r\n' +
-'            if (error && (fm = error.match(/^(nsfw|nsfl|sfw)Required$/))) {\r\n' +
-'               msg = "Das Bild wurde als <em>" + fm[1].toUpperCase() + "</em> markiert.<br/>" +\r\n' +
-'                    (p.user.id ? "Ändere deine Filter-Einstellung," : "Melde dich an,") + " wenn du es sehen willst."\r\n' +
-'            } else if (!this.hasItems) {\r\n' +
-'                msg = "Nichts gefunden &#175;\\_(&#12484;)_/&#175;";\r\n' +
-'            }\r\n' +
-'            if (msg) {\r\n' +
-'                this.$container.html("<h2 class=\'main-message\'>" + msg + "</h2>");\r\n' +
-'            }\r\n' +
-'            return;\r\n' +
-'        }\r\n' +
-'        if (position == p.Stream.POSITION.PREPEND && items.length > 0) {\r\n' +
-'            var prevHeight = $("#main-view").height();\r\n' +
-'            var firstRow = this.$streamContainer.find(".stream-row:first");\r\n' +
-'            var placeholders = firstRow.find(".thumb-placeholder");\r\n' +
-'            var numPlaceholders = placeholders.length\r\n' +
-'            if (numPlaceholders) {\r\n' +
-'                var html = "";\r\n' +
-'               for (var i = 0; i < numPlaceholders; i++) {\r\n' +
-'                   html += this.buildItem(items[items.length - numPlaceholders - 1 + i]);\r\n' +
-'               }\r\n' +
-'               placeholders.remove();\r\n' +
-'               firstRow.prepend(this.prepareThumbsForInsertion(html));\r\n' +
-'           }\r\n' +
-'          var html = this.buildItemRows(items, 0, items.length - numPlaceholders, position);\r\n' +
-'          this.$streamContainer.prepend(this.prepareThumbsForInsertion(html));\r\n' +
-'          var newHeight = $("#main-view").height() - (117 - 52);\r\n' +
-'          $(document).scrollTop($(document).scrollTop() + (newHeight - prevHeight));\r\n' +
-'      } else if (position == p.Stream.POSITION.APPEND && items.length > 0) {\r\n' +
-'          var lastRow = this.$streamContainer.find(".stream-row:last");\r\n' +
-'          var itemCount = lastRow.find(".thumb").length;\r\n' +
-'          var fill = 0;\r\n' +
-'          if (itemCount % this.itemsPerRow != 0) {\r\n' +
-'              var html = "";\r\n' +
-'              fill = this.itemsPerRow - itemCount;\r\n' +
-'              for (var i = 0; i < fill; i++) {\r\n' +
-'                   html += this.buildItem(items[i]);\r\n' +
-'              }\r\n' +
-'              lastRow.append(this.prepareThumbsForInsertion(html));\r\n' +
-'          }\r\n' +
-'          if(items.length - fill > 0) { var html = this.buildItemRows(items, fill, items.length, position);\r\n' +
-'          this.$streamContainer.append(this.prepareThumbsForInsertion(html));}\r\n' +
-'      }\r\n' +
-'      if (this.jumpToItem) {\r\n' +
-'          var target = $("#item-" + this.jumpToItem);\r\n' +
-'          if (target.length) {\r\n' +
-'              $(document).scrollTop(target.offset().top - CONFIG.HEADER_HEIGHT);\r\n' +
-'              this.showItem(target, this.SCROLL.THUMB);\r\n' +
-'          }\r\n' +
-'          this.jumpToItem = null;\r\n' +
-'      }\r\n' +
-'      this.loadInProgress = false;\r\n' +
-'      this.hasItems = true;\r\n' +
-'      if(items.length <= this.itemsPerRow * 3) $(window).resize();\r\n' +
-'   };' +
-*/
 /* Überschreibung einer orginal "Gehe zu den Folgenden Post" Methode. Die regelt jetzt "Best of" und "bullshit" mit.*/
 'p.navigateToOrginal = p.navigateTo;\r\n' +
 'p.navigateTo = function (location, mode) {\r\n' +
@@ -502,7 +438,6 @@ g.text = 'cust0m = {};\r\n' +
 /* Liest die ID des Aktuellen Post aus und gibt die Id den Angeschauten zähler (Wie gesagt ich kann nicht direkt methoden aufrufen)*/
 '    if(location != "new" && location != "top"){ $("#cust0m_viewed").append("<div view=\'" + location.slice(-6) + "\'></div>"); $("#item-" + location.slice(-6)).addClass("custom_seen");}\r\n' +
 '    },\r\n' +
-/*"p.View.Stream.Main.prototype.buildItemOFF = function (item) { return (item != undefined) ? ('<a class=\"silent thumb\" id=\"item-' + item.id + '\" href=\"' + this.baseURL + item.id + '\">' + '<img src=\"' + item.thumb + '\"/>' + '</a>') : '';}" ;*/
 /* Überschreibung der Pfeilbewegung um die Pfeile über das Bild hinaus zu bewegen*/
 'p.View.Stream.Item.prototype.onScroll = function () {\r\n' +
 '        if (!this.heightKnown) {\r\n' +
@@ -515,7 +450,33 @@ g.text = 'cust0m = {};\r\n' +
 '        this.navTop = p;\r\n' +
 '        this.$streamPrev.css("padding-top", p);\r\n' +
 '        this.$streamNext.css("padding-top", p);\r\n' +
-'    };';
+'    };\r\n' +
+/* Fügt den Benis graph ein*/
+'$(function () { ' +
+'    $("#cust0m_benis_graph").highcharts({' +
+'        chart: {' +
+'            type: "bar"' +
+'        },' +
+'        title: {' +
+'            text: "Fruit Consumption"' +
+'        },' +
+'        xAxis: {' +
+'            categories: ["Apples", "Bananas", "Oranges"]' +
+'        },' +
+'        yAxis: {' +
+'            title: {' +
+'                text: "Fruit eaten"' +
+'            }' +
+'        },' +
+'        series: [{' +
+'            name: "Jane",' +
+'            data: [1, 0, 4]' +
+'        }, {' +
+'            name: "John",' +
+'            data: [5, 7, 3]' +
+'        }]' +
+'    });' +
+'});';
 /* Fügt das Script letzten Endes ein*/
 s.parentNode.insertBefore(g, s);
 
