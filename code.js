@@ -453,7 +453,7 @@ g.text = 'cust0m = {};\r\n' +
 '    };\r\n' +
 /* Fügt den Benis graph ein*/
 'setTimeout(function () { ' +
-'    $("#cust0m_benis_graph").width($("#cust0m_benis_graph").width());' +
+'    $("#cust0m_benis_graph").width($("#head-content").width());' +
 '    $("#cust0m_benis_graph").highcharts({' +
 '        chart: {' +
 '            type: "bar"' +
@@ -477,7 +477,7 @@ g.text = 'cust0m = {};\r\n' +
 '            data: [5, 7, 3]' +
 '        }]' +
 '    });' +
-'}, 500);';
+'}, 1000);';
 /* Fügt das Script letzten Endes ein*/
 s.parentNode.insertBefore(g, s);
 
