@@ -669,8 +669,12 @@ $('#cust0m_save').click(save_options);
 $('.cust0m_trigger').click(save_options);
 $('#cust0m_input_save_views_opacity').change(save_options);
 
+/* Einstellungen bzw. Benis graph einblenden/ausblenden*/
 $('#settings-link').mouseout(function () {$('.cust0m_settings').css('display', 'none');});
 $('#settings-link').mouseover(function () {$('.cust0m_settings').css('display', 'block');});
+
+$('#settings-link').mouseout(function () {$('.cust0m_benis_graph').css('display', 'none');});
+$('#settings-link').mouseover(function () {$('.cust0m_benis_graph').css('display', 'block');});
 
 $('.cust0m_input').keypress(function (event)
 {
