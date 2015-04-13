@@ -371,5 +371,5 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 
 .cust0m_benis_graph_inner text
 {
-    display: none;
+    color: transparent;
 }
