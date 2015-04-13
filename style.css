@@ -350,7 +350,6 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
   right: 0px;
   margin-top: 15px;
   padding-top: 19px;
-  padding-bottom: 10px;
   position: absolute;
   display: none;
   font-size: 15px;
@@ -368,6 +367,7 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     right: 0px;
     background: rgba(0, 0, 0, 0.8);
     height: 500px;
+    padding-bottom: 10px;
 }
 
 .cust0m_benis_graph_inner svg text
