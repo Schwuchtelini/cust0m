@@ -453,6 +453,7 @@ g.text = 'cust0m = {};\r\n' +
 '    };\r\n' +
 /* Fügt den Benis graph ein*/
 'setTimeout(function () { ' +
+'    $("#cust0m_benis_graph").width($("#cust0m_benis_graph").width());' +
 '    $("#cust0m_benis_graph").highcharts({' +
 '        chart: {' +
 '            type: "bar"' +
