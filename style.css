@@ -326,7 +326,8 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     display: block;
 }
 
-.cust0m_item_info_bar {
+.cust0m_item_info_bar
+{
   width: 110px;
   height: 2px;
   background: #472222;
@@ -335,8 +336,27 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
   left: 10px;
 }
 
-.cust0m_item_info_bar_green {
+.cust0m_item_info_bar_green
+{
   width: 110px;
   height: 2px;
   background: #0A300A;
+}
+
+
+.cust0m_benis_graph
+{
+    width: 475px;
+    color: #FFF;
+    right: 0px;
+    margin-top: 15px;
+    padding-top: 19px;
+    position: absolute;
+    display: none;
+    font-size: 15px;
+}
+
+cust0m_benis_graph:hover
+{
+    display: block !important;
 }
