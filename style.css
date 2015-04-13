@@ -368,3 +368,8 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
     background: rgba(0, 0, 0, 0.9);
     height: 150px;
 }
+
+.cust0m_benis_graph_inner text
+{
+    display: none;
+}
