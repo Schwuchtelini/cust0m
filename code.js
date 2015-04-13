@@ -673,8 +673,8 @@ $('#cust0m_input_save_views_opacity').change(save_options);
 $('#settings-link').mouseout(function () {$('.cust0m_settings').css('display', 'none');});
 $('#settings-link').mouseover(function () {$('.cust0m_settings').css('display', 'block');});
 
-$('#settings-link').mouseout(function () {$('.cust0m_benis_graph').css('display', 'none');});
-$('#settings-link').mouseover(function () {$('.cust0m_benis_graph').css('display', 'block');});
+$('.cust0m_benis_head, .cust0m_benis_num').mouseout(function () {$('.cust0m_benis_graph').css('display', 'none');});
+$('.cust0m_benis_head, .cust0m_benis_num').mouseover(function () {$('.cust0m_benis_graph').css('display', 'block');});
 
 $('.cust0m_input').keypress(function (event)
 {
