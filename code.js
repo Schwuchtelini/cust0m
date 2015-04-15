@@ -831,7 +831,7 @@ standard =
     save_views_opacity_max: 100,
     flag: "OFF",
     ups_downs_comment: "ON",
-    benis_graph_time: (new Date().getTime() - 60000 * 60 * 24 * 100) / (60000 * 60 * 24),
+    benis_graph_time: 0,
     benis_graph: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 };
 
@@ -961,8 +961,8 @@ function update_settings()
     {
         views = items;
 
-        benis_graph = items.benis_graph;
-        benis_graph_time = items.benis_graph_time;
+        benis_graph = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+        benis_graph_time = 0;
 
         anzahl = items.anzahl;
 
@@ -1278,7 +1278,7 @@ function isView(id)
 load_benis_graph_width = 0;
 load_benis_graph = function ()
 {
-    now = Date.now() / (60000 * 60 * 24);
+    now = new Date().getTime() / (60000 * 60 * 24);
     rounds = 0;
     while(benis_graph_time < now && rounds < 102)
     {
