@@ -961,7 +961,7 @@ function update_settings()
     {
         views = items;
 
-        benis_graph = items.benis_graph
+        benis_graph = items.benis_graph;
         benis_graph_time = items.benis_graph_time;
 
         anzahl = items.anzahl;
