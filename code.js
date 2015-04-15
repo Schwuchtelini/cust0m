@@ -961,8 +961,8 @@ function update_settings()
     {
         views = items;
 
-        benis_graph = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-        benis_graph_time = 0;
+        benis_graph = items.benis_graph
+        benis_graph_time = items.benis_graph_time;
 
         anzahl = items.anzahl;
 
@@ -1288,7 +1288,6 @@ load_benis_graph = function ()
         rounds++;
     }
     benis_graph_time = now;
-    debugger;
     benis_graph.shift();
     benis_graph.push(benis);
 
