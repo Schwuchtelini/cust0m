@@ -1351,7 +1351,7 @@ load_benis_graph = function ()
                         enabled: false
                     },
                     pointInterval: 3600000 * 24,
-                    pointStart: new Date(benis_graph_time * (60000 * 60 * 24)).getUTCDate()
+                    pointStart: new Date(benis_graph_time - (60000 * 60 * 24 * 100)).getUTCDate()
                 }
             },
             tooltip:
