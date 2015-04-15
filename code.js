@@ -1288,8 +1288,7 @@ load_benis_graph = function ()
         rounds++;
     }
     benis_graph_time = now;
-    benis_graph.shift();
-    benis_graph.push(benis);
+    benis_graph[benis_graph.length - 1] = benis;
 
     chrome.storage.local.set({benis_graph: benis_graph, benis_graph_time: benis_graph_time, });
 
