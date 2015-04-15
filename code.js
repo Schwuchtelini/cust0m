@@ -236,6 +236,7 @@ $("#user-profile-name").after('<div class="cust0m_benis_head">mm</div><div class
 $("#tab-stalk").after('<a id="tab-best_of" class="head-tab cust0m_best_of" onclick="cust0m.load_best_of();">mm </a><a id="tab-bullshit" class="head-tab cust0m_bullshit" onclick="cust0m.load_bullshit();">mm </a>');
 
 /* Aktualisiert den Benis*/
+benis = -1;
 if($("#user-profile-name").text() != "") setInterval(loadBenis, 30000);
 function loadBenis()
 {
@@ -244,7 +245,8 @@ function loadBenis()
         url: "http://pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
         success: function(data)
         {
-            $(".cust0m_benis_num").text(JSON.parse(data).user.score);
+            benis = JSON.parse(data).user.score;
+            $(".cust0m_benis_num").text(benis);
         }
     });
 }
@@ -450,15 +452,7 @@ g.text = 'cust0m = {};\r\n' +
 '        this.navTop = p;\r\n' +
 '        this.$streamPrev.css("padding-top", p);\r\n' +
 '        this.$streamNext.css("padding-top", p);\r\n' +
-'    };\r\n' +
-/* Fügt den Benis graph ein*/
-'cust0m.load_benis_graph_width = 0;\r\n' +
-'cust0m.load_benis_graph = function () { \r\n' +
-'    $("#cust0m_benis_graph").width($("#head-content").width());\r\n' +
-'    if(cust0m.load_benis_graph_width != $("#cust0m_benis_graph").width()) $("#cust0m_benis_graph").highcharts({ chart: { type: \'spline\', backgroundColor: "transparent" }, title: { text: "" }, xAxis: { type: \'datetime\', labels: { enabled: false }, lineColor: "#333", tickColor: "transparent" }, legend: { enabled: false }, yAxis: { title: { text: \'\' }, gridLineColor: "#333", alternateGridColor: null }, tooltip: { valueSuffix: \' Benis\' }, plotOptions: { spline: { lineWidth: 2, states: { hover: { lineWidth: 2 } }, marker: { enabled: false }, pointInterval: 3600000 * 24, pointStart: Date.UTC(2015, 9, 6, 0, 0, 0) } }, tooltip: { backgroundColor: "rgba(0,0,0,0.95)", foregroundcolor: "#999", formatter: function() { var monthNames = [ "Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "December" ]; var date = new Date(this.x); var day = date.getDate(); var monthIndex = date.getMonth(); return \'<text style="color: #CCC"><b>\' + this.y + \'</b> Benis am <b>\'+ day + ". " + monthNames[monthIndex] + \'</b></text>\' }, useHTML: true }, series: [{ name: \'\', data: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600, 0, 0, 0, 0, 100, 200, 1000, 2000, 5000, 5600], color: "#ee4d2e" }] }); \r\n' +
-'    cust0m.load_benis_graph_width = $("#cust0m_benis_graph").width();\r\n' +
-'    };\r\n' +
-'$(\'.cust0m_benis_head, .cust0m_benis_num\').mouseover(cust0m.load_benis_graph);\r\n';
+'    };\r\n';
 /* Fügt das Script letzten Endes ein*/
 s.parentNode.insertBefore(g, s);
 
@@ -510,10 +504,15 @@ standard =
     save_views_opacity_max: 100,
     flag: "OFF",
     ups_downs_comment: "ON",
+    benis_graph_time: (new Date().getTime() - 60000 * 60 * 24 * 100) / (60000 * 60 * 24),
+    benis_graph: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 };
 
 /* Speichert die angeschauten Posts*/
 views = {};
+/* enthält den benis Graph*/
+benis_graph = [];
+benis_graph_time = 0;
 /* Speichert die Einstellungen*/
 function save_options()
 {
@@ -634,6 +633,9 @@ function update_settings()
     function (items)
     {
         views = items;
+
+        benis_graph = items.benis_graph;
+        benis_graph_time = items.benis_graph_time;
 
         anzahl = items.anzahl;
 
@@ -944,3 +946,108 @@ function isView(id)
 {
    return views.viewed[id] === true;
 }
+
+/* Fügt den Benis graph ein*/
+load_benis_graph_width = 0;
+load_benis_graph = function ()
+{
+    now = Date.now() / (60000 * 60 * 24);
+    rounds = 0;
+    while(benis_graph_time < now && rounds < 102)
+    {
+        benis_graph_time++;
+        benis_graph.shift();
+        benis_graph.push(null);
+        rounds++;
+    }
+    benis_graph_time = now;
+
+    benis_graph.shift();
+    benis_graph.push(benis);
+
+    chrome.storage.local.set({benis_graph: benis_graph, benis_graph_time: benis_graph_time, });
+
+    $("#cust0m_benis_graph").width($("#head-content").width());
+    if (cust0m.load_benis_graph_width != $("#cust0m_benis_graph").width())
+        $("#cust0m_benis_graph").highcharts(
+        {
+            chart:
+            {
+                type: 'spline',
+                backgroundColor: "transparent"
+            },
+            title:
+            {
+                text: ""
+            },
+            xAxis:
+            {
+                type: 'datetime',
+                labels:
+                {
+                    enabled: false
+                },
+                lineColor: "#333",
+                tickColor: "transparent"
+            },
+            legend:
+            {
+                enabled: false
+            },
+            yAxis:
+            {
+                title:
+                {
+                    text: ''
+                },
+                gridLineColor: "#333",
+                alternateGridColor: null
+            },
+            tooltip:
+            {
+                valueSuffix: ' Benis'
+            },
+            plotOptions:
+            {
+                spline:
+                {
+                    lineWidth: 2,
+                    states:
+                    {
+                        hover:
+                        {
+                            lineWidth: 2
+                        }
+                    },
+                    marker:
+                    {
+                        enabled: false
+                    },
+                    pointInterval: 3600000 * 24,
+                    pointStart: new Date(benis_graph_time * (60000 * 60 * 24)).getUTCDate()
+                }
+            },
+            tooltip:
+            {
+                backgroundColor: "rgba(0,0,0,0.95)",
+                foregroundcolor: "#999",
+                formatter: function () {
+                    var monthNames = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "December"];
+                    var date = new Date(this.x);
+                    var day = date.getDate();
+                    var monthIndex = date.getMonth();
+                    return '<text style="color: #CCC"><b>' + this.y + '</b> Benis am <b>' + day + ". " + monthNames[monthIndex] + '</b></text>'
+                },
+                useHTML: true
+            },
+            series: [
+            {
+                name: '',
+                data: benis_graph,
+                color: "#ee4d2e"
+            }]
+        });
+    load_benis_graph_width = $("#cust0m_benis_graph").width();
+};
+$('.cust0m_benis_head, .cust0m_benis_num').mouseover(load_benis_graph);
+setInterval(load_benis_graph, 60000);
