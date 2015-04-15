@@ -1294,7 +1294,7 @@ load_benis_graph = function ()
 
     chrome.storage.local.set({benis_graph: benis_graph, benis_graph_time: benis_graph_time, });
 
-    time_graph = new Date((benis_graph_time - 100) * (60000 * 60 * 24));
+    time_graph = new Date((benis_graph_time - 99) * (60000 * 60 * 24));
 
     $("#cust0m_benis_graph").width($("#head-content").width());
     if (load_benis_graph_width != $("#cust0m_benis_graph").width())
