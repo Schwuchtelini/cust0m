@@ -1353,7 +1353,7 @@ load_benis_graph = function ()
                         enabled: false
                     },
                     pointInterval: 3600000 * 24,
-                    pointStart: Date.UTC(time_graph.getFullYear(), time_graph.getDate(), time_graph.getFullMonth(), 0, 0, 0)
+                    pointStart: Date.UTC(time_graph.getFullYear(), time_graph.getDate(), time_graph.getMonth(), 0, 0, 0)
                 }
             },
             tooltip:
