@@ -968,7 +968,7 @@ load_benis_graph = function ()
     chrome.storage.local.set({benis_graph: benis_graph, benis_graph_time: benis_graph_time, });
 
     $("#cust0m_benis_graph").width($("#head-content").width());
-    if (cust0m.load_benis_graph_width != $("#cust0m_benis_graph").width())
+    if (load_benis_graph_width != $("#cust0m_benis_graph").width())
         $("#cust0m_benis_graph").highcharts(
         {
             chart:
