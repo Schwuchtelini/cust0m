@@ -1288,7 +1288,7 @@ load_benis_graph = function ()
         rounds++;
     }
     benis_graph_time = now;
-
+    debugger;
     benis_graph.shift();
     benis_graph.push(benis);
 
