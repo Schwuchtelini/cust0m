@@ -4,7 +4,7 @@
 /* Für die Scrollbar/Benis Graph*/
 $("head").append('<link rel="stylesheet" type="text/css" href="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.min.css"><script type="text/javascript" src="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.concat.min.js"></script>');
 
-// Highcharts START -------------------------
+/* Highcharts START ------------------------- */
 /*
  Highcharts JS v4.1.5 (2015-04-13)
 
@@ -329,7 +329,7 @@ a.hoverSeries=this},onMouseOut:function(){var a=this.options,b=this.chart,c=b.to
 for(c.attr(a);this["zoneGraph"+b];)this["zoneGraph"+b].attr(a),b+=1}},setVisible:function(a,b){var c=this,d=c.chart,e=c.legendItem,f,g=d.options.chart.ignoreHiddenSeries,h=c.visible;f=(c.visible=a=c.userOptions.visible=a===u?!h:a)?"show":"hide";m(["group","dataLabelsGroup","markerGroup","tracker"],function(a){if(c[a])c[a][f]()});if(d.hoverSeries===c||(d.hoverPoint&&d.hoverPoint.series)===c)c.onMouseOut();e&&d.legend.colorizeItem(c,a);c.isDirty=!0;c.options.stacking&&m(d.series,function(a){if(a.options.stacking&&
 a.visible)a.isDirty=!0});m(c.linkedSeries,function(b){b.setVisible(a,!1)});if(g)d.isDirtyBox=!0;b!==!1&&d.redraw();M(c,f)},show:function(){this.setVisible(!0)},hide:function(){this.setVisible(!1)},select:function(a){this.selected=a=a===u?!this.selected:a;if(this.checkbox)this.checkbox.checked=a;M(this,a?"select":"unselect")},drawTracker:T.drawTrackerGraph});r(w,{Color:na,Point:Ga,Tick:Ta,Renderer:$a,SVGElement:K,SVGRenderer:ta,arrayMin:Pa,arrayMax:Fa,charts:X,dateFormat:Oa,error:ka,format:Ja,pathAnim:zb,
 getOptions:function(){return P},hasBidiBug:Nb,isTouchDevice:Jb,setOptions:function(a){P=z(!0,P,a);Cb();return P},addEvent:N,removeEvent:Y,createElement:Z,discardElement:Ra,css:F,each:m,map:Ua,merge:z,splat:ra,extendClass:ja,pInt:B,svg:ba,canvas:ea,vml:!ba&&!ea,product:"Highcharts",version:"4.1.5"})})();
-// Highcharts END -------------------------
+/* Highcharts END ------------------------- */
 
 /* Also hier sieht man das Menu das oben links raus poppt.*/
 $(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="cust0m_benis_graph_inner" id="cust0m_benis_graph"></div></div><div class="cust0m_settings"><div class="cust0m_version">V2.0</div> \r\n' +
