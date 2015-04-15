@@ -1278,7 +1278,7 @@ function isView(id)
 load_benis_graph_width = 0;
 load_benis_graph = function ()
 {
-    now = new Date().getTime() / (60000 * 60 * 24);
+    now = parseInt(new Date().getTime() / (60000 * 60 * 24));
     rounds = 0;
     while(benis_graph_time < now && rounds < 102)
     {
