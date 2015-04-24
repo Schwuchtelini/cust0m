@@ -42,9 +42,10 @@ a.thumb
     height: 2px;
     float: left;
     width: 45%;
+    margin-top: 6px;
 }
 
-input[type=range].cust0m_slider::-webkit-slider-thumb
+input[type=range].cust0m_slider::-webkit-slider-thumb, input[type=range].cust0m_slider::-moz-range-thumb
 {
     -webkit-appearance: none;
     border: none;
