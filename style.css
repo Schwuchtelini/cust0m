@@ -48,10 +48,7 @@ input[type=range].cust0m_slider::-webkit-slider-thumb
 {
     -webkit-appearance: none;
     border: none;
-    height: 16px;
-    width: 8px;
     background: #666;
-    margin-top: -4px;
 }
 
 .cust0m_label
