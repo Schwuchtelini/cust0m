@@ -45,7 +45,16 @@ a.thumb
     margin-top: 6px;
 }
 
-input[type=range].cust0m_slider::-webkit-slider-thumb, input[type=range].cust0m_slider::-moz-range-thumb
+input[type=range].cust0m_slider::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    border: none;
+    background: #666;
+    height: 19px;
+    width: 10px;
+}
+
+input[type=range].cust0m_slider::-moz-range-thumb
 {
     -webkit-appearance: none;
     border: none;
