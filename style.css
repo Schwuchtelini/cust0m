@@ -106,6 +106,12 @@ input[type=range].cust0m_slider::-moz-range-thumb
     width: 55%;
 }
 
+.cust0m_label_full
+{
+    width: 95%;
+    text-align: center:
+}
+
 .cust0m_triggers
 {
     float: left;
@@ -260,21 +266,6 @@ input[type=range].cust0m_slider::-moz-range-thumb
     border-width: 1px 0px 1px 1px;
     opacity: 0;
     transition: 0.5s ease-in-out opacity;
-}
-
-.cust0m_help_full
-{
-    position: absolute;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px;
-    right: 475px;
-    width: 800px;
-    margin-top: -11px;
-    border: 1px solid #333;
-    border-width: 1px 0px 1px 1px;
-    opacity: 0;
-    transition: 0.5s ease-in-out opacity;
-    text-align: center;
 }
 
 .cust0m_middle:hover .cust0m_help
