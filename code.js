@@ -336,9 +336,19 @@ $(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="c
 '    <div class="cust0m_menu_middle"> \r\n' +
 '        <div class="cust0m_menu active" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_general\').css(\'display\',\'block\'); $(\'.cust0m_posts, .cust0m_info\').css(\'display\',\'none\');">Allgemein</div> \r\n' +
 '        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_posts\').css(\'display\',\'block\'); $(\'.cust0m_general, .cust0m_info\').css(\'display\',\'none\');">Posts</div> \r\n' +
-'        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_info\').css(\'display\',\'block\'); $(\'.cust0m_general, .cust0m_posts\').css(\'display\',\'none\');">Posts</div> \r\n' +
+'        <div class="cust0m_menu" onclick="$(\'.cust0m_menu\').removeClass(\'active\'); $(this).removeClass(\'active\'); $(this).addClass(\'active\'); $(\'.cust0m_info\').css(\'display\',\'block\'); $(\'.cust0m_general, .cust0m_posts\').css(\'display\',\'none\');">Infos</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_line"></div> \r\n' +
+'    <div class="cust0m_middle cust0m_info"> \r\n' +
+'        <div class="cust0m_help">Geklaute ideen: Youtube Benis Anzeige.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Benis Anzeige:</div> \r\n' +
+'        <div class="cust0m_label" href="http://pr0gramm.com/user/vikenzor">vikenzor</div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_info"> \r\n' +
+'        <div class="cust0m_help">Geklaute ideen: Youtube Benis Anzeige.</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Benis Anzeige:</div> \r\n' +
+'        <div class="cust0m_label" href="http://pr0gramm.com/user/holzmaster">holzmaster</div> \r\n' +
+'    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
 '        <div class="cust0m_help">Wie viele Vorschaubilder möchtest du pro Reihe maximal haben?<br>Normalerweise sind 8 eingetragen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Pro Reihe maximal:</div> \r\n' +
