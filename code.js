@@ -347,8 +347,13 @@ $(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="c
 '        <div class="cust0m_label"><a href="http://pr0gramm.com/user/vikenzor">vikenzor</a></div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_info"> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Youtube Benis Anzeige:</div> \r\n' +
+'        <div class="cust0m_help">Youtube Benis Anzeige, OP-Highlight und Kommentarlinien</div> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentarlinien, etc:</div> \r\n' +
 '        <div class="cust0m_label"><a href="http://pr0gramm.com/user/holzmaster">holzmaster</a></div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_info"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Kommentare ein/ausklappen:</div> \r\n' +
+'        <div class="cust0m_label"><a href="http://pr0gramm.com/user/algaten">algaten</a></div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_info"> \r\n' +
 '        <div class="cust0m_lable_full">Schwuchtelini der Hurensohn</div> \r\n' +
