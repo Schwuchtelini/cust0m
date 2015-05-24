@@ -356,6 +356,10 @@ $(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="c
 '        <div class="cust0m_label"><a href="http://pr0gramm.com/user/algaten">algaten</a></div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_info"> \r\n' +
+'        <div class="cust0m_label cust0m_lable_1">Alten Programm Pfeile:</div> \r\n' +
+'        <div class="cust0m_label"><a href="http://pr0gramm.com/user/X39">X39</a></div> \r\n' +
+'    </div> \r\n' +
+'    <div class="cust0m_middle cust0m_info"> \r\n' +
 '        <div class="cust0m_lable_full">Schwuchtelini der Hurensohn</div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_general"> \r\n' +
