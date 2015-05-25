@@ -2,7 +2,7 @@
 /* Achja, diesen Code als Text zu programmieren macht alles einfacher, viel Übersichtlicher und richtig viel spaß*/
 
 /* Für die Scrollbar/Benis Graph*/
-$("head").append('<link rel="stylesheet" type="text/css" href="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.min.css"><script type="text/javascript" src="http://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.concat.min.js"></script>');
+$("head").append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.min.css"><script type="text/javascript" src="https://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.concat.min.js"></script>');
 
 /* Highcharts START ------------------------- */
 /*
@@ -588,7 +588,7 @@ function loadBenis()
 {
     $.ajax(
     {
-        url: "http://pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
+        url: "https://pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
         success: function(data)
         {
             benis = JSON.parse(data).user.score;
