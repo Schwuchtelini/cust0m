@@ -582,10 +582,10 @@ $("#tab-stalk").after('<a id="tab-best_of" class="head-tab cust0m_best_of" oncli
 
 /* Aktualisiert den Benis*/
 benis = -1;
-if($("#user-profile-name").text() != "") setInterval(loadBenis, 30000);
+setInterval(loadBenis, 30000);
 function loadBenis()
 {
-    $.ajax(
+    if($("#user-profile-name").text() != "") $.ajax(
     {
         url: "https://pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
         success: function(data)
@@ -595,7 +595,7 @@ function loadBenis()
         }
     });
 }
-loadBenis();
+setTimeout(function(){ loadBenis();}, 500);
 
 /* Hier wird das script dass das Pr0gramm script ändert erstellt*/
 var g = document.createElement('script');
