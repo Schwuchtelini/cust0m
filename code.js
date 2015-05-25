@@ -1,8 +1,7 @@
 /* Ich mach jetzt auch mal ein paar Kommentare */
 /* Achja, diesen Code als Text zu programmieren macht alles einfacher, viel Übersichtlicher und richtig viel spaß*/
 
-/* Für die Scrollbar/Benis Graph*/
-$("head").append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.min.css"><script type="text/javascript" src="https://rawgit.com/malihu/malihu-custom-scrollbar-plugin/master/jquery.mCustomScrollbar.concat.min.js"></script>');
+/* Für Benis Graph*/
 
 /* Highcharts START ------------------------- */
 /*
