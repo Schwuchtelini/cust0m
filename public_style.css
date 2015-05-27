@@ -1,6 +1,7 @@
 #settings-link
 {
     padding: 10px 5px;
+
 }
 
 a.thumb
@@ -36,6 +37,32 @@ a.thumb
     margin-right: 5px;
 }
 
+.cust0m_slider
+{
+    height: 2px;
+    float: left;
+    width: 45%;
+    margin-top: 6px;
+}
+
+input[type=range].cust0m_slider::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    border: none;
+    background: #666;
+    height: 19px;
+    width: 10px;
+}
+
+input[type=range].cust0m_slider::-moz-range-thumb
+{
+    -webkit-appearance: none;
+    border: none;
+    background: #666;
+    height: 19px;
+    width: 10px;
+}
+
 .cust0m_label
 {
     float: left;
@@ -48,7 +75,7 @@ a.thumb
     background: rgba(0, 0, 0, 0.9);
 }
 
-.cust0m_posts
+.cust0m_posts, .cust0m_info
 {
     display: none;
 }
@@ -77,6 +104,13 @@ a.thumb
 .cust0m_lable_1
 {
     width: 55%;
+}
+
+.cust0m_lable_full
+{
+    width: 95%;
+    text-align: center;
+    color: #999;
 }
 
 .cust0m_triggers
@@ -216,7 +250,7 @@ a.thumb
 {
     position: absolute;
     font-size: 17px;
-    top: 80px;
+    top: 78px;
     left: 10px;
     color: #666;
 }
@@ -227,7 +261,7 @@ a.thumb
     background: rgba(0, 0, 0, 0.9);
     padding: 10px;
     right: 475px;
-    width: 350px;
+    width: 400px;
     margin-top: -11px;
     border: 1px solid #333;
     border-width: 1px 0px 1px 1px;
@@ -287,7 +321,7 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 .cust0m_menu
 {
     float: left;
-    width: 50%;
+    width: 33.3333333%;
     text-align: center;
     cursor: pointer;
     background-color: rgba(25, 25, 25, 0.75);
@@ -316,4 +350,53 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 .cust0m_general
 {
     display: block;
+}
+
+.cust0m_item_info_bar
+{
+  width: 110px;
+  height: 2px;
+  background: #472222;
+  position: absolute;
+  top: 100px;
+  left: 10px;
+}
+
+.cust0m_item_info_bar_green
+{
+  width: 110px;
+  height: 2px;
+  background: #0A300A;
+}
+
+
+.cust0m_benis_graph
+{
+  width: 100%;
+  right: 0px;
+  margin-top: 15px;
+  padding-top: 19px;
+  position: absolute;
+  display: none;
+  font-size: 15px;
+}
+
+.cust0m_benis_graph:hover
+{
+    display: block !important;
+}
+
+.cust0m_benis_graph_inner
+{
+    width: 100%;
+    color: #FFF;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.9);
+    height: 500px;
+    padding-bottom: 0px;
+}
+
+.cust0m_benis_graph_inner svg text
+{
+    display: none;
 }
