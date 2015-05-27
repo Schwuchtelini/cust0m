@@ -585,6 +585,7 @@ benis = -1;
 setInterval(loadBenis, 30000);
 function loadBenis()
 {
+    debug;
     if($("#user-profile-name").text() != "") $.ajax(
     {
         url: window.location.protocol + "//pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
