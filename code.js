@@ -587,7 +587,7 @@ function loadBenis()
 {
     if($("#user-profile-name").text() != "") $.ajax(
     {
-        url: "https://pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
+        url: window.location.protocol + "//pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
         success: function(data)
         {
             benis = JSON.parse(data).user.score;
