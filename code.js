@@ -813,7 +813,6 @@ standard =
     bullshit_benis_max: 9000,
     bullshit_benis_min: -150,
     ton: "OFF",
-    kommentarlinien: "OFF",
     kommentarklappen: "OFF",
     kommentarklappen_default: 3,
     kommentarklappen_default_min: 1,
@@ -827,8 +826,6 @@ standard =
     op_top: "ON",
     time: new Date().getTime(),
     viewed: {},
-    kommentarlinienbreite: 1,
-    kommentarlinienbreite_min: 1,
     save_views_opacity: 50,
     save_views_opacity_min: 1,
     save_views_opacity_max: 100,
@@ -855,10 +852,8 @@ function save_options()
         thumbs: $('#cust0m_input_thumbs').text(),
         benis: $('#cust0m_input_benis .active').text(),
         ups_downs: $('#cust0m_input_ups_downs .active').text(),
-        kommentarlinien: $('#cust0m_input_kommentarlinien .active').text(),
         kommentarklappen: $('#cust0m_input_kommentarklappen .active').text(),
         kommentarklappen_default: $('#cust0m_input_kommentarklappen_default').text(),
-        kommentarlinienbreite: $('#cust0m_input_kommentarlinienbreite').text(),
         fullsize: $('#cust0m_input_fullsize .active').text(),
         pfeil: $('#cust0m_input_pfeil .active').text(),
         best_of: $('#cust0m_input_best_of .active').text(),
@@ -909,7 +904,7 @@ function restore_options()
 
         $('#cust0m_input_start_tags').html(items.start_tags);
 
-        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarlinien", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views", "op", "op_top", "flag", "ups_downs_comment"];
+        var options = ["pos", "admin", "benis", "ups_downs", "fullsize", "kommentarklappen", "pfeil", "ton", "bullshit", "best_of", "no_updates", "save_views", "op", "op_top", "flag", "ups_downs_comment"];
 
         for(i = 0; i < options.length; i++)
         {
@@ -922,8 +917,6 @@ function restore_options()
             else $('#cust0m_input_' + option + ' .cust0m_trigger_off').addClass("active");
         }
         $('#cust0m_input_kommentarklappen_default').html(items.kommentarklappen_default);
-
-        $('#cust0m_input_kommentarlinienbreite').html(items.kommentarlinienbreite);
 
         $('#cust0m_input_thumbs').html(items.thumbs);
 
@@ -1071,27 +1064,6 @@ function update_settings()
             {
                 changeCss('.stream-prev-icon, .stream-next-icon', 'display: inline block !important');
                 changeCss('.cust0m_stream-prev-icon, .cust0m_stream-next-icon', 'display: none !important');
-            });
-        }
-
-        if(items.kommentarlinien == "ON")
-        {
-            $(window).resize().resize(function(event)
-            {
-                changeCss('div.comment-box', 'border-left: ' + items.kommentarlinienbreite + 'px solid #222; margin-left: 5px;');
-                changeCss('div.comment-box div.comment', 'margin-left: ' + (items.kommentarlinienbreite * 0.4 - 5) + 'px');
-                changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
-                changeCss('.cust0m_kommentarlinien_middle', 'display: block');
-            });
-        }
-        else
-        {
-            $(window).resize().resize(function(event)
-            {
-                changeCss('div.comment-box', 'border-left: none; margin-left: 0px;');
-                changeCss('div.comment-box div.comment', 'margin-left: 0px');
-                changeCss('.comments>.comment-box', 'border-left: none; margin-left: 0px;');
-                changeCss('.cust0m_kommentarlinien_middle', 'display: none');
             });
         }
 
