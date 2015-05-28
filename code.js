@@ -484,22 +484,6 @@ $(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="c
 '        </div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_posts"> \r\n' +
-'        <div class="cust0m_help">Kommentarlinien helfen dir, bei vielen Kommentaren den Überblick zu behalten.</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentarlinien anzeigen:</div> \r\n' +
-'        <div id="cust0m_input_kommentarlinien" class="cust0m_triggers"> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_on active" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\');">ON</div> \r\n' +
-'             <div class="cust0m_trigger cust0m_trigger_off" onclick="$(this).parent().children().removeClass(\'active\'); $(this).addClass(\'active\'); ">OFF</div> \r\n' +
-'        </div> \r\n' +
-'    </div> \r\n' +
-'    <div class="cust0m_posts"> \r\n' +
-'    <div class="cust0m_middle cust0m_kommentarlinien_middle"> \r\n' +
-'        <div class="cust0m_help">Wie breit sollen die Kommentarlinien sein?</div> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentarelinienbreite:</div> \r\n' +
-'        <div id="cust0m_input_kommentarlinienbreite" class="cust0m_input" contenteditable="true"></div> \r\n' +
-'        <div class="cust0m_label">px</div> \r\n' +
-'    </div> \r\n' +
-'    </div> \r\n' +
-'    <div class="cust0m_middle cust0m_posts"> \r\n' +
 '        <div class="cust0m_help">Gibt dir die Möglichkeit Kommentare ein- und auszuklappen.</div> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">Ein- und ausklappbare Kommentare:</div> \r\n' +
 '        <div id="cust0m_input_kommentarklappen" class="cust0m_triggers"> \r\n' +
