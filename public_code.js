@@ -350,10 +350,6 @@ $(".user-info.user-only").prepend('<div class="cust0m_benis_graph"><div class="c
 '        <div class="cust0m_label"><a href="http://pr0gramm.com/user/holzmaster">holzmaster</a></div> \r\n' +
 '    </div> \r\n' +
 '    <div class="cust0m_middle cust0m_info"> \r\n' +
-'        <div class="cust0m_label cust0m_lable_1">Kommentarlinien:</div> \r\n' +
-'        <div class="cust0m_label"><a href="http://pr0gramm.com/user/holzmaster">holzmaster</a></div> \r\n' +
-'    </div> \r\n' +
-'    <div class="cust0m_middle cust0m_info"> \r\n' +
 '        <div class="cust0m_label cust0m_lable_1">OP-Highlight:</div> \r\n' +
 '        <div class="cust0m_label"><a href="http://pr0gramm.com/user/holzmaster">holzmaster</a></div> \r\n' +
 '    </div> \r\n' +
