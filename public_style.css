@@ -400,3 +400,82 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 {
     display: none;
 }
+
+div.item-vote span.vote-up {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 30px;
+    display: block;
+    color: transparent !important;
+}
+
+div.item-vote span.vote-down {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark_down.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 30px;
+    display: block;
+    color: transparent !important;
+    margin-top: -10px;
+}
+
+div.item-vote.voted-up span.vote-up {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red.png);
+}
+
+div.item-vote.voted-up span.vote-down {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black_down.png);
+}
+
+div.item-vote.voted-down span.vote-up {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black.png);
+}
+
+div.item-vote.voted-down span.vote-down {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_light_down.png);
+}
+
+div.item-vote span.vote-up:hover {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red_dark.png);
+}
+
+div.item-vote span.vote-down:hover {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_gray_down.png);
+}
+
+span.stream-prev-icon, span.stream-next-icon {
+    width: 74px;
+    height: 74px;
+
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_gray.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: transparent;
+    color: transparent;
+    opacity: 0.5;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+span.stream-prev-icon {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_gray_left.png);
+}
+
+div.stream-prev:hover span.stream-prev-icon {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_red_left.png);
+    opacity: 0.9;
+    background-color: transparent;
+}
+
+div.stream-next:hover span.stream-next-icon {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_red.png);
+    opacity: 0.9;
+    background-color: transparent;
+}
