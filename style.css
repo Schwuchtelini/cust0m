@@ -468,7 +468,7 @@ span.stream-prev-icon {
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_gray_left.png);
 }
 
-div.stream-next:hover span.stream-prev-icon {
+div.stream-prev:hover span.stream-prev-icon {
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_red_left.png);
     opacity: 0.9;
     background-color: transparent;
