@@ -447,3 +447,35 @@ div.item-vote span.vote-up:hover {
 div.item-vote span.vote-down:hover {
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_gray_down.png);
 }
+
+span.stream-prev-icon, span.stream-next-icon {
+    width: 74px;
+    height: 74px;
+
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_gray.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: transparent;
+    color: transparent;
+    opacity: 0.5;
+    margin-left: -50px;
+    margin-right: -50px;
+
+
+}
+
+span.stream-prev-icon {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_gray_left.png);
+}
+
+div.stream-next:hover span.stream-prev-icon {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_red_left.png);
+    opacity: 0.9;
+}
+
+div.stream-next:hover span.stream-next-icon {
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_red.png);
+    opacity: 0.9;
+}
