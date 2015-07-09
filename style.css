@@ -402,10 +402,24 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 }
 
 div.item-vote span.vote-up {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 32px;
+    width: 30px;
+    display: inline-block;
+    color: transparent !important;
 }
 
 div.item-vote span.vote-down {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark_down.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 32px;
+    width: 30px;
+    display: inline-block;
+    color: transparent !important;
     margin-top: -10px;
 }
