@@ -408,7 +408,7 @@ div.item-vote span.vote-up {
     background-position: center;
     height: 32px;
     width: 30px;
-    display: inline-block;
+    display: block;
     color: transparent !important;
 }
 
@@ -419,7 +419,31 @@ div.item-vote span.vote-down {
     background-position: center;
     height: 32px;
     width: 30px;
-    display: inline-block;
+    display: block;
     color: transparent !important;
     margin-top: -10px;
+}
+
+div.item-vote.voted-up span.vote-up {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red.png);
+}
+
+div.item-vote.voted-up span.vote-down {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black_down.png);
+}
+
+div.item-vote.voted-down span.vote-up {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black.png);
+}
+
+div.item-vote.voted-down span.vote-down {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_light_down.png);
+}
+
+div.item-vote span.vote-up:hover {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red_dark.png);
+}
+
+div.item-vote span.vote-down:hover {
+    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_gray_down.png);
 }
