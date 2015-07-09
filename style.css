@@ -462,8 +462,6 @@ span.stream-prev-icon, span.stream-next-icon {
     opacity: 0.5;
     margin-left: -50px;
     margin-right: -50px;
-
-
 }
 
 span.stream-prev-icon {
@@ -473,9 +471,11 @@ span.stream-prev-icon {
 div.stream-next:hover span.stream-prev-icon {
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_red_left.png);
     opacity: 0.9;
+    background-color: transparent;
 }
 
 div.stream-next:hover span.stream-next-icon {
     background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_arrow_red.png);
     opacity: 0.9;
+    background-color: transparent;
 }
