@@ -402,7 +402,7 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 }
 
 div.item-vote span.vote-up {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -413,7 +413,7 @@ div.item-vote span.vote-up {
 }
 
 div.item-vote span.vote-down {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark_down.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_dark_down.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -425,25 +425,25 @@ div.item-vote span.vote-down {
 }
 
 div.item-vote.voted-up span.vote-up {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red.png);
 }
 
 div.item-vote.voted-up span.vote-down {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black_down.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black_down.png);
 }
 
 div.item-vote.voted-down span.vote-up {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_black.png);
 }
 
 div.item-vote.voted-down span.vote-down {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_light_down.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_light_down.png);
 }
 
 div.item-vote span.vote-up:hover {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red_dark.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_red_dark.png);
 }
 
 div.item-vote span.vote-down:hover {
-    background: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_gray_down.png);
+    background-image: url(https://raw.githubusercontent.com/Schwuchtelini/cust0m/master/hand_gray_down.png);
 }
