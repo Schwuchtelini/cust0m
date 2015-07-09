@@ -400,3 +400,12 @@ div.stream-next:hover span.cust0m_stream-next-icon, div.stream-prev:hover span.c
 {
     display: none;
 }
+
+div.item-vote span.vote-up {
+    height: 32px;
+}
+
+div.item-vote span.vote-down {
+    height: 32px;
+    margin-top: -10px;
+}
