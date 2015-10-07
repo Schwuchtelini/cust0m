@@ -769,7 +769,6 @@ g.text = 'cust0m = {};\r\n' +
 '    sta = location.lastIndexOf("/"); \r\n' +
 '    if(sta != -1) location = location.substr(sta + 1); \r\n' +
 '    $("#cust0m_viewed").append("<div view=\'" + location + "\'></div>"); $("#item-" + location).addClass("custom_seen");}\r\n' +
-'    alert(location);\r\n' +
 '    },\r\n' +
 /* Überschreibung der Pfeilbewegung um die Pfeile über das Bild hinaus zu bewegen*/
 'p.View.Stream.Item.prototype.onScroll = function () {\r\n' +
