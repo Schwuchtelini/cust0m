@@ -764,6 +764,7 @@ g.text = 'cust0m = {};\r\n' +
 '   cust0m.disableLoad = true;\r\n' +
 /* Liest die ID des Aktuellen Post aus und gibt die Id den Angeschauten zähler (Wie gesagt ich kann nicht direkt methoden aufrufen)*/
 '    if(location != "new" && location != "top"){ $("#cust0m_viewed").append("<div view=\'" + location.slice(-6) + "\'></div>"); $("#item-" + location.slice(-6)).addClass("custom_seen");}\r\n' +
+'    alert(location);\r\n' +
 '    },\r\n' +
 /* Überschreibung der Pfeilbewegung um die Pfeile über das Bild hinaus zu bewegen*/
 'p.View.Stream.Item.prototype.onScroll = function () {\r\n' +
