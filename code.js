@@ -570,7 +570,7 @@ function loadBenis()
         url: window.location.protocol + "//pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
         success: function(data)
         {
-            benis = JSON.parse(data).user.score;
+            benis = data.user.score;
             $(".cust0m_benis_num").text(benis);
         }
     });
