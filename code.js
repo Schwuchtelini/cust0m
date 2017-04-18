@@ -566,7 +566,7 @@ clearInterval(window._cust0mpr0grammPollInterval);
 window._cust0mpr0grammPollInterval = setInterval(loadBenisReal, 30000);
 function loadBenis()
 {
-    // int13h
+    /* int13h */
 }
 function loadBenisReal()
 {
