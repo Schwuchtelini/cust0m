@@ -562,20 +562,25 @@ $("#tab-stalk").after('<a id="tab-best_of" class="head-tab cust0m_best_of" oncli
 
 /* Aktualisiert den Benis*/
 benis = -1;
-setInterval(loadBenis, 30000);
+clearInterval(window._cust0mpr0grammPollInterval); 
+window._cust0mpr0grammPollInterval = setInterval(loadBenisReal, 30000);
 function loadBenis()
+{
+    // int13h
+}
+function loadBenisReal()
 {
     if($("#user-profile-name").text() != "") $.ajax(
     {
-        url: window.location.protocol + "//pr0gramm.com/api/profile/info?name=" + $("#user-profile-name").text() + "&flags=1&self=true",
+        url: window.location.protocol + "//pr0gramm.com/api/user/score",
         success: function(data)
         {
-            benis = JSON.parse(data).user.score;
+            benis = data.score;
             $(".cust0m_benis_num").text(benis);
         }
     });
 }
-setTimeout(function(){ loadBenis();}, 500);
+setTimeout(function(){ loadBenisReal();}, 500);
 
 /* Hier wird das script dass das Pr0gramm script ändert erstellt*/
 var g = document.createElement('script');
