@@ -999,7 +999,7 @@ function update_settings()
         {
             $(window).resize().resize(function(event)
             {
-                changeCss('img.item-image', 'width: initial !important; height: initial !important;');
+                changeCss('img.item-image', 'width: 100% !important; height: initial !important;');
             });
         }
         else
