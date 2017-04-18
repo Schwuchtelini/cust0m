@@ -995,6 +995,21 @@ function update_settings()
 
        changeCss('a.thumb, a.thumb img', 'height: ' + (128 * thumbs) + 'px; width: ' + (128 * thumbs) + 'px;');
 
+        if(items.fullsize == "ON")
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('img.item-image', 'width: initial !important; height: initial !important;');
+            });
+        }
+        else
+        {
+            $(window).resize().resize(function(event)
+            {
+                changeCss('img.item-image', '');
+            });
+        }
+        
         if(items.pos == "ON")
         {
             $(window).resize().resize(function(event)
